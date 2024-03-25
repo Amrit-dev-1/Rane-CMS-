@@ -1,0 +1,416 @@
+.Advisory_para {
+  margin: auto;
+  width: 80%;
+  padding: 55px 10px;
+}
+
+.top-banner {
+  width: 100%;
+  margin-top: 65px;
+}
+
+p {
+  color: #000000;
+}
+
+h4 {
+  color: #243D71;
+  font-size: 41px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+
+}
+
+
+.about_headings_adv {
+    text-align: center;
+    margin: 65px 0;
+    font-size: 40px;
+    color: #273d71;
+    font-weight: 700;
+}
+
+
+.advisory_img {
+  height: auto;
+  width: 50%;
+  margin-right: 15px;
+  justify-content: center;
+}
+
+.img-con {
+  width: 50%
+}
+
+.sub-container {
+  display: flex;
+  margin: 0 10%;
+  align-items: center;
+  padding: 20px
+}
+
+.report {
+
+  margin-top: 7%;
+  color: #000000;
+  font-family: Montserrat;
+
+}
+
+.place-1 {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+  /* margin-left: -21%; */
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+  justify-content: center;
+}
+
+.para-1 {
+  width: 70%;
+  /* margin-left: 20px; */
+}
+
+.para-2 {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.para {
+  width: 100%;
+}
+
+.place-title {
+  color: #2B3F49;
+  font-size: 24px ;
+  /* font: normal normal 600 22px/33px Poppins; */
+}
+
+.blog-place-title {
+  color: #243d71;
+}
+
+.margin-grp {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.margin-grp2 {
+  margin-left: -87px;
+  width: 102%;
+}
+
+.case1 {
+  color: #2B3F49;
+  font-size: 11px;
+}
+
+.grp-1-btn {
+  border: none;
+  padding: 12px;
+  background-color: #243D71;
+  color: white;
+  border-radius: 10px;
+  margin-left: 17px;
+  width: 160px;
+}
+
+.grp-1-btn2 {
+  border: none;
+  padding: 12px;
+  background-color: #243D71;
+  color: white;
+  border-radius: 10px;
+  margin-left: -90px;
+  width: 144px;
+}
+
+.card-btn {
+  border: none;
+  padding: 9px;
+  background-color: #243D71;
+  color: white;
+  border-radius: 27px;
+  margin-left: 16px;
+  width: 129px;
+  text-align: center;
+}
+
+.card-btn:hover {
+  background-color: white;
+  color: #243D71;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.grp-1-btn:hover {
+  background-color: white;
+  color: #243D71;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.grp-1-btn2:hover {
+  background-color: white;
+  color: #243D71;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.custom-card {
+  border: 1px 0 0 0 solid #000000;
+  border-radius: 35px;
+  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.custom-card:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.custom-card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #243D71;
+  line-height: normal;
+
+}
+
+.card-data {
+  line-height: normal;
+  font-size: 11px;
+}
+
+.card-text {
+  margin-left: 17px;
+  margin-top: 26px;
+}
+
+.banner-container {
+  position: relative;
+  width: 600px;
+  /* Adjust width as needed */
+  margin: 50px auto;
+  /* Center the container */
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-on-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add a shadow for better readability */
+}
+
+
+
+.banner-container2 {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+/* Style for the image */
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Style for the text overlay */
+.banner-text-adv {
+  position: absolute;
+    top: 39%;
+  left: 169px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Adds a shadow to the text */
+}
+
+/* .connect-btn{
+  border: none;
+  margin-top: 14px;
+  margin-left: 36%;
+} */
+.bybtn3 {
+  border: none;
+  border-radius: 10px;
+  padding: 9px;
+  font-size: 19px;
+  width: 140px;
+}
+
+/* .report2 {
+margin: 0 96px 0px 0px;
+padding: 0 0 0 0;
+} */
+.card-img-top {
+  height: 228px;
+
+}
+
+.place-2 {
+  /* margin: 0px 0 0px -20px;  */
+  height: auto;
+  width: 100%;
+}
+
+/* Aishwarya */
+.button-la div button {
+  /*padding: 10px;*/
+  color: #243D71;
+  border-radius: 5px;
+  border: 0.1px solid #243D71;
+  background-color: white;
+  display: flex;
+  margin: auto;
+  height: 75px;
+  width: 200px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.button-la div button img {
+  height: 40px;
+  margin: 16px 10px;
+}
+
+
+.button-la div button p {
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding: 25px 0px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #233d71;
+  margin: auto;
+}
+/* 
+.button-la {
+  margin: 55px;
+} */
+
+.Advisory_para h5 {
+  /* font-weight: 600; */
+  color: #233d71;
+}
+
+/* .banner-text-adv h2{
+	display: inline;
+    margin-bottom: 100%;
+    font-size: 32px;
+    border-bottom: aliceblue solid 2px;
+    text-align: center;
+    font-weight: 600;
+} */
+/* .details {
+  display: inline;
+  margin-bottom: 110%;
+  font-size: 36px !important;
+  border-bottom:none !important;
+  width: 80%;
+  font-weight: 600;
+  text-align: left;
+} */
+
+/*.button-la div button:hover {*/
+/*  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);*/
+/*  transition: 0.3s ease-in-out, color 0.3s ease-in-out;*/
+/*}*/
+.button-la div button:hover {
+  box-shadow: 5px 5px 50px #243D71;
+  transition: 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* End */
+
+
+.banner-advisory {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('/assets/new-img/All-Website-Images/Land-Advisory/Land-Advisory-Banner-new.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.advisory-logo {
+  width: 65px;
+  height: auto;
+  padding-bottom: 18px;
+}
+
+.advisory-title {
+  font-size: 18px;
+  color: #243d71;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.container-advisory {
+  padding: 50px;
+}
+.advisory-discription{
+  font-size: 13px;
+}
+
+.row-2-space {
+  padding-top: 60px;
+}
+.text-center-logo2{
+  padding: 10px;
+}
+
+.text-center-logo2:hover{
+  transition: 0.6s ease-in-out;
+    box-shadow: 0 0 80px rgb(255 255 255), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 10px;
+  }
+.about_headings_adv-2 {
+    text-align: center;
+    margin: 35px 21px;
+    font-size: 40px;
+    color: #273d71;
+    font-weight: 700;
+}
+.abt-para {
+  padding: 6% 0%;
+  margin-left: 13%;
+}

@@ -1,0 +1,27 @@
+.custom {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 22.666667%;
+    max-width: 10.666667%;
+    padding: 0 3px 1px 10px;
+}
+
+
+.client-logo {
+    width: 155px;
+    height: auto;
+}
+
+.client-logo{
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+.client-logo:hover{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.under-logo-text {
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    margin: 14px 18px 0 -8px;
+}
