@@ -76,74 +76,77 @@ class Home_Admin_3 extends CI_Controller
 
 
 
-
     public function edit($id = null)
     {
         if ($id === null) {
             // Handle case where no ID is provided
             redirect('admin/Home_Admin_3/display_data');
         }
-
+    
         $this->load->model('Home_model_3');
         $data['id'] = $id;
-        $data['Banner'] = $this->Home_model_3->getBannerById($id); 
-
+        $data['Banner'] = $this->Home_model_3->getBannerById($id);
+    
         if ($this->input->post()) {
-            // Handle form submission
-
+            // Form submitted
+    
+            // Load upload library
             $this->load->library('upload');
-
+    
             // Configuration for file upload
-           
             $config['upload_path'] = './uploads/Home-page-icon/';
             $config['allowed_types'] = '*';
             $config['max_size'] = 4096;
             $this->upload->initialize($config);
-
+    
+            // Array to store uploaded file paths
             $uploaded_icons = array();
-
-                $fieldName = 'our_service_icon';
-                if (!empty($_FILES[$fieldName]['name'])) {
-                    if ($this->upload->do_upload($fieldName)) {
-                        $data = $this->upload->data();
-                        $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-                        $uploaded_icons[$fieldName] = $imagePath;
-                    } else {
-                        $this->session->set_flashdata('error', $this->upload->display_errors());
-                        redirect('admin/Home_Admin_3/edit/');
-                    }
+    
+            // Field name for file upload
+            $fieldName = 'our_service_icon';
+    
+            // Check if file is uploaded
+            if (!empty($_FILES[$fieldName]['name'])) {
+                // File uploaded
+                if ($this->upload->do_upload($fieldName)) {
+                    // Upload successful
+                    $data = $this->upload->data();
+                    $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
+                    $uploaded_icons[$fieldName] = $imagePath;
+                } else {
+                    // Upload failed, set flash message and redirect
+                    $this->session->set_flashdata('error', $this->upload->display_errors());
+                    redirect('admin/Home_Admin_3/edit/');
                 }
-
+            }
+    
             // Prepare data for database update
             $update_data = array(
                 'our_service_title' => $this->input->post('our_service_title'),
-                'our_service_icon' => $this->input->post('our_service_icon'),
                 'our_service_head' => $this->input->post('our_service_head'),
                 'our_service_desc' => $this->input->post('our_service_desc')
             );
-
+    
             // Merge uploaded icons with update data
             $update_data = array_merge($update_data, $uploaded_icons);
-
-            echo "<pre>";
-            print_r($update_data);
-            // exit;
-
+    
             // Update data in the database
             if ($this->Home_model_3->updateBanner($id, $update_data)) {
+                // Database update successful, set success flash message
                 $this->session->set_flashdata('success', 'Banner data updated successfully.');
             } else {
+                // Database update failed, set error flash message
                 $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
             }
-
+    
+            // Redirect to display data page
             redirect('admin/Home_Admin_3/display_data');
         }
-
+    
         // Load the edit view with banner data
         $this->load->view('admin/Home_admin_view_3/edit.php', $data);
     }
-
-
+    
 
 
 

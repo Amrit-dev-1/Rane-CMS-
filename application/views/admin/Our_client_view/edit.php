@@ -30,9 +30,9 @@
 
 
 
-										<?php for ($i = 1; $i <= 5; $i++) : ?>
+										<?php for ($i = 1; $i <= 8; $i++) : ?>
 											<div class="form-group">
-												<label for="our_client_<?php echo $i; ?>">Survey Icon <?php echo $i; ?></label>
+												<label for="our_client_<?php echo $i; ?>">Our Client Icon <?php echo $i; ?></label>
 												<input type="file" class="form-control-file" id="our_client_<?php echo $i; ?>" name="our_client_<?php echo $i; ?>">
 												<?php if (isset($Banner['our_client_' . $i])) : ?>
 													<img src="<?php echo base_url($Banner['our_client_' . $i]); ?>" class="img-fluid admin-img" alt="survey Banner <?php echo $i; ?>">
