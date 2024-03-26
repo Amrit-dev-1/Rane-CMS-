@@ -72,140 +72,121 @@ class Our_client_Admin extends CI_Controller
     }
 
 
-
-
-
-
-
-    // public function edit($id = null)
+    // public function edit()
     // {
-    //     $this->load->model('Our_client_model');
-    //     $data['id'] = $id;
-    //     $data['Banner'] = $this->Our_client_model->getBannerById($id);
 
-    //     // Print the POST data and uploaded files for debugging
-    //     // echo "<pre>";
-    //     // print_r($this->input->post());
-    //     // print_r($_FILES);
+    //     echo "<pre>";
+    //     print_r($this->input->post());
+    //     print_r($_FILES);
 
-    //     $this->load->library('upload');
+    //     $id = $this->input->post('id');
 
-    //     $config['upload_path'] = './uploads/Home-page-icon/';
-    //     $config['allowed_types'] = '*';
-    //     $config['max_size'] = 4096;
+    //     // Initialize an empty array to store uploaded image paths
+    //     $uploaded_images = array();
 
-    //     $this->upload->initialize($config);
+    //     // Loop through images 1 to 8
+    //     for ($i = 1; $i <= 8; $i++) {
+    //         $field_name = 'our_client_' . $i;
 
-    //     $uploaded_icons = array();
+    //         // Check if a new image is uploaded
+    //         if (!empty($_FILES[$field_name]['name'])) {
+    //             $this->load->library('upload');
 
-    //     foreach ($_FILES as $field_name => $file_data) {
-    //         if (!empty($file_data['name'])) {
+    //             $config['upload_path'] = './uploads/Home-page-icon/';
+    //             $config['allowed_types'] = 'gif|jpg|png';
+    //             $config['max_size'] = 4096;
+
+    //             $this->upload->initialize($config);
+
     //             if ($this->upload->do_upload($field_name)) {
-    //                 $data = $this->upload->data();
-    //                 $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-    //                 $uploaded_icons[$field_name] = $imagePath;
+    //                 // Store the uploaded image path
+    //                 $uploaded_images[$field_name] = 'uploads/Home-page-icon/' . $this->upload->data('file_name');
     //             } else {
+    //                 // If upload fails, set flashdata error message and redirect back to edit page
     //                 $this->session->set_flashdata('error', $this->upload->display_errors());
-    //                 redirect('admin/Our_client_view/edit/');
+    //                 redirect('admin/Our_client_Admin/edit/' . $id);
     //             }
     //         }
     //     }
 
-    //     $update_data = $uploaded_icons;
-
-    //     // Print the updated data for debugging
-    //     // echo "<pre>";
-    //     // print_r($update_data);
-    //     // exit;
-
-    //     if ($this->Our_client_model->updateBanner($id, $update_data)) {
-    //         $this->session->set_flashdata('success', 'Banner data updated successfully.');
+    //     // Update the database with the new image paths
+    //     if ($this->Our_client_model->updateBanner($id, $uploaded_images)) {
+    //         $this->session->set_flashdata('success', 'Data updated successfully.');
     //     } else {
-    //         $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
+    //         $this->session->set_flashdata('error', 'Failed to update data.');
     //     }
 
-    //     redirect('admin/Our_client_Admin/edit/');
+    //     redirect('admin/Our_client_Admin/display_data');
     // }
 
 
 
-    public function edit($id = null)
+    public function edit($id)
     {
-        if ($id === null) {
-            // Handle case where no ID is provided
-            redirect('admin/Our_client_view/display_data');
-        }
+
+        $data['Banner'] = $this->Our_client_model->getHomepageData($id);
+        echo "<pre>";
+        print_r($data['Banner']);
+        echo "</pre>";
+        // Check if form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Handle form submission
+            
+            // Debug: Print received form data
+            echo "<pre>";
+            print_r($this->input->post());
+            print_r($_FILES);
     
-        $this->load->model('Our_client_model');
-        $data['id'] = $id;
-        $data['Banner'] = $this->Our_client_model->getBannerById($id);
+            // Retrieve the ID from the form data
+            $id = $this->input->post('id');
     
-        if ($this->input->post()) {
-            // Form submitted
+            // Initialize an empty array to store uploaded image paths
+            $uploaded_images = array();
     
-            // Load upload library
-            $this->load->library('upload');
+            // Loop through images 1 to 8
+            for ($i = 1; $i <= 8; $i++) {
+                $field_name = 'our_client_' . $i;
     
-            // Configuration for file upload
-            $config['upload_path'] = './uploads/Home-page-icon/';
-            $config['allowed_types'] = '*';
-            $config['max_size'] = 4096;
-            $this->upload->initialize($config);
+                // Check if a new image is uploaded
+                if (!empty($_FILES[$field_name]['name'])) {
+                    $this->load->library('upload');
     
-            // Array to store uploaded file paths
-            $uploaded_icons = array();
+                    $config['upload_path'] = './uploads/Home-page-icon/';
+                    $config['allowed_types'] = 'gif|jpg|png';
+                    $config['max_size'] = 4096;
     
-            // Field name for file upload
-            $fieldName = 'our_service_icon';
+                    $this->upload->initialize($config);
     
-            // Check if file is uploaded
-            if (!empty($_FILES[$fieldName]['name'])) {
-                // File uploaded
-                if ($this->upload->do_upload($fieldName)) {
-                    // Upload successful
-                    $data = $this->upload->data();
-                    $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-                    $uploaded_icons[$fieldName] = $imagePath;
-                } else {
-                    // Upload failed, set flash message and redirect
-                    $this->session->set_flashdata('error', $this->upload->display_errors());
-                    redirect('admin/Our_client_view/edit/');
+                    if ($this->upload->do_upload($field_name)) {
+                        // Store the uploaded image path
+                        $uploaded_images[$field_name] = 'uploads/Home-page-icon/' . $this->upload->data('file_name');
+                    } else {
+                        // If upload fails, set flashdata error message and redirect back to edit page
+                        $this->session->set_flashdata('error', $this->upload->display_errors());
+                        redirect('admin/Our_client_Admin/edit/' . $id);
+                    }
                 }
             }
     
-            // Prepare data for database update
-            $update_data = array(
-                // 'our_service_title' => $this->input->post('our_service_title'),
-                // 'our_service_head' => $this->input->post('our_service_head'),
-                // 'our_service_desc' => $this->input->post('our_service_desc')
-            );
-    
-            // Merge uploaded icons with update data
-            $update_data = array_merge($update_data, $uploaded_icons);
-    
-            // Update data in the database
-            if ($this->Our_client_model->updateBanner($id, $update_data)) {
-                // Database update successful, set success flash message
-                $this->session->set_flashdata('success', 'Banner data updated successfully.');
+            // Update the database with the new image paths
+            if ($this->Our_client_model->updateBanner($id, $uploaded_images)) {
+                $this->session->set_flashdata('success', 'Data updated successfully.');
             } else {
-                // Database update failed, set error flash message
-                $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
+                $this->session->set_flashdata('error', 'Failed to update data.');
             }
     
-            // Redirect to display data page
-            redirect('admin/Our_client_view/display_data');
+            redirect('admin/Our_client_Admin/display_data');
+        } else {
+            // Display the edit form
+            $data['id'] = $id;
+            $this->load->view('admin/Our_client_view/edit.php', $data);
         }
-    
-        // Load the edit view with banner data
-        $this->load->view('admin/Our_client_view/edit.php', $data);
     }
+    
 
 
 
-
-
-
-
+ 
     public function delete($id = null)
     {
         if ($id === null) {

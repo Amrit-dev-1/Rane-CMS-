@@ -46,18 +46,18 @@ class Our_client_model extends CI_Model
 
     // edit code 
 
-    public function getBannerById($id) {
+    public function getBannerById($id)
+    {
         $query = $this->db->get_where('our_client', array('id' => $id));
         return $query->row_array();
     }
 
+    // In your Our_client_model
+
     public function updateBanner($id, $data)
     {
-        $this->db->where('id', $id); 
-        $this->db->set($data); 
-        return $this->db->update('our_client'); 
+        $this->db->where('id', $id);
+        $this->db->set($data);
+        return $this->db->update('our_client');
     }
-    
-   
-
 }
