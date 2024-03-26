@@ -52,9 +52,16 @@ class Our_client_model extends CI_Model
     }
 
 
+    // public function updateBanner($id, $data)
+    // {
+    //     $this->db->where( $id);
+    //     return $this->db->update('our_client', $data);
+    // }
     public function updateBanner($id, $data)
     {
         $this->db->where('ID', $id);
-        return $this->db->update('our_client', $data);
+        $this->db->set($data); 
+        return $this->db->update('our_client');
     }
+
 }

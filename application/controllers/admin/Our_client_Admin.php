@@ -22,60 +22,120 @@ class Our_client_Admin extends CI_Controller
     }
 
 
-    // public function add()
-    // {
-    //     if ($this->input->post()) {
-    //         $this->load->library('upload');
-
-    //         $config['upload_path'] = './uploads/Home-page-icon/';
-    //         $config['allowed_types'] = '*';
-    //         $config['max_size'] = 4096;
-
-    //         $this->upload->initialize($config);
-
-    //         $uploaded_icons = array();
-
-    //         if (!empty($_FILES['our_service_icon' ])) {
-    //             if ($this->upload->do_upload('our_service_icon' )) {
-    //                 $data = $this->upload->data();
-    //                 $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-    //                 $uploaded_icons['our_service_icon'] = $imagePath;
-    //             } else {
-    //                 $this->session->set_flashdata('error', $this->upload->display_errors());
-    //             }
-    //         }
-
-
-    //         $our_service_data = array(
-    //             'our_service_title' => $this->input->post('our_service_title'),
-    //             'our_service_icon' => $this->input->post('our_service_icon'),
-    //             'our_service_head' => $this->input->post('our_service_head'),
-    //             'our_service_desc' => $this->input->post('our_service_desc')
-    //         );
-
-
-
-    //         $our_service_data = array_merge($our_service_data, $uploaded_icons);
-
-    //         echo "<pre>";
-    //         print_r($our_service_data);
-    //         // exit;
-
-    //         if ($this->Our_client_model->insertBanner($our_service_data)) {
-    //             $this->session->set_flashdata('success', 'Service data inserted successfully.');
-    //         } else {
-    //             $this->session->set_flashdata('error', 'Error occurred while inserting service data.');
-    //         }
-
-    //         redirect('admin/Home_Admin_3/display_data');
-    //     } else {
-    //         $this->load->view('admin/Home_admin_view_3/add.php');
-    //     }
-    // }
 
     public function add()
-{
-    if ($this->input->post()) {
+    {
+        // echo "<pre>";
+        // print_r($this->input->post());
+        // print_r($_FILES);
+
+        if (!empty($_FILES)) {
+            $this->load->library('upload');
+
+            $config['upload_path'] = './uploads/Home-page-icon/';
+            $config['allowed_types'] = '*';
+            $config['max_size'] = 4096;
+
+            $this->upload->initialize($config);
+
+            $uploaded_icons = array();
+
+            foreach ($_FILES as $field_name => $file_data) {
+                if ($this->upload->do_upload($field_name)) {
+                    $data = $this->upload->data();
+                    $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
+                    $uploaded_icons[$field_name] = $imagePath;
+                } else {
+
+                    $this->session->set_flashdata('error', $this->upload->display_errors());
+                }
+            }
+
+            echo '<pre>';
+            print_r($uploaded_icons);
+            // exit();
+
+            if (!empty($uploaded_icons)) {
+                if ($this->Our_client_model->insertBanner($uploaded_icons)) {
+                    $this->session->set_flashdata('success', 'Service data inserted successfully.');
+                } else {
+                    $this->session->set_flashdata('error', 'Error occurred while inserting service data.');
+                }
+            } else {
+                $this->session->set_flashdata('error', 'No files were uploaded.');
+            }
+
+            redirect('admin/Our_client_Admin/display_data');
+        } else {
+            $this->load->view('admin/Our_client_view/add.php');
+        }
+    }
+
+
+
+
+
+
+
+    // public function edit($id = null)
+    // {
+    //     $this->load->model('Our_client_model');
+    //     $data['id'] = $id;
+    //     $data['Banner'] = $this->Our_client_model->getBannerById($id);
+
+    //     // Print the POST data and uploaded files for debugging
+    //     // echo "<pre>";
+    //     // print_r($this->input->post());
+    //     // print_r($_FILES);
+
+    //     $this->load->library('upload');
+
+    //     $config['upload_path'] = './uploads/Home-page-icon/';
+    //     $config['allowed_types'] = '*';
+    //     $config['max_size'] = 4096;
+
+    //     $this->upload->initialize($config);
+
+    //     $uploaded_icons = array();
+
+    //     foreach ($_FILES as $field_name => $file_data) {
+    //         if (!empty($file_data['name'])) {
+    //             if ($this->upload->do_upload($field_name)) {
+    //                 $data = $this->upload->data();
+    //                 $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
+    //                 $uploaded_icons[$field_name] = $imagePath;
+    //             } else {
+    //                 $this->session->set_flashdata('error', $this->upload->display_errors());
+    //                 redirect('admin/Home_Admin_3/edit/');
+    //             }
+    //         }
+    //     }
+
+    //     $update_data = $uploaded_icons;
+
+    //     // Print the updated data for debugging
+    //     // echo "<pre>";
+    //     // print_r($update_data);
+    //     // exit;
+
+    //     if ($this->Our_client_model->updateBanner($id, $update_data)) {
+    //         $this->session->set_flashdata('success', 'Banner data updated successfully.');
+    //     } else {
+    //         $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
+    //     }
+
+    //     redirect('admin/Our_client_Admin/edit/');
+    // }
+
+
+
+
+    public function edit($id = null)
+    {
+        $this->load->model('Our_client_model');
+        $data['id'] = $id;
+        $data['Banner'] = $this->Our_client_model->getBannerById($id);
+
         $this->load->library('upload');
 
         $config['upload_path'] = './uploads/Home-page-icon/';
@@ -84,113 +144,35 @@ class Our_client_Admin extends CI_Controller
 
         $this->upload->initialize($config);
 
+        // Array to store uploaded file paths
         $uploaded_icons = array();
 
-        // Loop through each our_client field
-        for ($i = 1; $i <= 8; $i++) {
-            // Check if the our_client_$i file is uploaded
-            if (!empty($_FILES['our_client_' . $i]['name'])) {
-                if ($this->upload->do_upload('our_client_' . $i)) {
+        // Loop through each file input
+        foreach ($_FILES as $field_name => $file_data) {
+            if (!empty($file_data['name'])) {
+                // If a file is uploaded for this field
+                if ($this->upload->do_upload($field_name)) {
                     $data = $this->upload->data();
                     $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-                    $field_name = 'our_client_' . $i;
                     $uploaded_icons[$field_name] = $imagePath;
                 } else {
+                    // Handle upload errors
                     $this->session->set_flashdata('error', $this->upload->display_errors());
+                    redirect('admin/Home_Admin_3/edit/');
                 }
             }
         }
 
-        // Insert data into the database
-        if (!empty($uploaded_icons)) {
-            if ($this->Our_client_model->insertBanner($uploaded_icons)) {
-                $this->session->set_flashdata('success', 'Service data inserted successfully.');
-            } else {
-                $this->session->set_flashdata('error', 'Error occurred while inserting service data.');
-            }
+        // Update the banner data using the Our_client_model
+        if ($this->Our_client_model->updateBanner($id, $uploaded_icons)) {
+            $this->session->set_flashdata('success', 'Banner data updated successfully.');
         } else {
-            $this->session->set_flashdata('error', 'No files were uploaded.');
+            $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
         }
 
-        // Redirect to display data page
-        redirect('admin/Home_Admin_3/display_data');
-    } else {
-        // If not a POST request, load the form view
-        $this->load->view('admin/Home_admin_view_3/add.php');
+        // Redirect to the edit page
+        redirect('admin/Our_client_Admin/edit/');
     }
-}
-
-
-
-
-
-
-    public function edit($id = null)
-    {
-        if ($id === null) {
-            // Handle case where no ID is provided
-            redirect('admin/Home_Admin_3/display_data');
-        }
-
-        $this->load->model('Our_client_model');
-        $data['id'] = $id;
-        $data['Banner'] = $this->Our_client_model->getBannerById($id); 
-
-        if ($this->input->post()) {
-            // Handle form submission
-
-            $this->load->library('upload');
-
-            // Configuration for file upload
-           
-            $config['upload_path'] = './uploads/Home-page-icon/';
-            $config['allowed_types'] = '*';
-            $config['max_size'] = 4096;
-            $this->upload->initialize($config);
-
-            $uploaded_icons = array();
-
-                $fieldName = 'our_service_icon';
-                if (!empty($_FILES[$fieldName]['name'])) {
-                    if ($this->upload->do_upload($fieldName)) {
-                        $data = $this->upload->data();
-                        $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
-                        $uploaded_icons[$fieldName] = $imagePath;
-                    } else {
-                        $this->session->set_flashdata('error', $this->upload->display_errors());
-                        redirect('admin/Home_Admin_3/edit/');
-                    }
-                }
-
-            // Prepare data for database update
-            $update_data = array(
-                'our_service_title' => $this->input->post('our_service_title'),
-                'our_service_icon' => $this->input->post('our_service_icon'),
-                'our_service_head' => $this->input->post('our_service_head'),
-                'our_service_desc' => $this->input->post('our_service_desc')
-            );
-
-            // Merge uploaded icons with update data
-            $update_data = array_merge($update_data, $uploaded_icons);
-
-            echo "<pre>";
-            print_r($update_data);
-            // exit;
-
-            // Update data in the database
-            if ($this->Our_client_model->updateBanner($id, $update_data)) {
-                $this->session->set_flashdata('success', 'Banner data updated successfully.');
-            } else {
-                $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
-            }
-
-            redirect('admin/Home_Admin_3/display_data');
-        }
-
-        // Load the edit view with banner data
-        $this->load->view('admin/Home_admin_view_3/edit.php', $data);
-    }
-
 
 
 
@@ -209,6 +191,6 @@ class Our_client_Admin extends CI_Controller
             }
         }
 
-        redirect('admin/Home_Admin_3/display_data');
+        redirect('admin/Our_client_Admin/display_data');
     }
 }

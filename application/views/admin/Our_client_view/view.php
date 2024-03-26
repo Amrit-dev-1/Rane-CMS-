@@ -90,10 +90,10 @@
 
                           
 
-                            <!-- <td>
-                              <a href="<?php echo base_url('admin/Our_client_Admin/edit/' . $banner_item['ID']); ?>" class="btn btn-info">Edit</a>
-                              <a href="<?php echo base_url('admin/Our_client_Admin/delete/' . $banner_item['ID']); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
-                            </td> -->
+                            <td>
+                              <a href="<?php echo base_url('admin/Our_client_Admin/edit/' . $banner_item['id']); ?>" class="btn btn-info">Edit</a>
+                              <a href="<?php echo base_url('admin/Our_client_Admin/delete/' . $banner_item['id']); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
+                            </td>
 
                           </tr>
                         <?php endforeach; ?>
