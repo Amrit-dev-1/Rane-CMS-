@@ -95,21 +95,16 @@ class Home_Admin_2 extends CI_Controller
         $data['Banner'] = $this->Home_model_2->getBannerById($id); // Adjust this method according to your model
 
         if ($this->input->post()) {
-            // Handle form submission
 
-            // Load necessary libraries
             $this->load->library('upload');
 
-            // Configuration for file upload
             $config['upload_path'] = './uploads/Home-page';
             $config['allowed_types'] = '*';
             $config['max_size'] = 4096;
             $this->upload->initialize($config);
 
-            // Array to store uploaded images
             $uploaded_icons = array();
 
-            // Loop through each property card image to handle its upload
             for ($i = 1; $i <= 3; $i++) {
                 $fieldName = 'Properties_card_image_' . $i;
                 if (!empty($_FILES[$fieldName]['name'])) {
@@ -118,7 +113,6 @@ class Home_Admin_2 extends CI_Controller
                         $imagePath = 'uploads/Home-page/' . $data['file_name'];
                         $uploaded_icons[$fieldName] = $imagePath;
                     } else {
-                        // Handle upload errors
                         $this->session->set_flashdata('error', $this->upload->display_errors());
                         redirect('admin/Home_Admin_2/edit/' . $id);
                     }

@@ -23,7 +23,7 @@
         width: 80% !important;
         height: auto;
         display: block;
-        margin:auto;
+        margin: auto;
     }
 
     .client {
@@ -47,49 +47,49 @@
 </style>
 <!-- <div class="row"> -->
 <div style="margin: 40px 0px">
-   <!--<h2 class="about_heading"><span class="decoration"> Our</span> Client </h2>-->
-    <h2 class="about_headings Experience-font" > <strong>
-                <span class="decoration">Our</span> Client
-            </strong>
-        </h2>
+    <!--<h2 class="about_heading"><span class="decoration"> Our</span> Client </h2>-->
+    <h2 class="about_headings Experience-font"> <strong>
+            <span class="decoration">Our</span> Client
+        </strong>
+    </h2>
 
-<div class="client-carousel col-sm-6 col-md-9 col-xl-6">
-    <div class="owl-carousel">
-        <div class="client-logos-slider">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Cidco-Color-Logo-01.webp" alt="logo1" class=" client-logo img-fluid">
+    <div class="client-carousel col-sm-6 col-md-9 col-xl-6">
+        <div class="owl-carousel">
+            <div class="client-logos-slider">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Cidco-Color-Logo-01.webp" alt="logo1" class=" client-logo img-fluid">
+
+            </div>
+            <div class="client-logos-slider ">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/DFC-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
+
+            </div>
+            <div class="client-logos-slider ">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Suez-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+
+            </div>
+            <div class=" client-logos-slider">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MMRD-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
+            </div>
+
+            <!-- 2nd row -->
+            <div class="client-logos-slider ">
+                <img src="<?php base_url(); ?>assets/image/Client/Color/Reliance Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
+            </div>
+            <div class=" client-logos-slider">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/NHAI-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+
+            </div>
+            <div class="client-logos-slider ">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/RNVL-Color-Logo-01.webp" alt="logo1" class="client-logo img-fluid">
+
+            </div>
+            <div class=" client-logos-slider">
+                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MSRDC-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+
+            </div>
 
         </div>
-        <div class="client-logos-slider ">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/DFC-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
-
-        </div>
-        <div class="client-logos-slider ">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Suez-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
-
-        </div>
-        <div class=" client-logos-slider">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MMRD-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
-        </div>
-
-        <!-- 2nd row -->
-        <div class="client-logos-slider ">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/Reliance Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class=" client-logos-slider">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/NHAI-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
-
-        </div>
-        <div class="client-logos-slider ">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/RNVL-Color-Logo-01.webp" alt="logo1" class="client-logo img-fluid">
-
-        </div>
-        <div class=" client-logos-slider">
-            <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MSRDC-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
-
-        </div>
-
     </div>
-</div>
 </div>
 <!-- </div> -->
 
