@@ -1,24 +1,24 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Service2_admin_view extends CI_Controller
+class About_Us_Admin_1 extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Service_2_model');
+        $this->load->model('About_Us_model_1');
         $this->load->library('session');
     }
 
     public function display_data()
     {
-        $data['services'] = $this->Service_2_model->get_all_data();
+        $data['services'] = $this->About_Us_model_1->get_all_data();
 
         //var_dump($data);exit;
 
-        // $this->load->view('admin/Service_2_section/view', $data);
-        $this->load->view('admin/Service_2_section/view', $data);
+        // $this->load->view('admin/Aboutus_admin_view_1/view', $data);
+        $this->load->view('admin/Aboutus_admin_view_1/view', $data);
     }
 
 
@@ -65,7 +65,7 @@ class Service2_admin_view extends CI_Controller
 
                 $data = array_merge($data, $client_images);
 
-                $result = $this->Service_2_model->add($data);
+                $result = $this->About_Us_model_1->add($data);
 
                 if ($result) {
                     $this->session->set_flashdata('success', 'Data inserted successfully.');
@@ -76,9 +76,9 @@ class Service2_admin_view extends CI_Controller
                 $this->session->set_flashdata('error', $this->upload->display_errors());
             }
 
-            redirect('admin/Service2_admin_view/display_data');
+            redirect('admin/Aboutus_admin_view_1/display_data');
         } else {
-            $this->load->view('admin/Service_2_section/add');
+            $this->load->view('admin/Aboutus_admin_view_1/add');
         }
     }
 
@@ -104,7 +104,7 @@ class Service2_admin_view extends CI_Controller
                     $main_img = $main_img_data['file_name']; // Separate variable for main image
                 } else {
                     $this->session->set_flashdata('error', $this->upload->display_errors());
-                    redirect('admin/Service2_admin_view/edit/' . $id);
+                    redirect('admin/Aboutus_admin_view_1/edit/' . $id);
                 }
             }
     
@@ -123,7 +123,7 @@ class Service2_admin_view extends CI_Controller
                         $client_images[$i] = $client_img_data['file_name'];
                     } else {
                         $this->session->set_flashdata('error', $this->upload->display_errors());
-                        redirect('admin/service2_admin_view/edit/' . $id);
+                        redirect('admin/Aboutus_admin_view_1/edit/' . $id);
                     }
                 }
             }
@@ -151,7 +151,7 @@ class Service2_admin_view extends CI_Controller
             }
     
             // Call model to update data
-            $result = $this->Service_2_model->edit($id, $data);
+            $result = $this->About_Us_model_1->edit($id, $data);
     
             // Set flash messages based on result
             if ($result) {
@@ -161,11 +161,11 @@ class Service2_admin_view extends CI_Controller
             }
     
             // Redirect to appropriate page
-            redirect('admin/service2_admin_view/display_data');
+            redirect('admin/Aboutus_admin_view_1/display_data');
         } else {
             // Load the data of the service to be edited
-            $data['service'] = $this->Service_2_model->get_service_by_id($id);
-            $this->load->view('admin/Service_2_section/edit', $data);
+            $data['service'] = $this->About_Us_model_1->get_service_by_id($id);
+            $this->load->view('admin/Aboutus_admin_view_1/edit', $data);
         }
     }
 
@@ -173,10 +173,10 @@ class Service2_admin_view extends CI_Controller
     {
         if ($id === null) {
             $this->session->set_flashdata('error', 'Invalid ID.');
-            redirect('admin/service2_admin_view/display_data');
+            redirect('admin/Aboutus_admin_view_1/display_data');
         }
 
-        $result = $this->Service_2_model->delete($id);
+        $result = $this->About_Us_model_1->delete($id);
 
         if ($result) {
             $this->session->set_flashdata('success', 'Data deleted successfully.');
@@ -184,7 +184,7 @@ class Service2_admin_view extends CI_Controller
             $this->session->set_flashdata('error', 'Error occurred while deleting data.');
         }
 
-        redirect('admin/service2_admin_view/display_data');
+        redirect('admin/Aboutus_admin_view_1/display_data');
     }
 }
 

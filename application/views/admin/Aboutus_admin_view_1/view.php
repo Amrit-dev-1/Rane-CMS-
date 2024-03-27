@@ -38,7 +38,7 @@
                 <div class="card-header">
                   <h3 class="card-title">Land Acquisition</h3>
                   <div class="card-tools">
-                    <a href="<?php echo base_url() ?>admin/service2_admin_view/add">
+                    <a href="<?php echo base_url() ?>admin/Aboutus_admin_view_1/add">
                       <button type="button" class="btn btn-success">
                         <i class="fas fa-plus"></i> Add New
                       </button>
@@ -50,21 +50,20 @@
                   <table id="example1" class="table table-bordered table-hover">
                     <thead>
                       <tr>
-                        <th>Main image</th>
-                        <th>Title</th>
+                        <th>Our Story Title</th>
+                        <th>Our Story Content</th>
 
-                        <th>Content</th>
-                        <th>client image 1</th>
-                        <th>client image 2</th>
-                        <th>client image 3</th>
-                        <th>client image 4</th>
-                        <th>client Description 1</th>
-                        <th>client Description 2</th>
-                        <th>client Description 3</th>
-                        <th>client Description 4</th>
-                        <th>key_feature_1</th>
-                        <th>key_feature_2</th>
-                        <th></th>
+                        <th>Our Vision Title</th>
+                        <th>Our Vision Content </th>
+                        <th>Our Vision Image</th>
+
+                        <th>Our Mission Title</th>
+                        <th>Our Mission Content </th>
+                        <th>Our Mission Image </th>
+                        <th>Action</th>
+
+                       
+                       
 
                         <!-- Include other table headers here -->
                       </tr>
@@ -74,30 +73,29 @@
                         <?php foreach ($services as $service) : ?>
                           <tr>
 
-                            <td><img src="<?php echo base_url('uploads/Main-img/' . $service->main_img); ?>" class="img-fluid" alt="Main Image"></td>
 
 
 
-                            <td><?php echo $service->title; ?></td>
-                            <td><?php echo $service->content; ?></td>
+                            <td><?php echo $service->our_story_titile; ?></td>
+                            <td><?php echo $service->our_story_para; ?></td>
 
-                            <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_1); ?>" class="img-fluid" alt="Client Image 1"></td>
+                            <!-- <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_1); ?>" class="img-fluid" alt="Client Image 1"></td>
                             <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_2); ?>" class="img-fluid" alt="Client Image 2"></td>
                             <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_3); ?>" class="img-fluid" alt="Client Image 3"></td>
-                            <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_4); ?>" class="img-fluid" alt="Client Image 4"></td>
+                            <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_4); ?>" class="img-fluid" alt="Client Image 4"></td> -->
 
 
 
-                            <td><?php echo $service->client_des_1; ?></td>
-                            <td><?php echo $service->client_des_2; ?></td>
-                            <td><?php echo $service->client_des_3; ?></td>
-                            <td><?php echo $service->client_des_4; ?></td>
-                            <td><?php echo $service->key_feature_1; ?></td>
-                            <td><?php echo $service->key_feature_2; ?></td>
+                            <td><?php echo $service->our_vision_title; ?></td>
+                            <td><?php echo $service->our_vision_para; ?></td>
+                            <td><?php echo $service->our_vision_img; ?></td>
+                            <td><?php echo $service->our_mission_title; ?></td>
+                            <td><?php echo $service->our_mission_para; ?></td>
+                            <td><?php echo $service->our_mission_img; ?></td>
                             <td>
-                              <a href="<?php echo base_url() ?>admin/service2_admin_view/edit/<?php echo $service->id; ?>" class="btn btn-info">Edit</a>
+                              <a href="<?php echo base_url() ?>admin/Aboutus_admin_view_1/edit/<?php echo $service->id; ?>" class="btn btn-info">Edit</a>
                        
-                              <a href="<?php echo base_url() ?>admin/service2_admin_view/delete/<?php echo $service->id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
+                              <a href="<?php echo base_url() ?>admin/Aboutus_admin_view_1/delete/<?php echo $service->id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
                             </td>
                           </tr>
                         <?php endforeach; ?>
