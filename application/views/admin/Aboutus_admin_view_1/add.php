@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card card-default">
 
-				<form action="<?php echo base_url(); ?>admin/service2_admin_view/add" method="POST" enctype="multipart/form-data">
+				<form action="<?php echo base_url(); ?>admin/About_Us_Admin_1/add" method="POST" enctype="multipart/form-data">
 
 
 
@@ -31,59 +31,51 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="main_img">Main Image</label>
-									<input type="file" class="form-control" name="main_img" id="main_img" required>
+									<label for="main_img">Our Story Title</label>
+									<input type="text" class="form-control" name="our_story_titile" id="our_story_titile" required>
+								</div>
+
+								<div class="form-group">
+									<label for="title">Our Story Content</label>
+									<textarea class="form-control" name="our_story_para" id="our_story_para" rows="3" required></textarea>
+								</div>
+
+
+								<div class="form-group">
+									<label for="content">Our Vision</label>
+									<input type="text" class="form-control" name="our_vision_title" id="our_vision_title" required>
 								</div>
 								<div class="form-group">
-									<label for="title">Title</label>
-									<input type="text" class="form-control" name="title" id="title" required>
+									<label for="title">Our Vision Content</label>
+									<textarea class="form-control" name="our_vision_para" id="our_vision_para" rows="3" required></textarea>
+								</div>
+
+
+
+								<div class="form-group">
+									<label for="client_image_1"> Our Vision Image </label>
+									<input type="file" class="form-control" name="our_vision_img" id="our_vision_img" required>
+								</div>
+
+
+
+
+								<div class="form-group">
+									<label for="client_des_1">Our Mission Title</label>
+									<input type="text" class="form-control" name="our_mission_title" id="our_mission_title" required>
 								</div>
 								<div class="form-group">
-									<label for="content">Content</label>
-									<textarea class="form-control" name="content" id="content" rows="3" required></textarea>
+									<label for="title">Our Mission Content</label>
+									<textarea class="form-control" name="our_mission_para" id="our_mission_para" rows="3" required></textarea>
 								</div>
-								<div class="form-group">
-									<label for="client_image_1">Client Image 1</label>
-									<input type="file" class="form-control" name="client_image_1" id="client_image_1" required>
-								</div>
-								<div class="form-group">
-									<label for="client_des_1">Client Description 1</label>
-									<input type="text" class="form-control" name="client_des_1" id="client_des_1" required>
-								</div>
-								<div class="form-group">
-									<label for="key_feature_1">Key Feature 1</label>
-									<input type="text" class="form-control" name="key_feature_1" id="key_feature_1" required>
-								</div>
+
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="client_image_2">Client Image 2</label>
-									<input type="file" class="form-control" name="client_image_2" id="client_image_2" required>
+									<label for="client_image_2"> Our Mission Image </label>
+									<input type="file" class="form-control" name="our_mission_img" id="our_mission_img" required>
 								</div>
-								<div class="form-group">
-									<label for="client_des_2">Client Description 2</label>
-									<input type="text" class="form-control" name="client_des_2" id="client_des_2" required>
-								</div>
-								<div class="form-group">
-									<label for="client_image_3">Client Image 3</label>
-									<input type="file" class="form-control" name="client_image_3" id="client_image_3" required>
-								</div>
-								<div class="form-group">
-									<label for="client_des_3">Client Description 3</label>
-									<input type="text" class="form-control" name="client_des_3" id="client_des_3" required>
-								</div>
-								<div class="form-group">
-									<label for="client_image_4">Client Image 4</label>
-									<input type="file" class="form-control" name="client_image_4" id="client_image_4" required>
-								</div>
-								<div class="form-group">
-									<label for="client_des_4">Client Description 4</label>
-									<input type="text" class="form-control" name="client_des_4" id="client_des_4" required>
-								</div>
-								<div class="form-group">
-									<label for="key_feature_2">Key Feature 2</label>
-									<input type="text" class="form-control" name="key_feature_2" id="key_feature_2" required>
-								</div>
+								
 							</div>
 						</div>
 					</div>

@@ -39,179 +39,129 @@
 				<!-- /.card-header -->
 				<!--<div class="card-body">-->
 				<!-- form start -->
-				<form id="demo-form2" action="<?php echo base_url(); ?>admin/service2_admin_view/edit" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
+				<form id="demo-form2" action="<?php echo base_url(); ?>admin/About_Us_Admin_1/edit" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
 
 					<input type="hidden" id="id" required="required" class="form-control" name="id" value="<?php echo $service['id']; ?>">
 
 
-					<div class="item form-group">
+					<!-- <div class="item form-group">
 						<label class="col-form-label col-md-3 col-sm-3 label-align" for="main-img">Main Image</label>
 						<div class="col-md-6 col-sm-6">
-							<!-- Existing image display -->
+		
 							<img src="<?php echo base_url('uploads/Main-img/' . $service['main_img']); ?>" alt="Main Image" width="100">
 							<br>
-							<!-- Input for new image -->
+
 							<input type="file" id="main-img" class="form-control" name="main-img">
 							<div class="error"><?php echo form_error('main-img'); ?></div>
 						</div>
-					</div>
+					</div> -->
 
 
 					<div class="item form-group">
 
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title<span class="required">*</span></label>
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">our_story_titile<span class="required">*</span></label>
 
 						<div class="col-md-6 col-sm-6 ">
-							<input type="text" id="title" required="required" class="form-control" name="title" value="<?php echo $service['title']; ?>">
-							<div class="error"><?php echo form_error('title'); ?></div>
+							<input type="text" id="title" required="required" class="form-control" name="our_story_titile" value="<?php echo $service['our_story_titile']; ?>">
+							<div class="error"><?php echo form_error('our_story_titile'); ?></div>
 						</div>
 
 					</div>
 
 					<div class="item form-group">
 
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Content</label>
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Our Story Para</label>
 
 						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="content"><?php echo $service['content']; ?></textarea>
-							<div class="error"><?php echo form_error('content'); ?></div>
+							<textarea class="form-control" name="our_story_para"><?php echo $service['our_story_para']; ?></textarea>
+							<div class="error"><?php echo form_error('our_story_para'); ?></div>
+						</div>
+
+					</div>
+
+
+
+					<!-- vision -->
+
+					<div class="item form-group">
+
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">our_vision_title<span class="required">*</span></label>
+
+						<div class="col-md-6 col-sm-6 ">
+							<input type="text" id="title" required="required" class="form-control" name="our_vision_title" value="<?php echo $service['our_vision_title']; ?>">
+							<div class="error"><?php echo form_error('our_vision_title'); ?></div>
 						</div>
 
 					</div>
 
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="client_image_1">Client Image 1</label>
+
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Our vision Para</label>
+
+						<div class="col-md-6 col-sm-6 ">
+							<textarea class="form-control" name="our_vision_para"><?php echo $service['our_vision_para']; ?></textarea>
+							<div class="error"><?php echo form_error('our_vision_para'); ?></div>
+						</div>
+
+					</div>
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="main-img">Our vision image</label>
 						<div class="col-md-6 col-sm-6">
-							<!-- Existing image display -->
-							<img src="<?php echo base_url('uploads/Logo/' . $service['client_image_1']); ?>" alt="Client Image 1" width="100">
+
+							<img src="<?php echo base_url('uploads/About-us/' . $service['our_vision_img']); ?>" alt="Main Image" width="100">
 							<br>
-							<!-- Input for new image -->
-							<input type="file" id="client_image_1" class="form-control" name="client_image_1">
-							<div class="error"><?php echo form_error('client_image_1'); ?></div>
+
+							<input type="file" id="our_vision_img" class="form-control" name="our_vision_img">
+							<div class="error"><?php echo form_error('main-img'); ?></div>
 						</div>
 					</div>
+					<!-- vision -->
 
 
-					
+
+					<!-- mission -->
+
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="client_image_2">Client Image 2</label>
+
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">our_mission_title<span class="required">*</span></label>
+
+						<div class="col-md-6 col-sm-6 ">
+							<input type="text" id="our_mission_title" required="required" class="form-control" name="our_mission_title" value="<?php echo $service['our_mission_title']; ?>">
+							<div class="error"><?php echo form_error('our_mission_title'); ?></div>
+						</div>
+
+					</div>
+
+					<div class="item form-group">
+
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Our Mission Para</label>
+
+						<div class="col-md-6 col-sm-6 ">
+							<textarea class="form-control" name="our_mission_para"><?php echo $service['our_mission_para']; ?></textarea>
+							<div class="error"><?php echo form_error('our_mission_para'); ?></div>
+						</div>
+
+					</div>
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="our_mission_img">Our vision image</label>
 						<div class="col-md-6 col-sm-6">
-							<!-- Existing image display -->
-							<img src="<?php echo base_url('uploads/Logo/' . $service['client_image_2']); ?>" alt="Client Image 2" width="100">
+
+							<img src="<?php echo base_url('uploads/About-us/' . $service['our_mission_img']); ?>" alt="Main Image" width="100">
 							<br>
-							<!-- Input for new image -->
-							<input type="file" id="client_image_2" class="form-control" name="client_image_2">
-							<div class="error"><?php echo form_error('client_image_2'); ?></div>
-						</div>
-					</div>
 
+							<input type="file" id="our_mission_img" class="form-control" name="our_mission_img">
+							<div class="error"><?php echo form_error('our_mission_img'); ?></div>
+						</div>
+
+					</div>
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="client_image_2">Client Image 3</label>
-						<div class="col-md-6 col-sm-6">
-							<!-- Existing image display -->
-							<img src="<?php echo base_url('uploads/Logo/' . $service['client_image_3']); ?>" alt="Client Image 3" width="100">
-							<br>
-							<!-- Input for new image -->
-							<input type="file" id="client_image_3" class="form-control" name="client_image_3">
-							<div class="error"><?php echo form_error('client_image_3'); ?></div>
-						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
 					</div>
 
-					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="client_image_4">Client Image 4</label>
-						<div class="col-md-6 col-sm-6">
-							<!-- Existing image display -->
-							<img src="<?php echo base_url('uploads/Logo/' . $service['client_image_4']); ?>" alt="Client Image 4" width="100">
-							<br>
-							<!-- Input for new image -->
-							<input type="file" id="client_image_4" class="form-control" name="client_image_4">
-							<div class="error"><?php echo form_error('client_image_4'); ?></div>
-						</div>
-					</div>
+					<!-- mission -->
 
 
 
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">client Description 1</label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="client_des_1"><?php echo $service['client_des_1']; ?></textarea>
-							<div class="error"><?php echo form_error('client_des_1'); ?></div>
-						</div>
-
-					</div>
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">client Description 2</label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="client_des_2"><?php echo $service['client_des_2']; ?></textarea>
-							<div class="error"><?php echo form_error('client_des_2'); ?></div>
-						</div>
-
-					</div>
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">client Description 3</label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="client_des_3"><?php echo $service['client_des_3']; ?></textarea>
-							<div class="error"><?php echo form_error('client_des_3'); ?></div>
-						</div>
-
-					</div>
-
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">client Description 4</label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="client_des_4"><?php echo $service['client_des_4']; ?></textarea>
-							<div class="error"><?php echo form_error('client_des_4'); ?></div>
-						</div>
-
-					</div>
-
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Key Feature 1 </label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="key_feature_1"><?php echo $service['key_feature_1']; ?></textarea>
-							<div class="error"><?php echo form_error('key_feature_1'); ?></div>
-						</div>
-
-					</div>
-
-
-					<div class="item form-group">
-
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Key Feature 2 </label>
-
-						<div class="col-md-6 col-sm-6 ">
-							<textarea class="form-control" name="key_feature_2"><?php echo $service['key_feature_2']; ?></textarea>
-							<div class="error"><?php echo form_error('key_feature_2'); ?></div>
-						</div>
-
-					</div>
-
-
-
-
-
-					<div class="item form-group">
-
-						<div class="col-md-6 col-sm-6 offset-md-3">
-							<button type="submit" class="btn btn-success">Update</button>
-						</div>
-
-					</div>
 
 				</form>
 				<!--</div>-->

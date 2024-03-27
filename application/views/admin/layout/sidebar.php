@@ -59,6 +59,16 @@
                      </a>
                  </li>
 
+                      
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/About_Us_Admin_1/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>About us Section - 1</p>
+                     </a>
+                 </li>
+
+
                  
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/Our_client_Admin/display_data" class="nav-link">
