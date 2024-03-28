@@ -206,73 +206,73 @@ class About_Us_Admin_1 extends CI_Controller
     // }
 
     public function edit($id = null)
-{
-    if ($this->input->post()) {
-        $id = $this->input->post('id');
+    {
+        if ($this->input->post()) {
+            $id = $this->input->post('id');
 
-        $this->load->library('upload');
+            $this->load->library('upload');
 
-        // Handle main image upload
-        if (!empty($_FILES['our_vision_img']['name'])) {
-            $config['upload_path'] = './uploads/About-us/';
-            $config['allowed_types'] = 'jpg|jpeg|png|gif';
-            $config['max_size'] = 1024 * 10; // 10 MB
-            $config['overwrite'] = true;
-            $this->upload->initialize($config);
+            // Handle main image upload
+            if (!empty($_FILES['our_vision_img']['name'])) {
+                $config['upload_path'] = './uploads/About-us/';
+                $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                $config['max_size'] = 1024 * 10; // 10 MB
+                $config['overwrite'] = true;
+                $this->upload->initialize($config);
 
-            if ($this->upload->do_upload('our_vision_img')) {
-                $main_img_data = $this->upload->data();
-                $data['our_vision_img'] = $main_img_data['file_name']; // Store uploaded image name
-            } else {
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/Aboutus_admin_view_1/edit/' . $id);
+                if ($this->upload->do_upload('our_vision_img')) {
+                    $main_img_data = $this->upload->data();
+                    $data['our_vision_img'] = $main_img_data['file_name']; // Store uploaded image name
+                } else {
+                    $this->session->set_flashdata('error', $this->upload->display_errors());
+                    redirect('admin/Aboutus_admin_view_1/edit/' . $id);
+                }
             }
-        }
 
-        // Handle mission image upload
-        if (!empty($_FILES['our_mission_img']['name'])) {
-            $config['upload_path'] = './uploads/About-us/';
-            $config['allowed_types'] = 'jpg|jpeg|png|gif';
-            $config['max_size'] = 1024 * 10; // 10 MB
-            $config['overwrite'] = true;
-            $this->upload->initialize($config);
+            // Handle mission image upload
+            if (!empty($_FILES['our_mission_img']['name'])) {
+                $config['upload_path'] = './uploads/About-us/';
+                $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                $config['max_size'] = 1024 * 10; // 10 MB
+                $config['overwrite'] = true;
+                $this->upload->initialize($config);
 
-            if ($this->upload->do_upload('our_mission_img')) {
-                $mission_img_data = $this->upload->data();
-                $data['our_mission_img'] = $mission_img_data['file_name']; // Store uploaded image name
-            } else {
-                $this->session->set_flashdata('error', $this->upload->display_errors());
-                // redirect('admin/Aboutus_admin_view_1/edit/' . $id);
+                if ($this->upload->do_upload('our_mission_img')) {
+                    $mission_img_data = $this->upload->data();
+                    $data['our_mission_img'] = $mission_img_data['file_name']; // Store uploaded image name
+                } else {
+                    $this->session->set_flashdata('error', $this->upload->display_errors());
+                    // redirect('admin/Aboutus_admin_view_1/edit/' . $id);
+                }
             }
-        }
 
-        // Prepare data for update
-        $data['our_story_titile'] = $this->input->post('our_story_titile');
-        $data['our_story_para'] = $this->input->post('our_story_para');
-        $data['our_vision_title'] = $this->input->post('our_vision_title');
-        $data['our_vision_para'] = $this->input->post('our_vision_para');
-        $data['our_mission_title'] = $this->input->post('our_mission_title');
-        $data['our_mission_para'] = $this->input->post('our_mission_para');
+            // Prepare data for update
+            $data['our_story_titile'] = $this->input->post('our_story_titile');
+            $data['our_story_para'] = $this->input->post('our_story_para');
+            $data['our_vision_title'] = $this->input->post('our_vision_title');
+            $data['our_vision_para'] = $this->input->post('our_vision_para');
+            $data['our_mission_title'] = $this->input->post('our_mission_title');
+            $data['our_mission_para'] = $this->input->post('our_mission_para');
 
-                  echo "<pre>";
-                    print_r($data);
-                    // exit;
+            echo "<pre>";
+            print_r($data);
+            // exit;
 
-        // Update data in the database
-        $result = $this->About_Us_model_1->edit($id, $data);
+            // Update data in the database
+            $result = $this->About_Us_model_1->edit($id, $data);
 
-        if ($result) {
-            $this->session->set_flashdata('success', 'Data updated successfully.');
+            if ($result) {
+                $this->session->set_flashdata('success', 'Data updated successfully.');
+            } else {
+                $this->session->set_flashdata('error', 'Error occurred while updating data.');
+            }
+
+            redirect('admin/About_Us_Admin_1/display_data');
         } else {
-            $this->session->set_flashdata('error', 'Error occurred while updating data.');
+            $data['service'] = $this->About_Us_model_1->get_service_by_id($id);
+            $this->load->view('admin/Aboutus_admin_view_1/edit', $data);
         }
-
-        redirect('admin/About_Us_Admin_1/display_data');
-    } else {
-        $data['service'] = $this->About_Us_model_1->get_service_by_id($id);
-        $this->load->view('admin/Aboutus_admin_view_1/edit', $data);
     }
-}
 
 
 

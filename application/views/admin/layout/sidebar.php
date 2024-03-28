@@ -68,6 +68,14 @@
                      </a>
                  </li>
 
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/About_Us_Admin_2/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>About us Time Line</p>
+                     </a>
+                 </li>
+
 
                  
                  <li class="nav-item">
@@ -148,101 +156,7 @@
                      </a>
                  </li>
                  <!--active-->
-                 <li class="nav-header">Vendor Management</li>
-                 <!-- <li class="nav-item">
-                                <a href="<?php echo base_url(); ?>admin/vendor" class="nav-link">
-                                    <i class="nav-icon fas fa-file"></i>
-                                    <p>All Vendors</p>
-                                </a> -->
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Bridal_Wear" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Bridal Wear</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Jewellery" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Bridal Jewellery</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Catering" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Catering</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Decoration" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Decoration</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Gift" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Gifts</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Groom_wear" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Groom Wear</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Inivitation" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Invitations</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/MakeUp" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Make Up Artists</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Mehendi" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Mehendi Artists</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Photography" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Photographers</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/Admin_Vendor/Venue" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Venues</p>
-                     </a>
-                 </li>
-                 <!--active-->
-                 <li class="nav-header">Listing Management</li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/listing" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Listing</p>
-                     </a>
-                 </li>
-                 <li class="nav-header">Blog Category</li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/blogcategory" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Blog category list</p>
-                     </a>
-                 </li>
-                 <li class="nav-header">Blog</li>
-                 <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/blog" class="nav-link">
-                         <i class="nav-icon fas fa-file"></i>
-                         <p>Blog list</p>
-                     </a>
-                 </li>
+                
              </ul>
          </nav>
          <!-- /.sidebar-menu -->
