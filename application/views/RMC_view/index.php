@@ -11,46 +11,82 @@ $this->load->view('RMC_view/layout/header_view.php');
 
 <body>
 
-    <section>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(1).webp" alt="First slide">
-                    <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/01stBannerwork.webp" alt="First slide">
-                    <a href="<?php base_url() ?>Contact_us" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+
+    <!-- <section>
+        <?php if (!empty($Banner)) : ?>
+            <?php $banner_item = $Banner[0]; ?>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <img class="d-block w-100 for-desktop-banner" src="<?php echo base_url('uploads/Home-page/' . $service->desktop_banner_1); ?>" alt="First slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/01stBannerwork.webp" alt="First slide">
+                        <a href="<?php base_url() ?>Contact_us" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(2).webp" alt="Second slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/2ndBannerMobileBanner.webp" alt="First slide">
+                        <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(3).webp" alt="Third slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/3rdMobileWebsiteBanner.webp" alt="First slide">
+                        <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(4).webp" alt="Third slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/4thBannerMobileWork.webp" alt="First slide">
+                        <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/5th-Banner-Website-copy.webp" alt="Third slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/5thBannerMobileWork%2002.webp" alt="First slide">
+                        <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(2).webp" alt="Second slide">
-                    <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/2ndBannerMobileBanner.webp" alt="First slide">
-                    <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(3).webp" alt="Third slide">
-                    <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/3rdMobileWebsiteBanner.webp" alt="First slide">
-                    <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/homepage-banner-(4).webp" alt="Third slide">
-                    <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/4thBannerMobileWork.webp" alt="First slide">
-                    <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 for-desktop-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Banner/5th-Banner-Website-copy.webp" alt="Third slide">
-                    <img class="d-block w-100 for-mobile-banner" src="<?php base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/5thBannerMobileWork%2002.webp" alt="First slide">
-                    <a href="<?php base_url() ?>Engineering_survey_of_land" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <a class="carousel-control-prev black" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev black" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+        <?php else : ?>
+            <p>No services available.</p>
+        <?php endif; ?>
+    </section> -->
+
+    <section>
+        <?php if (!empty($Banner)) : ?>
+            <?php $banner_item = $Banner; ?>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 for-desktop-banner" src="<?php echo base_url('uploads/Home-page/' . $banner_item->desktop_banner_1); ?>" alt="First slide">
+                        <img class="d-block w-100 for-mobile-banner" src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Homepage-Mobile-Banner/01stBannerwork.webp" alt="First slide">
+                        <a href="<?php echo base_url(); ?>Contact_us" class="banner-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Additional carousel items here -->
+                </div>
+                <a class="carousel-control-prev black" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        <?php else : ?>
+            <p>No services available.</p>
+        <?php endif; ?>
     </section>
+
+
     <!-- carousel end -->
 
 

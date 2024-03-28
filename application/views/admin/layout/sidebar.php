@@ -1,4 +1,5 @@
  <!-- Main Sidebar Container -->
+
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
      <!-- Brand Logo -->
      <a href="https://ranemanagementconsultant.com/" target="blank" class="brand-link" style="background-color: #FFF;height: 55px;">
@@ -31,6 +32,10 @@
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+             
+
+            
+
 
                  <!--active-->
                  <!-- <li class="nav-header">MASTER Data</li> -->
@@ -59,7 +64,7 @@
                      </a>
                  </li>
 
-                      
+
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/About_Us_Admin_1/display_data" class="nav-link">
                          <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
@@ -76,8 +81,41 @@
                      </a>
                  </li>
 
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Land_Advisory_Admin_1/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p> Land Advisory Key Points </p>
+                     </a>
+                 </li>
 
-                 
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Land_Advisory_Admin_2/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p> Land Advisory Case Study </p>
+                     </a>
+                 </li>
+
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Contact_us_Admin_1/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p> Contact us Registered Office </p>
+                     </a>
+                 </li>
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Contact_us_Admin_2/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p> Contact us Details </p>
+                     </a>
+                 </li>
+
+
+
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/Our_client_Admin/display_data" class="nav-link">
                          <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
@@ -143,7 +181,14 @@
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/service9_admin_view/display_data" class="nav-link">
                          <i class="nav-icon fas fa-file"></i>
-                         <p>Land& Building Valuation</p>
+                         <p>Land & Building Valuation</p>
+                     </a>
+                 </li>
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Blog_1_Admin/display_data" class="nav-link">
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>Blog 1</p>
                      </a>
                  </li>
 
@@ -155,11 +200,18 @@
                          <p>Admin List</p>
                      </a>
                  </li>
+
+
+
+
                  <!--active-->
-                
+
              </ul>
          </nav>
          <!-- /.sidebar-menu -->
      </div>
      <!-- /.sidebar -->
  </aside>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

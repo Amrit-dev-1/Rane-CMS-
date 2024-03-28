@@ -17,23 +17,23 @@ class Home_model_1 extends CI_Model
     }
 
 
-// get data code 
-public function getHomepageData($id = null)
-{   
-    if ($id !== null) {
-        $this->db->where('ID', $id);
-        $query = $this->db->get('homepage_1');
-        return $query->row_array(); 
-    } else {
-        $query = $this->db->get('homepage_1');
-        return $query->result_array(); 
+    // get data code 
+    public function getHomepageData($id = null)
+    {
+        if ($id !== null) {
+            $this->db->where('ID', $id);
+            $query = $this->db->get('homepage_1');
+            return $query->row_array();
+        } else {
+            $query = $this->db->get('homepage_1');
+            return $query->result_array();
+        }
     }
-}
-
-    
 
 
-    
+
+
+
 
     // delete function
     public function deleteBanner($id)
@@ -52,12 +52,14 @@ public function getHomepageData($id = null)
 
     // edit code 
 
-    public function getBannerById($id) {
+    public function getBannerById($id)
+    {
         $query = $this->db->get_where('homepage_1', array('ID' => $id));
         return $query->row_array();
     }
 
-    public function updateBanner($id, $data) {
+    public function updateBanner($id, $data)
+    {
         $this->db->where('ID', $id);
         return $this->db->update('homepage_1', $data);
     }
