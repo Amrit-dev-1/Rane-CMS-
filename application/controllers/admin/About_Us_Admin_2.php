@@ -56,43 +56,6 @@ class About_Us_Admin_2 extends CI_Controller
     }
 
 
-
-    // public function edit($id = null)
-    // {
-    //     if ($this->input->post()) {
-    //         $id = $this->input->post('id');
-
-    //         $this->load->library('upload');
-
-
-
-
-    //         // Prepare data for update
-    //         $data = array(
-    //             'Our_Journey_title' => $this->input->post('Our_Journey_title'),
-    //             'Our_Journey_year' => $this->input->post('Our_Journey_year'),
-    //             'Year_content' => $this->input->post('Year_content'),
-
-    //         );
-    //         echo "<pre>";
-    //         print_r($data);
-    //         exit;
-
-    //         // Update data in the database
-    //         $result = $this->About_Us_model_2->edit($id, $data);
-
-    //         if ($result) {
-    //             $this->session->set_flashdata('success', 'Data updated successfully.');
-    //         } else {
-    //             $this->session->set_flashdata('error', 'Error occurred while updating data.');
-    //         }
-
-    //         redirect('admin/About_Us_Admin_2/display_data');
-    //     } else {
-    //         $data['service'] = $this->About_Us_model_2->get_service_by_id($id);
-    //         $this->load->view('admin/Aboutus_admin_view_2/edit', $data);
-    //     }
-    // }
     public function edit($id = null)
     {
         if ($this->input->post()) {
