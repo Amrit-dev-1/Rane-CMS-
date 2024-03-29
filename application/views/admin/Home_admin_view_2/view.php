@@ -77,35 +77,35 @@
 
 
                       <?php if (!empty($Banner)) : ?>
-                        <?php foreach ($Banner as $banner_item) : ?>
+                        <?php foreach ($Banner as $banner_item_2) : ?>
                           <tr>
-                            <td><?php echo $banner_item['About_us_desc']; ?></td>
+                            <td><?php echo $banner_item_2['About_us_desc']; ?></td>
 
 
                             <?php for ($i = 1; $i <= 3; $i++) : ?>
                               <td>
                                 <?php $image_key = 'Properties_card_image_' . $i; ?>
-                                <?php if (!empty($banner_item[$image_key])) : ?>
-                                  <img src="<?php echo base_url($banner_item[$image_key]); ?>" class="img-fluid admin-img" alt="Properties Card Image <?php echo $i; ?>">
+                                <?php if (!empty($banner_item_2[$image_key])) : ?>
+                                  <img src="<?php echo base_url($banner_item_2[$image_key]); ?>" class="img-fluid admin-img" alt="Properties Card Image <?php echo $i; ?>">
                                 <?php endif; ?>
                               </td>
                             <?php endfor; ?>
 
 
-                            <td><?php echo $banner_item['Properties_card_title_1']; ?></td>
-                            <td><?php echo $banner_item['Properties_card_title_2']; ?></td>
-                            <td><?php echo $banner_item['Properties_card_title_3']; ?></td>
+                            <td><?php echo $banner_item_2['Properties_card_title_1']; ?></td>
+                            <td><?php echo $banner_item_2['Properties_card_title_2']; ?></td>
+                            <td><?php echo $banner_item_2['Properties_card_title_3']; ?></td>
 
                             <?php for ($i = 1; $i <= 6; $i++) : ?>
-                              <td><?php echo $banner_item['Whychooseus_head_' . $i]; ?></td>
-                              <td><?php echo $banner_item['Whychooseus_desc_' . $i]; ?></td>
+                              <td><?php echo $banner_item_2['Whychooseus_head_' . $i]; ?></td>
+                              <td><?php echo $banner_item_2['Whychooseus_desc_' . $i]; ?></td>
                             <?php endfor; ?>
 
 
                             <td>
-                              <a href="<?php echo base_url('admin/Home_Admin_2/edit/' . $banner_item['id']); ?>" class="btn btn-info">Edit</a>
+                              <a href="<?php echo base_url('admin/Home_Admin_2/edit/' . $banner_item_2['id']); ?>" class="btn btn-info">Edit</a>
 
-                              <a href="<?php echo base_url('admin/Home_Admin_2/delete/' . $banner_item['id']); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
+                              <a href="<?php echo base_url('admin/Home_Admin_2/delete/' . $banner_item_2['id']); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?')">Delete</a>
                             </td>
                           </tr>
                         <?php endforeach; ?>

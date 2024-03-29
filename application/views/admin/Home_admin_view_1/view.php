@@ -95,59 +95,7 @@
                     </thead>
                     <tbody>
 
-                      <!-- <?php if (!empty($Banner)) : ?>
-                        <?php foreach ($Banner as $banner_id) : ?>
-                          <tr>
-                          <tr>
 
-                            <td> <img src="<?php echo base_url('uploads/Home-page/' . $banner_id['desktop_banner_1']); ?>" class="img-fluid" alt="Desktop_banner"></td>
-
-
-
-                            <td> <img src="<?php echo base_url($banner_id->desktop_banner_2); ?>" class="img-fluid admin-img" alt="Desktop Banner 2"></td>
-                            <td> <img src="<?php echo base_url($banner_id->desktop_banner_3); ?>" class="img-fluid admin-img" alt="Desktop Banner 3"></td>
-                            <td> <img src="<?php echo base_url($banner_id->desktop_banner_4); ?>" class="img-fluid admin-img" alt="Desktop Banner 4"></td>
-                            <td> <img src="<?php echo base_url($banner_id->desktop_banner_5); ?>" class="img-fluid admin-img" alt="Desktop Banner 5"></td>
-
-                            <td> <img src="<?php echo base_url($banner_id->Mobile_banner_1); ?>" class="img-fluid admin-img" alt="Mobile Banner 1"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Mobile_banner_2); ?>" class="img-fluid admin-img" alt="Mobile Banner 2"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Mobile_banner_3); ?>" class="img-fluid admin-img" alt="Mobile Banner 3"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Mobile_banner_4); ?>" class="img-fluid admin-img" alt="Mobile Banner 4"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Mobile_banner_5); ?>" class="img-fluid admin-img" alt="Mobile Banner 5"></td>
-
-                            <td> <img src="<?php echo base_url($banner_id->Survey_icon_1); ?>" class="img-fluid admin-img" alt="Survey Icon 1"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Survey_icon_2); ?>" class="img-fluid admin-img" alt="Survey Icon 2"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Survey_icon_3); ?>" class="img-fluid admin-img" alt="Survey Icon 3"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Survey_icon_4); ?>" class="img-fluid admin-img" alt="Survey Icon 4"></td>
-                            <td> <img src="<?php echo base_url($banner_id->Survey_icon_5); ?>" class="img-fluid admin-img" alt="Survey Icon 5"></td>
-
-
-                            <td><?php echo $banner_id->Survey_desc_1; ?></td>
-                            <td><?php echo $banner_id->Survey_desc_2; ?></td>
-                            <td><?php echo $banner_id->Survey_desc_3; ?></td>
-                            <td><?php echo $banner_id->Survey_desc_4; ?></td>
-                            <td><?php echo $banner_id->Survey_desc_5; ?></td>
-
-                            <td>
-
-                              <a href="<?php echo base_url('admin/Home_Admin_1/delete/' . $banner_id->ID); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this data?');">Delete</a>
-                            </td>
-
-
-
-                            </td>
-
-
-                            </td>
-
-
-
-
-                          </tr>
-                        <?php endforeach; ?>
-                      <?php else : ?>
-                        <p>No data found.</p>
-                      <?php endif; ?> -->
 
                       <?php if (!empty($Banner)) : ?>
                         <?php foreach ($Banner as $banner_item) : ?>
