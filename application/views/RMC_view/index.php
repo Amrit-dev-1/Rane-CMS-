@@ -168,7 +168,7 @@ $this->load->view('RMC_view/layout/header_view.php');
                     <?php else : ?>
                         <p>About us description not available.</p>
                     <?php endif; ?>
-                    <p class="about-para">This expansion led to further growth in land acquisition, infrastructure planning, & design. Anticipating future demands, the company established an IT cell for GIS solutions in 2014 to meet the emerging consumer needs in application development related to mapping technology.</p><br>
+                    <!-- <p class="about-para">This expansion led to further growth in land acquisition, infrastructure planning, & design. Anticipating future demands, the company established an IT cell for GIS solutions in 2014 to meet the emerging consumer needs in application development related to mapping technology.</p><br> -->
                     <a href="<?php echo base_url(); ?>About_us">
                         <button class="read-about-us-btn"> Read more </button>
                     </a>

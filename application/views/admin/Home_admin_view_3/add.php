@@ -26,19 +26,19 @@
 				<form action="<?php echo base_url(); ?>admin/Home_Admin_3/add" method="POST" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="our_service_title">Service Title:</label>
-						<input type="text" class="form-control" id="our_service_title" name="our_service_title" required>
+						<input type="text" class="form-control" id="our_service_title" name="our_service_title" >
 					</div>
 					<div class="form-group">
 						<label for="our_service_icon">Service Icon:</label>
-						<input type="file" class="form-control-file" id="our_service_icon" name="our_service_icon" required>
+						<input type="file" class="form-control-file" id="our_service_icon" name="our_service_icon" >
 					</div>
 					<div class="form-group">
 						<label for="our_service_head">Service Head:</label>
-						<input type="text" class="form-control" id="our_service_head" name="our_service_head" required>
+						<input type="text" class="form-control" id="our_service_head" name="our_service_head" >
 					</div>
 					<div class="form-group">
 						<label for="our_service_desc">Service Description:</label>
-						<textarea class="form-control" id="our_service_desc" name="our_service_desc" required></textarea>
+						<textarea class="form-control" id="our_service_desc" name="our_service_desc" ></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
