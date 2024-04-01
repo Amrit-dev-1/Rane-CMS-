@@ -8,19 +8,23 @@ class RANE_con extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Home_model_1');
-        $this->load->model('Home_model_2');
     }
 
     public function index()
-    {
-        $data['service'] = $this->Home_model_1->getHomepageData();
-        $data['Banner'] = $this->Home_model_2->getHomepageData();
+{
+    $this->load->model('Home_model_2'); 
+    $this->load->model('Home_model_3'); 
 
-        if (!empty($data['service']) && !empty($data['Banner'])) {
-            $this->load->view('RMC_view/index.php', $data);
-        } else {
-            echo 'No data available.';
-        }
+    $data['service'] = $this->Home_model_1->getHomepageData();
+    $data['service_2'] = $this->Home_model_2->getHomepageData(); 
+    $data['service_3'] = $this->Home_model_3->getHomepageData(); 
+
+    if (!empty($data['service'])) {
+        $this->load->view('RMC_view/index.php', $data);
+    } else {
+        echo 'No data available.';
     }
+}
+
 }
 ?>

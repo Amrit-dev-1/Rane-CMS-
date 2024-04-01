@@ -39,7 +39,7 @@ body {
 
 .read-about-us-btn {
 	padding: 10px;
-	height: 20px;
+	height: auto;
 	width: 200px;
 	background-color: white;
 	color: #243d71;
@@ -2755,3 +2755,4 @@ padding: 9px;
 .blog-col p {
     text-align:left;
 }
+

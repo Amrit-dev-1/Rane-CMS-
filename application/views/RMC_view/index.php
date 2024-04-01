@@ -157,14 +157,14 @@ $this->load->view('RMC_view/layout/header_view.php');
 <?php endif; ?>
 <!-- about-banner for desktop start -->
 
-<?php if (!empty($service)) : ?>
-    <?php foreach ($service as $key => $banner_item_2) : ?>
+<?php if (!empty($service_2)) : ?>
+    <?php foreach ($service_2 as $key => $banner_item_2) : ?>
         <section class="desktop-view-section">
             <div class="about-banner">
                 <div class="about-description">
                     <h2 class="abt-title">About US</h2><br>
                     <?php if (!empty($banner_item_2['About_us_desc'])) : ?>
-                        <p><?php echo $banner_item_2['About_us_desc']; ?></p>
+                        <p class="about-para"><?php echo $banner_item_2['About_us_desc']; ?></p>
                     <?php else : ?>
                         <p>About us description not available.</p>
                     <?php endif; ?>
@@ -178,22 +178,31 @@ $this->load->view('RMC_view/layout/header_view.php');
 
         <!-- about-banner for mobile start -->
         <section class="mobile-view" data-aos="zoom-out-up" data-aos-duration="2000">
+
             <div class="about-banner-2">
+
                 <div class="about-description">
+
                     <h4 class="abt-title" style="color: white;">About US</h4><br>
-                    <p class="about-para"><?php echo $banner_item_2['About_us_desc']; ?></p><br>
-                    <p style="color: white;">This expansion led to further growth in land acquisition, infrastructure planning, & design. Anticipating future demands, the company established an IT cell for GIS solutions in 2014 to meet the emerging consumer needs in application development related to mapping technology.</p><br>
+                    <p style="color: white;">Founded in 1995 Director Mr. Manmohan B. Rane, Specializes in providing precise land survey data for both private & government agencies. In 2002, the company expanded its services to include city survey work for various Maharashtra corporations, successfully completing 8 municipal city survey projects</p>
+
+                    <p style="color: white;">This expansion led to further growth in land acquisition, infrastructure planning, & design. Anticipating future demands, the company established an IT cell for GIS solutions in 2014 to meet the emerging consumer needs in application development related to mapping technology.</p><br>
                     <a href="<?php echo base_url(); ?>About_us">
-                        <button class="read-about-us-btn"> Read more </button>
+                        <buton class="read-about-us-btn"> Read more </button>
                     </a>
+
                 </div>
+
+
             </div>
+
         </section>
         <!-- about-banner for mobile end -->
     <?php endforeach; ?>
 <?php else : ?>
     <p>No banners available.</p>
 <?php endif; ?>
+
 
 <!-- Our Services start -->
 <section data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
@@ -209,54 +218,44 @@ $this->load->view('RMC_view/layout/header_view.php');
                     <span class="decoration">Our</span><span> Services</span></strong>
             </h2>
             <div class="row services-icon">
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con">
-                            <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" alt="img1" class="other-service-icon-hp">
+                <?php if (!empty($service_3)) : ?>
+                    <?php $count = count($service_3); ?>
+                    <?php for ($i = 0; $i < min(4, $count); $i++) : ?>
+                        <?php $item = $service_3[$i]; ?>
+                        <div class="col-md-6 col-sm-3 col-xl-3">
+                            <div class="text-center-logo1">
+                                <div class="con">
+                                    <img src="<?php echo base_url() . $item['our_service_icon']; ?>" alt="Service Icon" class="other-service-icon-hp">
+                                </div>
+                                <p class="fon-head"><?php echo $item['our_service_title']; ?></p>
+                                <p class="fon-text"><?php echo $item['our_service_desc']; ?></p>
+                            </div>
                         </div>
-                        <p class="fon-head">Engineering Survey</p>
-                        <p class="fon-text">
-                            Our licensed experts employ DGPS, ETS, and drones for precise land surveying, mapping, and alignment in various infrastructure projects.
-                        </p>
-                    </div>
-                </div>
+                    <?php endfor; ?>
 
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con ">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Land-Record-Verification-01.webp" alt="img1" class="other-service-icon-hp">
+                    <?php for ($i = 4; $i < min(8, $count); $i++) : ?>
+                        <?php $item = $service_3[$i]; ?>
+                        <div class="col-md-6 col-sm-3 col-xl-3">
+                            <div class="text-center-logo1">
+                                <div class="con">
+                                    <img src="<?php echo base_url() . $item['our_service_icon']; ?>" alt="Service Icon" class="other-service-icon-hp">
+                                </div>
+                                <p class="fon-head"><?php echo $item['our_service_title']; ?></p>
+                                <p class="fon-text"><?php echo $item['our_service_desc']; ?></p>
+                            </div>
                         </div>
-                        <p class="fon-head">Land Record Verification & Modification</p>
-                        <p class="fon-text">
-                            We excel in meticulous Land Record Verification and Modification, ensuring compliance and property integrity. Choose us for reliable, professional expertise
-                        </p>
+                    <?php endfor; ?>
+                <?php else : ?>
+                    <div class="col-md-12">
+                        <p>No services available.</p>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con ">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/MasterPlaning-01.webp" alt="img1" class="other-service-icon-hp">
-                        </div>
-                        <p class="fon-head">Master Planning</p>
-                        <p class="fon-text">
-                            Comprehensive Master Planning for Government and Semi-Government: City and Township Planning, Layout Design, and More. Our Experienced Team is Ready to Assist
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con ">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/DPR-Feasiblitiy.webp" alt="img1" class="other-service-icon-dpr">
-                        </div>
-                        <p class="fon-head">DPR & Feasibility Studies</p>
-                        <p class="fon-text">
-                            Delivering expert DPRs and Feasibility Studies, we provide thorough assessments and strategic guidance for informed decisions in infrastructure development.
-                        </p>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
+
+
+
             <br>
-            <div class="row services-icon group-3">
+            <!-- <div class="row services-icon group-3">
                 <div class="col-md-6 col-sm-3 col-xl-3">
                     <div class="text-center-logo1">
                         <div class="con ">
@@ -307,7 +306,7 @@ $this->load->view('RMC_view/layout/header_view.php');
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
 
         </div>
@@ -328,63 +327,72 @@ $this->load->view('RMC_view/layout/header_view.php');
     <div class="contaner-fluid">
 
         <!-- cards sections start  -->
-        <section>
 
-            <div class="container">
-                <h2 class="about_headings"><strong>
-                        <span class="decoration">Pro</span>perties </strong>
-                </h2>
-                <div class="container-cards">
+        <?php if (!empty($service_2)) : ?>
+            <?php foreach ($service_2 as $key => $banner_item_2) : ?>
+                <section>
 
-                    <div class="row">
+                    <div class="container">
+                        <h2 class="about_headings"><strong>
+                                <span class="decoration">Pro</span>perties </strong>
+                        </h2>
+                        <div class="container-cards">
 
-                        <div class="col-lg-4 col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                            <!-- <a href="<?php base_url(); ?>#"> -->
-                            <div class="card" data-toggle="modal" data-target="#comingSoonModal">
-                                <img src="<?php base_url() ?>assets/new-img/All-Website-Images/home-cards/card-1.webp" class="image">
-                                <div class="overlay">
-                                    <h2 class="mytop">Properties For Lease</h2>
+                            <div class="row">
 
+                                <div class="col-lg-4 col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                                    <!-- <a href="<?php base_url(); ?>#"> -->
+                                    <div class="card" data-toggle="modal" data-target="#comingSoonModal">
+                                        <img src="<?php base_url() ?><?php echo $banner_item_2['Properties_card_image_1']; ?>" class="image">
+
+                                        <div class="overlay">
+                                            <h2 class="mytop"><?php echo $banner_item_2['Properties_card_title_1']; ?></h2>
+
+                                        </div>
+                                        <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
+                                        </a>
+                                    </div>
                                 </div>
-                                <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- </a> -->
-                        <br><Br>
-                        <div class="col-lg-4 col-md-4 mb-4 " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                            <!-- <a href="<?php base_url(); ?>#"> -->
+                                <!-- </a> -->
+                                <br><Br>
+                                <div class="col-lg-4 col-md-4 mb-4 " data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                                    <!-- <a href="<?php base_url(); ?>#"> -->
 
-                            <div class="card" data-toggle="modal" data-target="#comingSoonModal">
-                                <img src="<?php base_url() ?>assets/new-img/All-Website-Images/home-cards/card-2.webp" class="image">
-                                <div class="overlay">
-                                    <h2>Properties For Sale</h2>
+                                    <div class="card" data-toggle="modal" data-target="#comingSoonModal">
+                                        <img src="<?php base_url() ?><?php echo $banner_item_2['Properties_card_image_2']; ?>" class="image">
 
+                                        <div class="overlay">
+                                            <h2 class="mytop"><?php echo $banner_item_2['Properties_card_title_2']; ?></h2>
+
+                                        </div>
+                                        <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
+                                    </div>
                                 </div>
-                                <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
-                            </div>
-                        </div>
-                        <!-- </a> -->
-                        <br><br>
-                        <div class="col-lg-4 col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                            <!-- <a href="<?php base_url(); ?>#"> -->
+                                <!-- </a> -->
+                                <br><br>
+                                <div class="col-lg-4 col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                                    <!-- <a href="<?php base_url(); ?>#"> -->
 
-                            <div class="card" data-toggle="modal" data-target="#comingSoonModal">
-                                <img src="<?php base_url() ?>assets/new-img/All-Website-Images/home-cards/card-3.webp" class="image">
-                                <div class="overlay">
-                                    <h2>Properties For Joint Development</h2>
+                                    <div class="card" data-toggle="modal" data-target="#comingSoonModal">
+                                        <img src="<?php base_url() ?><?php echo $banner_item_2['Properties_card_image_3']; ?>" class="image">
 
+                                        <div class="overlay">
+                                            <h2 class="mytop"><?php echo $banner_item_2['Properties_card_title_3']; ?></h2>
+
+                                        </div>
+                                        <!-- <p class="card_text details">Properties for For Joint Development </p> -->
+                                        <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
+                                    </div>
                                 </div>
-                                <!-- <p class="card_text details">Properties for For Joint Development </p> -->
-                                <button class="read-more-button read-btn">Read More <i class='fas fa-arrow-circle-right' style='font-size:18px'></i></button>
                             </div>
+                            <!-- </a> -->
                         </div>
                     </div>
-                    <!-- </a> -->
-                </div>
-            </div>
-        </section>
-
+                </section>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p>No banners available.</p>
+        <?php endif; ?>
         <!-- cards sections ends   -->
 
 
@@ -401,54 +409,66 @@ $this->load->view('RMC_view/layout/header_view.php');
 
 
 
+<?php if (!empty($service_2)) : ?>
+    <?php foreach ($service_2 as $key => $banner_item_2) : ?>
+        <!-- Why Choose Us section start -->
+        <section>
+            <div class="banner">
+                <div class="container02">
 
-<!-- Why Choose Us section start -->
-<section>
-    <div class="banner">
-        <div class="container02">
-
-            <h1 class="about_headings"><strong><span class="decoration"> Why </span>Choose Us
-                </strong>
-            </h1>
-
-
-            <strong>
-                <span class="head4"><span class="decoration">Experi</span>ence<br>
-            </strong>
-            <p class="font2"> With a track record dating back to 1992, our experience speaks for itself. </p>
+                    <h1 class="about_headings"><strong><span class="decoration"> Why </span>Choose Us
+                        </strong>
+                    </h1>
 
 
-            <strong>
-                <span class="head4"><span class="decoration">Expert</span> Team
-            </strong>
-            <p class="font2">Our team of skilled engineers brings a wealth of knowledge to every project. </p>
-
-            <strong>
-                <span class="head4"><span class="decoration">Cuttin</span>g Edge Technology</span>
-            </strong>
-            <p class="font2">We invest in the latest surveying tools to ensure accurate results.</p>
-
-            <strong>
-                <span class="head4"><span class="decoration">Compr</span>ehensive Services</span>
-            </strong>
-            <p class="font2">From topographic surveys to CAD deliverables, we've got you covered. </p>
-
-            <strong>
-                <span class="head4"><span class="decoration">Versati</span>lity</span>
-            </strong>
-            <p class="font2">We adapt our services to various industries and project scopes. </p>
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_1']; ?></span><br>
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_1']; ?></p>
 
 
-            <strong>
-                <span class="head4"><span class="decoration">Reliab</span>ility</span>
-            </strong>
-            <p class="font2">Count on us for precise data that you can trust for your decision-making. </p><br>
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_2']; ?></span>
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_2']; ?></p>
 
 
-        </div>
-    </div>
-</section>
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_3']; ?></span>
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_3']; ?></p>
 
+
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_4']; ?></span>
+
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_4']; ?></p>
+
+
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_5']; ?></span>
+
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_5']; ?></p>
+
+
+
+                    <strong>
+                        <span class="head4"><span class="decoration"><?php echo $banner_item_2['Whychooseus_head_6']; ?></span>
+
+                    </strong>
+                    <p class="font2"><?php echo $banner_item_2['Whychooseus_desc_6']; ?></p>
+
+
+
+                </div>
+            </div>
+        </section>
+    <?php endforeach; ?>
+<?php else : ?>
+    <p>No banners available.</p>
+<?php endif; ?>
 <!-- Why Choose Us section end -->
 
 <section>
