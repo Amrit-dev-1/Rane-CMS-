@@ -255,58 +255,7 @@ $this->load->view('RMC_view/layout/header_view.php');
 
 
             <br>
-            <!-- <div class="row services-icon group-3">
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con ">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Project-Clearance-01.webp" alt="img1" class="other-service-icon-hp">
-                        </div>
-                        <p class="fon-head">Project Clearance</p>
-                        <p class="fon-text">
-
-                            We provide tailored project clearances for environmental, regulatory approvals, and permits, ensuring efficient and precise progress. Let us help you navigate the complexities, so you can focus on achieving your project goals.
-
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con ">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Architecture-01.webp" alt="img1" class="other-service-icon-hp">
-                        </div>
-                        <p class="fon-head">Architecture</p>
-                        <p class="fon-text">
-
-                            We offer experienced architectural services for residential, commercial, and industrial projects, ensuring professionalism, detail, and collaboration for designs that exceed expectations
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Land&BuildingValuation-01.webp" alt="img1" class="other-service-icon-hp">
-
-                        </div>
-                        <p class="fon-head">Land & Building Valuation</p>
-                        <p class="fon-text">
-                            We provide professional valuation services for corporate, individual, and banking needs, led by an IBBI-registered licensed valuer for accurate and reliable reports.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-3 col-xl-3">
-                    <div class="text-center-logo1">
-                        <div class="con">
-                            <img src="<?php base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/LandReports-Acquisition-01.webp" alt="img1" class="other-service-icon-hp">
-                        </div>
-                        <p class="fon-head">Land Reports & Acquisition</p>
-                        <p class="fon-text">
-                            We're Maharashtra's top consultants, aiding government and private clients in land acquisition, ensuring a smooth process from proposals to payments for project success.
-                        </p>
-                    </div>
-                </div>
-
-            </div> -->
+    
 
 
         </div>

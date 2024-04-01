@@ -1,4 +1,7 @@
  <!-- Main Sidebar Container -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
      <!-- Brand Logo -->
@@ -32,13 +35,65 @@
          <nav class="mt-2">
              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-             
 
-            
+
+
 
 
                  <!--active-->
                  <!-- <li class="nav-header">MASTER Data</li> -->
+<!-- 
+                 <li class="nav-item">
+                     <a href="#" class="nav-link">
+                         <i class="nav-icon fas fa-chart-pie"></i>
+                         <p>
+                             Charts
+                             <i class="right fas fa-angle-left"></i>
+                         </p>
+                     </a>
+                     <ul class="nav nav-treeview">
+                         <li class="nav-item">
+                             <a href="pages/charts/chartjs.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>ChartJS</p>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                             <a href="pages/charts/flot.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Flot</p>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                             <a href="pages/charts/inline.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Inline</p>
+                             </a>
+                         </li>
+                         <li class="nav-item">
+                             <a href="pages/charts/uplot.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>uPlot</p>
+                             </a>
+                         </li>
+                     </ul>
+                 </li> -->
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Navigation_bar/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>Navigation Bar</p>
+                     </a>
+                 </li>
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Footer_bar/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p> Footer  </p>
+                     </a>
+                 </li>
 
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/Home_Admin_1/display_data" class="nav-link">
@@ -212,6 +267,12 @@
      </div>
      <!-- /.sidebar -->
  </aside>
+ <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
 
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+ <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+
+
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

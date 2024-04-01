@@ -35,15 +35,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <!-- dropzonejs -->
   <!--<link rel="stylesheet" href="../../plugins/dropzone/min/dropzone.min.css">-->
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/summernote/summernote-bs4.min.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <!-- <link href="assets/front/css/bootstrap.min.css" rel="stylesheet"> -->
 
 
 
-
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    
 </head>
+
 
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
