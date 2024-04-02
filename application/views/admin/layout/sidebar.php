@@ -180,6 +180,14 @@
                  </li>
 
                  <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/All_service_Ban_Con/display_data" class="nav-link">
+                         <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>Service Banner</p>
+                     </a>
+                 </li>
+
+                 <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/service1_admin_view/display_data" class="nav-link">
                          <!-- <img src="<?php echo base_url(); ?>assets/new-img/All-Website-Images/Our-Service-Icons/Engineering-Survey-01.webp" class="img-fluid" alt=""> -->
                          <i class="nav-icon fas fa-file"></i>

@@ -95,7 +95,7 @@ class About_Us_Admin_1 extends CI_Controller
 
                 if ($this->upload->do_upload('our_vision_img')) {
                     $main_img_data = $this->upload->data();
-                    $data['our_vision_img'] = $main_img_data['file_name']; // Store uploaded image name
+                    $data['our_vision_img'] = $main_img_data['file_name']; 
                 } else {
                     $this->session->set_flashdata('error', $this->upload->display_errors());
                     redirect('admin/Aboutus_admin_view_1/edit/' . $id);
@@ -129,7 +129,7 @@ class About_Us_Admin_1 extends CI_Controller
 
             echo "<pre>";
             print_r($data);
-            // exit;
+            exit;
 
             // Update data in the database
             $result = $this->About_Us_model_1->edit($id, $data);

@@ -32,7 +32,7 @@ class Our_client_Admin extends CI_Controller
         if (!empty($_FILES)) {
             $this->load->library('upload');
 
-            $config['upload_path'] = './uploads/Home-page-icon/';
+            $config['upload_path'] = './uploads/Our_client/';
             $config['allowed_types'] = '*';
             $config['max_size'] = 4096;
 
@@ -43,7 +43,7 @@ class Our_client_Admin extends CI_Controller
             foreach ($_FILES as $field_name => $file_data) {
                 if ($this->upload->do_upload($field_name)) {
                     $data = $this->upload->data();
-                    $imagePath = 'uploads/Home-page-icon/' . $data['file_name'];
+                    $imagePath = 'uploads/Our_client/' . $data['file_name'];
                     $uploaded_icons[$field_name] = $imagePath;
                 } else {
 
@@ -92,7 +92,7 @@ class Our_client_Admin extends CI_Controller
     //         if (!empty($_FILES[$field_name]['name'])) {
     //             $this->load->library('upload');
 
-    //             $config['upload_path'] = './uploads/Home-page-icon/';
+    //             $config['upload_path'] = './uploads/Our_client/';
     //             $config['allowed_types'] = 'gif|jpg|png';
     //             $config['max_size'] = 4096;
 
@@ -100,7 +100,7 @@ class Our_client_Admin extends CI_Controller
 
     //             if ($this->upload->do_upload($field_name)) {
     //                 // Store the uploaded image path
-    //                 $uploaded_images[$field_name] = 'uploads/Home-page-icon/' . $this->upload->data('file_name');
+    //                 $uploaded_images[$field_name] = 'uploads/Our_client/' . $this->upload->data('file_name');
     //             } else {
     //                 // If upload fails, set flashdata error message and redirect back to edit page
     //                 $this->session->set_flashdata('error', $this->upload->display_errors());
@@ -151,7 +151,7 @@ class Our_client_Admin extends CI_Controller
                 if (!empty($_FILES[$field_name]['name'])) {
                     $this->load->library('upload');
     
-                    $config['upload_path'] = './uploads/Home-page-icon/';
+                    $config['upload_path'] = './uploads/Our_client/';
                     $config['allowed_types'] = 'gif|jpg|png';
                     $config['max_size'] = 4096;
     
@@ -159,7 +159,7 @@ class Our_client_Admin extends CI_Controller
     
                     if ($this->upload->do_upload($field_name)) {
                         // Store the uploaded image path
-                        $uploaded_images[$field_name] = 'uploads/Home-page-icon/' . $this->upload->data('file_name');
+                        $uploaded_images[$field_name] = 'uploads/Our_client/' . $this->upload->data('file_name');
                     } else {
                         // If upload fails, set flashdata error message and redirect back to edit page
                         $this->session->set_flashdata('error', $this->upload->display_errors());

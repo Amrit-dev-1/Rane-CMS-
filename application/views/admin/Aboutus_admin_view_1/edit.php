@@ -1,5 +1,9 @@
 <?php $this->load->view('admin/layout/header'); ?>
 <?php $this->load->view('admin/layout/sidebar'); ?>
+<head>
+<link rel="stylesheet" href="https://cdn.ckeditor.com/4.16.2/standard-all/contents.css">
+
+</head>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -180,3 +184,11 @@
 </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+
+
+<script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('our_story_para');
+    CKEDITOR.replace('our_vision_para');
+    CKEDITOR.replace('our_mission_para');
+</script>

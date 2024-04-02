@@ -1,6 +1,12 @@
 <?php $this->load->view('admin/layout/header'); ?>
 
+
 <?php $this->load->view('admin/layout/sidebar'); ?>
+
+<head>
+<link rel="stylesheet" href="https://cdn.ckeditor.com/4.16.2/standard-all/contents.css">
+
+</head>
 
 <div class="content-wrapper">
 	<section class="content-header">
@@ -90,3 +96,10 @@
 
 <?php $this->load->view('admin/layout/footer'); ?>
 <?php $this->load->view('admin/layout/script'); ?>
+
+<script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('our_story_para');
+    CKEDITOR.replace('our_vision_para');
+    CKEDITOR.replace('our_mission_para');
+</script>

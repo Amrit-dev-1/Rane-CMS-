@@ -41,12 +41,13 @@ class About_Us_Admin_2 extends CI_Controller
                 'Year_content' => $this->input->post('Year_content'),
 
             );
-            echo "<pre>";
-            print_r($data);
+            // echo "<pre>";
+            // print_r($data);
             // exit;
             $result = $this->About_Us_model_2->add($data);
             if ($result) {
                 $this->session->set_flashdata('success', 'Data inserted successfully.');
+                redirect('admin/About_Us_Admin_2/display_data');
             } else {
                 $this->session->set_flashdata('error', 'Error occurred while inserting data.');
             }
