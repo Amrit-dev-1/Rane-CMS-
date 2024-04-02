@@ -34,6 +34,19 @@
         /* Adjust as needed */
     }
 
+    .client-images-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .client-images-container img {
+        width: 20%;
+        /* Adjust as needed */
+        margin: 5px;
+        /* Adjust as needed */
+    }
+
+
 
     .client-logo img-fluid {
         display: flex;
@@ -55,79 +68,55 @@
 
     <div class="client-carousel col-sm-6 col-md-9 col-xl-6">
         <div class="owl-carousel">
-            <div class="client-logos-slider">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Cidco-Color-Logo-01.webp" alt="logo1" class=" client-logo img-fluid">
+            <?php if (!empty($clients)) : ?>
+                <?php foreach ($clients as $client) : ?>
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_1']); ?>" alt="client-1" class="client-logo img-fluid">
+                    </div>
 
-            </div>
-            <div class="client-logos-slider ">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/DFC-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_2']); ?>" alt="client-2" class="client-logo img-fluid">
+                    </div>
 
-            </div>
-            <div class="client-logos-slider ">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/Suez-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_3']); ?>" alt="client-3" class="client-logo img-fluid">
+                    </div>
 
-            </div>
-            <div class=" client-logos-slider">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MMRD-Logo-Color-01.webp" alt="logo1" class="client-logo img-fluid">
-            </div>
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_4']); ?>" alt="client-4" class="client-logo img-fluid">
+                    </div>
 
-            <!-- 2nd row -->
-            <div class="client-logos-slider ">
-                <img src="<?php base_url(); ?>assets/image/Client/Color/Reliance Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-            </div>
-            <div class=" client-logos-slider">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/NHAI-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_5']); ?>" alt="client-5" class="client-logo img-fluid">
+                    </div>
 
-            </div>
-            <div class="client-logos-slider ">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/RNVL-Color-Logo-01.webp" alt="logo1" class="client-logo img-fluid">
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_6']); ?>" alt="client-6" class="client-logo img-fluid">
+                    </div>
 
-            </div>
-            <div class=" client-logos-slider">
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/client-slider-logo/MSRDC-ColorLogo-01.webp" alt="logo1" class="client-logo img-fluid">
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_7']); ?>" alt="client-7" class="client-logo img-fluid">
+                    </div>
 
-            </div>
+                    <div class="client-logos-slider">
+                        <img src="<?php echo base_url($client['our_client_8']); ?>" alt="client-8" class="client-logo img-fluid">
+                    </div>
+
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p>No clients found.</p>
+            <?php endif; ?>
 
         </div>
     </div>
-</div>
-<!-- </div> -->
 
 
-<!-- 
-<div class="client ">
-    <div class="row">
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/Cidco Color Logo-01.png" alt="logo1" class=" client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/DFC Logo Color-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/Suez Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/MMRD Logo Color-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/Reliance Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/RNVL Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/NHAI Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-        <div class="col-md-2 col-sm-4 col-6">
-            <img src="<?php base_url(); ?>assets/image/Client/Color/MSRDC Color Logo-01.png" alt="logo1" class="client-logo img-fluid">
-        </div>
-    </div>
+
 </div>
 
- -->
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
