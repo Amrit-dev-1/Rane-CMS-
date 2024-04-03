@@ -110,27 +110,27 @@ $this->load->view('RMC_view/layout/header_view.php');
 
 
     <?php if (!empty($services_2)) : ?>
-    <div id="container">
-    <h2 class="about_headings">
-            <span class="decoration">Our</span><span> Journey</span>
+        <div id="container">
+            <h2 class="about_headings">
+                <span class="decoration">Our</span><span> Journey</span>
 
-        </h2>
-        <div class="contain">
-            <div id="owl-carousel" class="owl-carousel owl-theme our-story">
-                <?php foreach ($services_2 as $journey) : ?>
-                    <div class="item">
-                        <h4 class="year"><?php echo $journey->Our_Journey_year; ?></h4>
-                        <span class="year-para">
-                            <?php echo $journey->Year_content; ?>
-                        </span>
-                    </div>
-                <?php endforeach; ?>
+            </h2>
+            <div class="contain">
+                <div id="owl-carousel" class="owl-carousel owl-theme our-story">
+                    <?php foreach ($services_2 as $journey) : ?>
+                        <div class="item">
+                            <h4 class="year"><?php echo $journey->Our_Journey_year; ?></h4>
+                            <span class="year-para">
+                                <?php echo $journey->Year_content; ?>
+                            </span>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
-    </div>
-<?php else : ?>
-    <p>No data available for services.</p>
-<?php endif; ?>
+    <?php else : ?>
+        <p>No data available for services.</p>
+    <?php endif; ?>
 
 
 

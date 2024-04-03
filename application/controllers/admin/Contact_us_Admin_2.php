@@ -11,6 +11,11 @@ class Contact_us_Admin_2 extends CI_Controller
         $this->load->model('Contact_us_model_2');
 
         $this->load->library('session');
+        
+        // Check if admin is not logged in, redirect to login page
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
     }
 
     public function display_data()

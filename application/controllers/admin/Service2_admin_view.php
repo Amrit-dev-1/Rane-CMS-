@@ -9,6 +9,11 @@ class Service2_admin_view extends CI_Controller
         parent::__construct();
         $this->load->model('Service_2_model');
         $this->load->library('session');
+        
+        // Check if admin is not logged in, redirect to login page
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
     }
 
     public function display_data()

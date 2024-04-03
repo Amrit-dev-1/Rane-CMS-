@@ -11,7 +11,14 @@ class About_Us_Admin_1 extends CI_Controller
         $this->load->model('About_Us_model_1');
 
         $this->load->library('session');
+    
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
+    
     }
+
+
 
     public function display_data()
     {

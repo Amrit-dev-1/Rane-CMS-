@@ -11,7 +11,22 @@ class Home_Admin_2 extends CI_Controller
         $this->load->library('session');
         $this->load->helper('url');
         $this->load->library('upload');
+
+
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
     }
+
+    
+    // public function __construct()
+    // {
+       
+
+    //     if (!$this->session->userdata('admin_logged_in')) {
+    //         redirect('admin/Admin_Login');
+    //     }
+    // }
 
 
     public function display_data()

@@ -11,6 +11,10 @@ class Land_Advisory_Admin_2 extends CI_Controller
         $this->load->model('Land_Advisory_model_2');
 
         $this->load->library('session');
+
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
     }
 
     public function display_data()

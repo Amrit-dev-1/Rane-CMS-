@@ -8,9 +8,17 @@ class Our_client_Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Our_client_model');
-        $this->load->library('session');
+        // $this->load->library('session');
         $this->load->helper('url');
         $this->load->library('upload');
+
+        $this->load->library('session');
+        
+        // Check if admin is not logged in, redirect to login page
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
+
     }
 
 
