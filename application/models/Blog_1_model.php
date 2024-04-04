@@ -12,7 +12,10 @@ class Blog_1_model extends CI_Model
 
     public function add($data)
     {
-        return $this->db->insert('blog_1', $data);
+        // return $this->db->insert('blog_1', $data);
+
+        $this->db->insert('blog_1', $data);
+        return $this->db->affected_rows() > 0;
     }
 
     public function get_all_data()

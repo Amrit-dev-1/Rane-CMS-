@@ -15,6 +15,7 @@ class RANE_con extends CI_Controller
         $this->load->model('Home_model_2');
         $this->load->model('Home_model_3');
         $this->load->model('Our_client_model');
+        
 
         $data['service'] = $this->Home_model_1->getHomepageData();
         $data['service_2'] = $this->Home_model_2->getHomepageData();

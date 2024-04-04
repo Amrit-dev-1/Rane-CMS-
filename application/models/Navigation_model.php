@@ -9,10 +9,9 @@ class Navigation_model extends CI_Model
         $this->load->database();
     }
 
-    // Upload data from form
     public function insertBanner($data)
     {
-        $this->db->insert('nav_bar   ', $data);
+        $this->db->insert('nav_bar', $data);
         return $this->db->affected_rows() > 0;
     }
 

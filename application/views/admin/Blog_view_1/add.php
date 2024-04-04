@@ -28,38 +28,45 @@
 		<div class="container-fluid">
 			<div class="card card-default">
 
-				<form action="<?php echo base_url(); ?>admin/Blog_1_Admin/add" method="POST" enctype="multipart/form-data">
+				<form id="demo-form2" action="<?php echo base_url(); ?>admin/Blog_1_Admin/add" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
+
+					<input type="hidden" id="id" required="required" class="form-control" name="id" >
 
 
 
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-6">
-
-								<div class="form-group">
-									<label for="Blog_title"> Blog Title </label>
-									<input type="text" class="form-control" name="Blog_title" id="Blog_title" required>
-								</div>
-
-
-								<div class="form-group">
-									<label for="Blog_Img"> Blog Image </label>
-									<input type="file" class="form-control" name="Blog_Img" id="Blog_Img" required>
-								</div>
-
-
-								<div class="form-group">
-									<label for="Blog_main_content"> Blog Content </label>
-									<textarea class="form-control" name="Blog_main_content" id="Blog_main_content" required></textarea>
-								</div>
-
-							</div>
-
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="Blog_title"> Blog title <span class="required">*</span></label>
+						<div class="col-md-6 col-sm-6 ">
+							<input type="text" id="Blog_title" required="required" class="form-control" name="Blog_title" >
+							<!-- <div class="error"><?php echo form_error('Blog_title'); ?></div> -->
 						</div>
 					</div>
-					<div class="card-footer">
+
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="Blog_Img">Blog Images </label>
+						<div class="col-md-6 col-sm-6">
+							<!-- <img src="<?php echo base_url('uploads/blog_images/' . $service['Blog_Img']); ?>" alt="Main Image" width="100"> -->
+							<br>
+
+							<input type="file" id="Blog_Img" class="form-control" name="Blog_Img">
+							<!-- <div class="error"><?php echo form_error('Blog_Img'); ?></div> -->
+						</div>
+					</div>
+
+
+					<div class="item form-group">
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align"> blog Content  </label>
+						<div class="col-md-6 col-sm-6 ">
+							<textarea class="form-control" name="Blog_main_content"></textarea>
+							<!-- <div class="error"><?php echo form_error('Blog_main_content'); ?></div> -->
+						</div>
+					</div>
+
+
+					<div class="item form-group">
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</div>
+
 				</form>
 			</div>
 		</div>

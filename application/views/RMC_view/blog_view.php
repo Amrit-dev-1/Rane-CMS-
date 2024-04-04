@@ -108,6 +108,10 @@ $this->load->view('RMC_view/layout/header_view.php');
             text-align: justify;
         }
     }
+
+    .custom-margin {
+        margin: 11px 0px;
+    }
 </style>
 
 <body>
@@ -120,97 +124,17 @@ $this->load->view('RMC_view/layout/header_view.php');
         <div class="blog-main-container">
             <h1 class="blog-title-1">Blogs </h1>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Agricultural-Land.webp" alt="First slide">
-                        <h3>Significance, Classifications, and Ownership of Land in India</h3>
-                        <p>Agricultural land, encompassing various forms of cultivation and related activities, plays a pivotal role in sustaining communities.</p>
-                        <a href="<?php base_url() ?>Blogdetail"><button class="read-more-btn">Read More </button></a>
+                <?php foreach ($service as $blog_item) : ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12 custom-margin">
+                        <div class="blog-col">
+                            <img class="d-block w-100" src="<?php echo base_url('uploads/blog_images/' . $blog_item->Blog_Img); ?>" alt="First slide">
+                            <h3><?php echo $blog_item->Blog_title; ?></h3>
+                            <p><?php echo $blog_item->Blog_main_content; ?></p>
+                            <a href="<?php base_url() ?>Blogdetail"><button class="read-more-btn">Read More </button></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Development-of-Land.webp" alt="First slide">
-                        <h3>Navigating Land Development Regulations in Maharashtra</h3>
-                        <p>Development of land involves various operations aimed at changing </p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Development">Read More </a></button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Blog-Images-Work/NON-AGRICULTURAL-LAND-New.webp" alt="First slide">
-                        <h3>Insights of Maharashtra's Land Administration</h3>
-                        <p>Non-agricultural land refers to land that undergoes development activities making it unsuitable for cultivation</p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Non_Agricultural_Land">Read More </a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <?php endforeach; ?>
 
-
-        <div class="blog-main-container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Blog.webp" alt="First slide">
-                        <h3> Understanding Land in India</h3>
-                        <p>providing essential necessities like food, clothing, and shelter. Throughout history, it has remained a crucial factor in economic activities</p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Land">Read More </a></button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Record.webp" alt="First slide">
-                        <h3>Understanding Maharashtra Land Records</h3>
-                        <p>Accurate and up-to-date land records play a crucial role not only in policy formulation but also in fostering harmonious relations within rural societies. </p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Land_record">Read More </a></button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Reveune-Blog.webp" alt="First slide">
-                        <h3>The Journey of Land Administration</h3>
-                        <p>The roots of Land Administration trace back to ancient times when kingdoms thrived under the rule of kings</p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Land_Reveune">Read More </a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="blog-main-container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Investigation-of-Title.webp" alt="First slide">
-                        <h3>Overview of Land Title Investigation</h3>
-                        <p>Title signifies ownership rights to property; investigation ensures legality through a thorough search into ownership records.
-
-
-
-
-
-                        </p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Investigation">Read More </a></button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Right-over-land.webp" alt="First slide">
-                        <h3>Understanding Maharashtra Land Rights</h3>
-                        <p>Land rights, a critical aspect of property ownership, undergo various changes and are subject to legal restrictions.</p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Right_over_land">Read More </a></button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <!-- <div class="blog-col">
-                        <img class="d-block w-100" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Reveune-Blog.webp" alt="First slide">
-                        <h3>Land Reveune</h3>
-                        <p>Land provides basic necessities like food, clothing and shelter to human being. Land has always been an
-                            important locus for the economic activity necessary for human life. Any developmental activity is nearly
-                            impossible to conceive without taking land into consideration.</p>
-                        <button class="read-more-btn"><a href="<?php base_url() ?>Land_Reveune">Read More </a></button>
-                    </div> -->
-                </div>
             </div>
         </div>
     </section>

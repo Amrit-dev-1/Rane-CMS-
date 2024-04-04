@@ -248,6 +248,23 @@
                      </a>
                  </li>
 
+                 
+                 <!-- <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Navigation_bar/display_data" class="nav-link">
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>Navigation Bar</p>
+                     </a>
+                 </li>
+
+                 <li class="nav-item">
+                     <a href="<?php echo base_url(); ?>admin/Footer_bar/display_data" class="nav-link">
+                         <i class="nav-icon fas fa-file"></i>
+                         <p>Footer</p>
+                     </a>
+                 </li> -->
+
+
+
                  <li class="nav-item">
                      <a href="<?php echo base_url(); ?>admin/Blog_1_Admin/display_data" class="nav-link">
                          <i class="nav-icon fas fa-file"></i>

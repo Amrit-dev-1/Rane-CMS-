@@ -22,32 +22,23 @@ class Blog_1_Admin extends CI_Controller
 
 
 
-
     public function add()
     {
         if ($this->input->post()) {
             $this->load->library('upload');
-    
             $config['upload_path'] = './uploads/blog_images/';
-            $config['allowed_types'] = 'jpg|jpeg|png|gif';
+            $config['allowed_types'] = '*';
             $config['max_size'] = 1024 * 10;
-            $config['overwrite'] = false; 
+            $config['overwrite'] = false;
             $this->upload->initialize($config);
     
             if ($this->upload->do_upload('Blog_Img')) {
-                // Get uploaded file data
-                $file_data = $this->upload->data();
-                $file_name = $file_data['file_name'];
-    
+                $upload_data = $this->upload->data();
                 $data = array(
                     'Blog_title' => $this->input->post('Blog_title'),
-                    'Blog_Img' => $file_name, // Store uploaded file name
-                    'Blog_main_content' => $this->input->post('Blog_main_content')
+                    'Blog_main_content' => $this->input->post('Blog_main_content'),
+                    'Blog_Img' => $upload_data['file_name']
                 );
-
-                echo '<pre>';
-                print_r($data);
-                // exit;
     
                 $result = $this->Blog_1_model->add($data);
     
