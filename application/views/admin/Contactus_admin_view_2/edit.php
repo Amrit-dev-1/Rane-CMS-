@@ -81,7 +81,7 @@
 					
 
 					<div class="item form-group">
-						<label class="col-form-label col-md-3 col-sm-3 label-align" for="G_map"> Branch Office Address  <span class="required">*</span></label>
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="G_map"> Map location  <span class="required">*</span></label>
 						<div class="col-md-6 col-sm-6 ">
 							<input type="text" id="G_map" required="required" class="form-control" name="G_map" value="<?php echo $service['Branch_Office_address']; ?>">
 							<div class="error"><?php echo form_error('G_map'); ?></div>

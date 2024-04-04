@@ -6,9 +6,9 @@ $this->load->view('RMC_view/layout/header_view.php');
     <link rel="stylesheet" href="<?php base_url(); ?>assets/css/contactus.css">
     <link rel="stylesheet" href="<?php base_url(); ?>assets/css/responsive.css">
     <title>
-    Contact for Land Surveying, Land Acquisition - 8104280569 / 9820536562
+        Contact for Land Surveying, Land Acquisition - 8104280569 / 9820536562
     </title>
-  <meta name="description" content="Rane Management Consultant - C-17 Acharya Vinobhabhave Rd Sector, 4, Airoli Bridge Road, Sector 4, Airoli, Navi Mumbai, Maharashtra 400708   ">
+    <meta name="description" content="Rane Management Consultant - C-17 Acharya Vinobhabhave Rd Sector, 4, Airoli Bridge Road, Sector 4, Airoli, Navi Mumbai, Maharashtra 400708   ">
 
 </head>
 
@@ -67,48 +67,69 @@ $this->load->view('RMC_view/layout/header_view.php');
     <!--        </div>-->
     <!--    </div>-->
     <!--</div>-->
+    <?php foreach ($services_1 as $service) : ?>
 
-    <div class="container" data-aos="fade-down" data-aos-duration="3000">
-        <div class="row justify-content-center">
-            <!-- First Card - Registered Office -->
-            <div class="">
-                <a href="tel:+919820536562" class="card-link">
-                    <div class="card card1" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title1"><i class="fa-solid fa-map-location-dot fa-2xl"></i><br><br>Registered Office</h5>
-                            <p class="card-text-con">Shubhangi Niwas, Row House No. C - 17, Sector - 4, Airoli, Navi Mumbai - 400708. Tel. 022 27795812.</p>
-                            <div class="container-sch">
-                                <div class="clock-icon">
-                                    <i class=" fas fa-clock fa-2xl" style="color: #ffffff;"></i>
+        <div class="container" data-aos="fade-down" data-aos-duration="3000">
+
+            <div class="row justify-content-center">
+                <!-- First Card - Registered Office -->
+                <div class="">
+                    <a href="tel:+919820536562" class="card-link">
+                        <div class="card card1" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title1"><i class="fa-solid fa-map-location-dot fa-2xl"></i><br><br><?php echo $service->Registered_Office_title; ?></h5>
+                                <p class="card-text-con"><?php echo $service->Registered_Office_address; ?></p>
+                                <div class="container-sch">
+                                    <div class="clock-icon">
+                                        <i class="fas fa-clock fa-2xl" style="color: #ffffff;"></i>
+                                    </div>
+                                    <p class="card-text-con2">Working Hours :<br><?php echo $service->Working_hours_time; ?><br><?php echo $service->Working_hours_days; ?></p>
                                 </div>
-                                <p class="card-text-con2">Working Hours :<br>09:00 - 18:00<br>Mon - Sat</p>
+                            <?php endforeach; ?>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <!-- Second Card - Phone and Email -->
-            <div class="">
-                <a href="tel:+919820536562" class="card-link">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title2"><i class="fa-solid fa-phone fa-lg"></i> Phone</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">+91 9820536562</h6><br>
-                            <p class="email-icon"><i class="fa-solid fa-envelope fa-xl"></i> Email </p>
-                            <p class="email-list">rmcpl_ltd@yahoo.com<br>ranemanagementconsultant@gmail.com</p>
+
+                <!-- Second Card - Phone and Email -->
+                <div class="">
+                    <!-- <a href="tel:+919820536562" class="card-link">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title2"><i class="fa-solid fa-phone fa-lg"></i> Phone</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">+91 9820536562</h6><br>
+                                <p class="email-icon"><i class="fa-solid fa-envelope fa-xl"></i> Email </p>
+                                <p class="email-list">rmcpl_ltd@yahoo.com<br>ranemanagementconsultant@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a> -->
+
+                    <?php foreach ($services_2 as $ser) : ?>
+
+
+                        <a href="tel:<?php echo $ser->Phone_no; ?>" class="card-link">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title2"><i class="fa-solid fa-phone fa-lg"></i> Phone</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">+<?php echo $ser->Phone_no; ?></h6><br>
+                                    <p class="email-icon"><i class="fa-solid fa-envelope fa-xl"></i> Email </p>
+                                    <p class="email-list"><?php echo $ser->Email_id; ?></p>
+                                </div>
+                            </div>
+                        </a>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3768.908459430887!2d72.9928641!3d19.1554839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf4dc01d3731%3A0xd5d8731047c9fb0f!2sRane%20management%20consultant%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1703839183893!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <br>
+        <div class="map-container">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3768.908459430887!2d72.9928641!3d19.1554839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf4dc01d3731%3A0xd5d8731047c9fb0f!2sRane%20management%20consultant%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1703839183893!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+            <iframe src="<?php echo $ser->G_map; ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <br>
+    <?php endforeach; ?>
 
     <div class="container">
         <div class="row justify-content-center">
