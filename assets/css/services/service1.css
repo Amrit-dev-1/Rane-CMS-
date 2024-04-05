@@ -31,8 +31,12 @@
     font-weight: 700;
 
 }
-.container-1{
-    padding: 25px 73px 0 6px;
+.container-1 {
+    padding: 0 7% 0 0px;
+}
+
+.service-custom-position {
+    left: 7.5%;
 }
 .container-2{
     padding: 0 0 0 105px;

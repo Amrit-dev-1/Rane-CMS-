@@ -275,7 +275,7 @@
                  <!--active-->
                  <li class="nav-header">Admin Management</li>
                  <li class="nav-item">
-                     <a href="<?php echo base_url(); ?>admin/admin" class="nav-link">
+                     <a href="<?php echo base_url(); ?>admin/Admin_con/display_data" class="nav-link">
                          <i class="nav-icon fas fa-file"></i>
                          <p>Admin List</p>
                      </a>

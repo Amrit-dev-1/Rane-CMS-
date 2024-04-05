@@ -31,317 +31,140 @@ $this->load->view('RMC_view/layout/header_view.php');
 	</div>
 
 
-
 	<div class="container-1">
-		<div class="row">
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-mobile"> <span class="decoration">Land A</span>cquisition Proposal</h4>
-				<img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Land-Acquisition-Proposal-copy.webp" class="contout">
-
-			</div>
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head-s2-1 for-desktop"> <span class="decoration">Land A</span>cquisition Proposal</h4>
-				<p class="survey-para">Under the major category of Land Acquisition, our specialized sub-service, Land Acquisition Proposal, serves as the crucial first step in the land acquisition process. Once the project area of interest is finalized, we commence our meticulous process. This involves collecting essential revenue records, such as village maps, 7/12 abstracts, and more, and conducting in-depth research to identify the ownership details of Project Affected Persons (PAPs). We then diligently compile and submit these records to the Collector's Office. Our role doesn't stop there; we handle verification, correction, and modification processes to ensure accuracy and compliance. We also facilitate the Revenue Department in the notification and distribution of notices for land acquisition. With our expertise, we streamline the entire process, ensuring a smooth transition from project planning to land acquisition..</p>
-				<h4 class="survey-head2">Client Projects</h4>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/RVNL-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Rail Connectivity To Dighi Port 35 Kms</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/Rites Logo-01-01.png" class="proj-logo img-fluid">
-										<!--<p class="logo-dis text-center mb-0" >Kalyan - Murbad Central Railway 28 Kms</p>-->
-										<p class="logo-dis text-center mb-0">Kalyan - Kasara 3rd Line Project 67 Kms</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MRVC Logo-01-01-01.png" class="proj-logo rite-img-align img-fluid">
-										<!--<p class="logo-dis text-center mb-0">Kalyan - Kasara 3rd Line Project 67 Kms</p>-->
-											<p class="logo-dis text-center mb-0" >Kalyan - Murbad Central Railway 28 Kms</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/DDF Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis  text-center mb-0">JNPT - Bhilad 200 Kms</p>
-									</div>
-								</div>
-							</div>
-						</div>
+	<?php if (!empty($services)) : ?>
+		<?php foreach ($services as $item) : ?>
+			<div class="row">
+				<?php if ($item->id % 2 == 1) : ?>
+					<div class="col-md-12 col-lg-6 col-xl-6">
+						<h2 class="survey-head for-mobile">
+							<span class="decoration"><?php echo $item->title; ?></span>
+						</h2>
+						<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
 					</div>
-				</div>
-
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p>Ownership <spna class="decor">Identification Precision</spna>
-						</p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p>Transparent <spna class="decor"> Surveying Practices</spna>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<br><br>
-
-	<div class="container-2">
-		<div class="row reverse">
-
-			<div class="col-md-12 col-lg-6 col-xl-6 col-custom">
-				<h4 class="survey-head3 for-desktop"> <span class="decoration">Joint M</span>easurement Survey / Govt. Survey</h4>
-				<p class="survey-para">
-
-					In our Joint Measurement Survey / Govt. Survey service, we play a crucial role in facilitating the State Revenue Department. Our team collaborates with their staff and utilizes the latest surveying equipment, including DGPS and drones, to ensure precision and efficiency. We conduct the survey in the presence of Project Affected Persons (PAPs), the land-acquiring body, the Revenue Department, and other relevant government agencies. During this process, we meticulously prepare accurate maps known as Joint Measurement Survey sheets and compile detailed area statements referred to as 'Vivaran Patra.' Once our maps and area statements are prepared, we submit them to the Revenue Department for verification and authentication. Our expertise and technology-driven approach streamline the surveying process, ensuring that all stakeholders have access to reliable and up-to-date land measurements for informed decision-making.
-
-				</p>
-
-				<h4 class="survey-head2 ">Client Projects</h4>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MSRDC Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Nagpur-Mumbai Super Communication Expressway 1300 Ha.</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MRVC Logo-01-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0" >Thane - Diva Central Railway 10 Kms</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/DDF Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">JNPT - Bhilad 200 Kms</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MIDC Logo-01.png" class="img-fluid">
-										<p class="logo-dis text-center mb-0" >Dolvi Industrial Area 209 Hec.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i>
-						<p class="key-point">Efficient <spna class="decor">Measurement Process</spna>
-						</p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p class="key-point">
-							<spna class="decor"> Verification</spna> and <spna class="decor">Authentication</spna>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head3 for-mobile"> <span class="decoration">Joint M</span>easurement Survey / Govt. Survey</h4>
-				<img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Joint-Measurement-Survey-copy.webp" class="contout">
-
-			</div>
-
-		</div>
-	</div>
-	<br><Br>
-
-	<div class="container-3">
-		<div class="row">
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-mobile"> <span class="decoration">Govt. Re</span>venue Record Compilation</h4><br>
-				<img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Govt-Revenue-copy.webp" class="contout">
-
-
-			</div>
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head-s2-2 for-desktop"> <span class="decoration">Govt. Re</span>venue Record Compilation</h4><br>
-				<p class="survey-para">In our Govt. Revenue Record Compilation service, we undertake a comprehensive process to compile and verify government records critical to land ownership and boundaries. We meticulously gather various government records, including gutbook, gutscheme, tippan, fhalani, 8A abstract, aakarband, goan namuna 1, and more, ensuring a thorough examination of ownership details and boundary verification. These records serve as essential components in the land acquisition process, particularly before declaring awards. Our experts superimpose and cross-reference these records to create revised area statements where necessary. If required, we also handle land subdivision. The culmination of our efforts results in the preparation of final land plans and area statements. These documents are then submitted for verification and authentication to both the Revenue Department and the Collector's Office, ensuring the utmost accuracy and compliance in the land acquisition process.
-				<h4 class="survey-head2">Client Projects</h4>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MSRDC Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Nagpur-Mumbai Super Communication Expressway 1300 Ha.</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/CIdco Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Panvel 250 Acres</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MRVC Logo-01-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Kalyan - Murbad Central Railway 28 Kms</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/Rites Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Kalyan - Kasara 3rd Line Project 67 Kms</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p>Thorough <spna class="decor">Ownership Examination</spna>
-						</p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p>Accuracy & Compliance <spna class="decor"> Assurance</spna>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<br><br>
-
-	<div class="container-4">
-		<div class="row reverse">
-
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head3 for-desktop"> <span class="decoration">Trees &</span> Structure Valuation</h4><br>
-				<p class="survey-para-se2">
-
-					In our Tree and Structure Valuation service, we provide a comprehensive assessment that includes detailed reports featuring photographs and essential information. For trees, we gather data on their age, species, height, girth, and overall health. When it comes to structures, we conduct precise measurements of length, breadth, and area. These detailed assessments serve as the foundation for valuation. We then expedite the process by submitting the comprehensive reports to various government departments, such as the Agriculture Department, Forest Department, and Public Works Department (PWD). Our role extends beyond data collection; we actively assist these departments in compiling reports, ensuring efficiency in the valuation process. Our goal is to facilitate and expedite the valuation of trees and structures, contributing to a smoother and more streamlined process for all stakeholders involved.
-
-				</p>
-				<h4 class="survey-head2">Client Projects</h4>
+					<div class="col-md-12 col-lg-6 col-xl-6">
+						<h4 class="survey-head for-desktop">
+							<span class="decoration"><?php echo $item->title; ?></span>
+						</h4>
+						<p class="survey-para"><?php echo $item->content; ?></p>
+						<h4 class="survey-head2 client-project">Client Projects</h4>
 						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-lg-6 col-xl-6">
+									<div class="row">
+										<div class="col-6 mb-4">
+											<div class="project-logo text-center">
+												<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+												<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+											</div>
+										</div>
+										<div class="col-6 mb-4">
+											<div class="project-logo text-center">
+												<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+												<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 col-lg-6 col-xl-6">
+									<div class="row">
+										<div class="col-6 mb-4">
+											<div class="project-logo text-center">
+												<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+												<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+											</div>
+										</div>
+										<div class="col-6 mb-4">
+											<div class="project-logo text-center">
+												<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+												<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h4 class="Key">Key Features</h4>
+						<div class="row">
+							<div class="col-sm-6 col-md-6" style="display: flex;">
+								<i class="fa-solid fa-circle dot-1"></i> <br>
+								<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
+							</div>
+							<div class="col-sm-6 col-md-6" style="display: flex;">
+								<i class="fa-solid fa-circle dot-1"></i> <br>
+								<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
+							</div>
+						</div>
+					</div>
+				<?php else : ?>
 					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/DDF Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">JNPT - Bhilad 200 Kms</p>
+						<div class="col-md-12 col-lg-6 col-xl-6 order-lg-2 service-custom-position">
+							<h2 class="survey-head for-mobile">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h2>
+							<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
+						</div>
+						<div class="col-md-12 col-lg-6 col-xl-6 service-custom-position">
+							<h4 class="survey-head for-desktop">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h4>
+							<p class="survey-para"><?php echo $item->content; ?></p>
+							<h4 class="survey-head2 client-project">Client Projects</h4>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/Rites Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Panvel 250 Acres</p>
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
+							<h4 class="Key">Key Features</h4>
 							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MRVC Logo-01-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Thane - Diva Central Railway 10 Kms</p>
-									</div>
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
 								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center mb-0">
-										<img src="<?php base_url(); ?>assets/image/All-Logos-PNGs/MSRDC Logo-01-01.png" class="proj-logo img-fluid">
-										<p class="logo-dis text-center mb-0">Nagpur-Mumbai Super Communication Expressway 1300 Ha</p>
-									</div>
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
 								</div>
 							</div>
 						</div>
+
 					</div>
-				</div>
-
-			
-
+				<?php endif; ?>
 			</div>
-
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head3 for-mobile"> <span class="decoration">Trees &</span> Structure Valuation</h4><br>
-				<img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Trees-Structure-Valuation-copy.webp" class="contout tree">
-
-			</div>
-
-		</div>
-
-	</div>
-
-	<br><Br>
-
-	<div class="container-3">
-		<div class="row">
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-mobile"> <span class="decoration">Mutat</span>ion of Land</h4><br><bR>
-				<img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Mutation-of-Land-copy.webp" class="contout tree">
-
-
-			</div>
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-desktop"> <span class="decoration">Mutat</span>ion of Land</h4><br><bR>
-				<p class="survey-para-se2">In our Mutation Updates service, we play a pivotal role in the final stages of land acquisition. We assist the land acquisition body, Collector's Office, and Revenue Department in swiftly updating mutation records. This crucial process involves transferring ownership details from the original owner to the acquiring body following compensation disbursement. Our team collaborates closely with these government bodies to ensure the seamless and expedited completion of mutation updates. By streamlining this final step, we contribute to a more efficient and organized land acquisition process, ensuring that ownership details accurately reflect the new status of the land.
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p>Comprehensive  <spna class="decor">Data Integration</spna>
-						</p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p>Transparent <spna class="decor">Surveying Practices</spna>
-						</p>
-					</div>
-				</div>
-
-
-			</div>
-
-		</div>
-	</div>
+		<?php endforeach; ?>
+	<?php endif; ?>
+</div>
 
 
 

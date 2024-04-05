@@ -22,6 +22,13 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
 </head>
 
+<style>
+  .admin-scroll{
+    height: 300px I !important;
+    overflow-y: scroll;
+  }
+</style>
+
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
 
@@ -79,7 +86,7 @@
 
 
                             <td><?php echo $service->title; ?></td>
-                            <td><?php echo $service->content; ?></td>
+                            <td class="admin-scroll" ><?php echo $service->content; ?></td>
 
                             <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_1); ?>" class="img-fluid" alt="Client Image 1"></td>
                             <td><img src="<?php echo base_url('uploads/Logo/' . $service->client_image_2); ?>" class="img-fluid" alt="Client Image 2"></td>

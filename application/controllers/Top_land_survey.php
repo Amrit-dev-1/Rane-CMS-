@@ -9,7 +9,7 @@ class Top_land_survey extends CI_Controller {
     }
 
     public function index() {
-        $data['service'] = $this->Service_1_model->db->get('service-1')->result(); // Fetch data from the service-1 table
-        $this->load->view('RMC_view/Service1_view', $data); // Pass data to the view
+        $data['services'] = $this->Service_1_model->get_all_data(); 
+        $this->load->view('RMC_view/Service1_view', $data); 
     }
 }

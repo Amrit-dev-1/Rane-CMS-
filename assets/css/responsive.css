@@ -204,6 +204,10 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
+  .service-custom-position {
+    left:0 !important;
+}
+
   .abt-para {
     padding: 0% !important;
     margin-left: 0% !important;
@@ -531,6 +535,10 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
+
+  .service-custom-position {
+    left:0 !important;
+}
 
   .abt-para {
     padding: 0% !important;
@@ -1168,6 +1176,12 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 600px) {
+
+  
+  .service-custom-position {
+    left:0 !important;
+}
+    
 
   .abt-para {
     padding: 0% !important;
@@ -2109,6 +2123,12 @@
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
 
+  
+  .service-custom-position {
+    left:0 !important;
+}
+    
+
   .abt-para {
     padding: 0% !important;
     margin-left: 0% !important;
@@ -3042,6 +3062,10 @@
 
 
 @media screen and (max-width: 360px) {
+
+  .service-custom-position {
+    left:0 !important;
+}
     
     .p-0 {
     margin: 0px auto;

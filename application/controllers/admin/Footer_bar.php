@@ -8,9 +8,15 @@ class Footer_bar extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Footer_model');
-        $this->load->library('session');
+       
         $this->load->helper('url');
         $this->load->library('upload');
+
+        $this->load->library('session');
+    
+        if (!$this->session->userdata('admin_logged_in')) {
+            redirect('admin/Admin_Login');
+        }
     }
 
 

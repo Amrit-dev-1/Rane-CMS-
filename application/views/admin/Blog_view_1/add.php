@@ -55,10 +55,18 @@
 
 
 					<div class="item form-group">
-						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align"> blog Content  </label>
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align"> blog Content in detail </label>
 						<div class="col-md-6 col-sm-6 ">
 							<textarea class="form-control" name="Blog_main_content"></textarea>
 							<!-- <div class="error"><?php echo form_error('Blog_main_content'); ?></div> -->
+						</div>
+					</div>
+
+					<div class="item form-group">
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align"> blog Content  </label>
+						<div class="col-md-6 col-sm-6 ">
+							<textarea class="form-control" name="Blog_detail_content"></textarea>
+							<!-- <div class="error"><?php echo form_error('Blog_detail_content'); ?></div> -->
 						</div>
 					</div>
 
@@ -79,4 +87,6 @@
 <script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('Blog_main_content');
+    CKEDITOR.replace('Blog_detail_content');
+
 </script>

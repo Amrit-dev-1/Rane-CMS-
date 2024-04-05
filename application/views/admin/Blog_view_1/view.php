@@ -50,6 +50,7 @@
                         <th> Blog Title </th>
                         <th> Blog Image </th>
                         <th>Blog Content</th>
+                        <th>Blog content in Detail </th>
 
                         <th>Action</th>
 
@@ -71,6 +72,9 @@
                             <!-- <td><?php echo $service->Blog_Img; ?></td> -->
 
                             <td><?php echo $service->Blog_main_content; ?></td>
+
+                            <td><?php echo $service->Blog_detail_content; ?></td>
+
 
 
                             <td>
