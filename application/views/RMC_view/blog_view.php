@@ -130,10 +130,13 @@ $this->load->view('RMC_view/layout/header_view.php');
                             <img class="d-block w-100" src="<?php echo base_url('uploads/blog_images/' . $blog_item->Blog_Img); ?>" alt="First slide">
                             <h3><?php echo $blog_item->Blog_title; ?></h3>
                             <p><?php echo $blog_item->Blog_main_content; ?></p>
-                            <a href="<?php base_url() ?>Blogdetail"><button class="read-more-btn">Read More </button></a>
+                            <!-- "Read More" button with dynamically generated URL -->
+                            <a href="<?php echo base_url('Blogdetail?id=' . $blog_item->id); ?>"><button class="read-more-btn">Read More </button></a>
                         </div>
                     </div>
                 <?php endforeach; ?>
+
+
 
             </div>
         </div>

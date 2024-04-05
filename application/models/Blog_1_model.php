@@ -10,6 +10,15 @@ class Blog_1_model extends CI_Model
         $this->load->database();
     }
 
+
+    public function get_blog_item($id)
+    {
+        $query = $this->db->get_where('blog_1', array('id' => $id));
+        return $query->row(); 
+    }
+
+
+
     public function add($data)
     {
         // return $this->db->insert('blog_1', $data);

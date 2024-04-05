@@ -173,76 +173,20 @@ $this->load->view('RMC_view/layout/header_view.php');
 
         </div>
 
+        <?php if(isset($blog_item)): ?>
+
 
         <div class="blog-main-container">
             <div class="row">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="blog-detail-1">
-                        <h1 class="blog-title">Significance, Classifications, and Ownership of Land in India</h1>
-                        <img class="d-block w-100" src="assets/new-img/All-Website-Images/Blog-Images-Work/Blog-Images-Work/Agricultural-Land-Main-Image.webp" alt="First slide">
+                        <h1 class="blog-title"><?php echo $blog_item->Blog_title; ?></h1>
+                        <img class="d-block w-100" src="<?php echo base_url('uploads/blog_images/' . $blog_item->Blog_Img); ?>" alt="First slide">
                         <!--<h3>Land provides basic necessities like food</h3>-->
-                        <h1>Introduction:</h1>
-                        <p>Agricultural land, encompassing various forms of cultivation and related activities, plays a pivotal role in sustaining communities. This article explores the classification of agricultural lands based on usage and delves into the permissible activities, farm building regulations, and restrictions on land use in Maharashtra, India.</p>
+                      
 
-                        <h2>Classification of Agricultural Lands:</h2>
-                        <ul>
-                            <li><strong>Warkas Land:</strong>
-                                <ul>
-                                    <li>Used for low-productivity crops like nachani and warai during the monsoon.</li>
-                                    <li>Involves burning vegetation, manual soil preparation, and hand sowing.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Jirayat Land (Dry Crop):</strong>
-                                <ul>
-                                    <li>Dependent on annual rainfall for seasonal crops (kharif and rabi).</li>
-                                    <li>Agricultural sessions for kharif crops start from June, while rabi crops start from September-October.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Bagayat or Irrigated Land:</strong>
-                                <ul>
-                                    <li>Cultivation dependent on water sources other than rain (wells, bandharas, government irrigation).</li>
-                                </ul>
-                            </li>
-                            <li><strong>Rice Land:</strong>
-                                <ul>
-                                    <li>In coastal and heavy rainfall areas, categorized into rice land and warkas land.</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <p><?php echo $blog_item->Blog_detail_content; ?></p>
 
-                        <h2>Permitted Activities for Land Cultivation:</h2>
-                        <ol>
-                            <li>Construction of tanks, wells, water channels, embankments for water storage or distribution.</li>
-                            <li>Works for drainage, flood protection, erosion prevention.</li>
-                            <li>Planting trees, reclaiming, clearing, enclosing, leveling, or terracing land.</li>
-                            <li>Erecting buildings for residence, agricultural storage, sheltering cattle, or integral cultivation purposes.</li>
-                            <li>Renewal or reconstruction of the mentioned works.</li>
-                        </ol>
-
-                        <h2>Prohibited Works:</h2>
-                        <ol>
-                            <li>Temporary wells, common agricultural works, or minor alterations.</li>
-                            <li>Any work substantially diminishing the value of another person's land.</li>
-                        </ol>
-
-                        <h2>Farm Building Regulations:</h2>
-                        <p>Farm building includes structures for residence, agricultural storage, and cattle shelter. Maximum plinth area varies based on land size:</p>
-                        <ul>
-                            <li>Less than 0.4 Hectare: Nil for residence and other purposes.</li>
-                            <li>0.4 to 0.6 Hectare: Up to 150 square meters for both.</li>
-                            <li>More than 0.6 Hectare: Up to 150 square meters for residence, up to 400 square meters for other purposes, with a total limit of 400 square meters.</li>
-                        </ul>
-
-                        <h2>Permission for Farm Building:</h2>
-                        <p>Permission is required for any farm building within Planning Authorities' jurisdiction, Regional Plans, Town Planning schemes, and specified distances from municipal peripheries.</p>
-                        <h3>Procedure for Obtaining Permission:</h3>
-                        <p>Eligible applicants include landholders, servants, tenants, agents, or legal representatives. Application in the prescribed form is necessary.</p>
-
-                        <h2>Land Use Restrictions:</h2>
-                        <p>In developing areas, land use plans like Regional Plans allocate zones for purposes such as urbanization, industry, recreation, forestry, and greenery. Compliance with these plans is essential within their limits.</p>
-
-                        <h1>Conclusion:</h1>
-                        <p>Understanding the nuances of agricultural land use regulations is crucial for sustainable development. From permissible activities to farm building limits and adherence to land use plans, these guidelines ensure responsible land management and contribute to the overall welfare of communities and the environment. Developers and landowners should be well-informed about these regulations to make informed decisions and contribute to the organized growth of the agricultural sector.</p>
                     </div>
 
                 </div>
@@ -331,6 +275,9 @@ $this->load->view('RMC_view/layout/header_view.php');
             </div>
 
         </div>
+
+
+        <?php endif; ?>
     </section>
     <!-- carousel end -->
 
