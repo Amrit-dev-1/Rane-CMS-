@@ -9,12 +9,7 @@
     <title>Document</title>
 </head>
 
-<?php if ($this->session->flashdata('success')) : ?>
-    <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
-<?php endif; ?>
-<?php if ($this->session->flashdata('error')) : ?>
-    <div class="alert alert-danger"><?php echo $this->session->flashdata('error'); ?></div>
-<?php endif; ?>
+
 
 <body>
     <section>
@@ -37,10 +32,20 @@
                 <a href="#">Forget Password</a>
             </div>
             <button type="submit">Log in</button>
+            
+
+            <?php if ($this->session->flashdata('success')) : ?>
+                <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
+            <?php endif; ?>
+            <?php if ($this->session->flashdata('error')) : ?>
+                <div class="alert alert-danger"><?php echo $this->session->flashdata('error'); ?></div>
+            <?php endif; ?>
         </form>
 
-
     </section>
+
+
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
