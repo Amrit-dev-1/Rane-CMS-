@@ -28,236 +28,138 @@ $this->load->view('RMC_view/layout/header_view.php');
 	</div>
 
 	<div class="container-1">
-		<div class="row">
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-mobile"> <span class="decoration"> City Sur</span>vey</h4>
-				<img src="<?php base_url() ?>assets/new-img/All-Website-Images/City-Survey-copy.webp" class="contout">
-
-			</div>
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head for-desktop"> <span class="decoration"> City Sur</span>vey</h4>
-				<p class="survey-para">Our services encompass comprehensive city survey work tailored specifically for government organizations. With a pioneering legacy in Maharashtra, we've been entrusted with the responsibility of city survey work for eight urban local bodies. Our approach integrates cutting-edge land topographic and cadastral surveys, seamlessly blending the digitalization of government revenue records with the superimposition of new survey data to create precise and up-to-date plans. We also specialize in assigning unique property numbers to structures, streamlining property identification, and providing invaluable assistance in the issuance of property cards. Our commitment to accuracy and efficiency ensures that government organizations receive invaluable support in managing their urban landscapes.</p>
-
-				<h4 class="survey-head2">Client Projects</h4>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Thane Mahanagar-01.png" class="proj-logo">
-										<br><br>
-										<p class="logo-dis">Thane Municipal Corporation</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Mira-Bhayander Logo-01-01.png" class="proj-logo">
-										<br><br>
-										<p class="logo-dis">Mira Bhayander Municipal corporation</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Vasai-Virar Logo-01-01.png" class="proj-logo">
-										<br><br>
-										<p class="logo-dis">Vasai Virar Municipal Corporation</p>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Kalyan-Dombivali Logo-01-01.png" class="proj-logo">
-										<br><br>
-										<p class="logo-dis">Kalyan Dombivli Municipal Corporation</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<h4 class="Key">Key Features</h4>
+		<?php if (!empty($services)) : ?>
+			<?php foreach ($services as $item) : ?>
 				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p>Pioneering<span class="decor"> Expertise</span></p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p>Vast Revenue<span class="decor"> Document Mastery </span></p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<br>
-
-	<div class="container-2">
-		<div class="row reverse">
-
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head3 for-desktop"> Existing Land Use Plan Analysis <span class="decoration">& Evalu</span>ation (ELU)</h4>
-				<p class="survey-para">Our service specializes in the meticulous preparation and approval of existing land use plans (ELU). We begin with a topographic survey to gather accurate data, and then we skillfully superimpose city survey sheets and revenue records, creating comprehensive land use plans. To ensure the highest level of accuracy and compliance, we diligently seek approval from the Department of Town Planning and the Deputy Superintendent of Land Records (Dy.SLR). Once approved, the ELU is made public for verification, promoting transparency in town planning activity.</p>
-
-				<h4 class="survey-head2">Client Projects</h4>
-				<div class="container">
-					<div class="row">
+					<?php if ($item->id % 2 == 1) : ?>
 						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Tahalsari Nagar-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Talasari Nagar Panchayat</p>
+							<h2 class="survey-head for-mobile">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h2>
+							<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
+						</div>
+						<div class="col-md-12 col-lg-6 col-xl-6">
+							<h4 class="survey-head for-desktop">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h4>
+							<p class="survey-para"><?php echo $item->content; ?></p>
+							<h4 class="survey-head2 client-project">Client Projects</h4>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/KanKavli Logo-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Kankavli Nagar Panchayat</p>
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
+							<h4 class="Key">Key Features</h4>
 							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Mangoan-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Mangaon Nagar Panchayat</p>
-										</div>
-									</div>
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
 								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Maharashtra Seal-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Khalapur Nagar Panchayat</p>
-										</div>
-									</div>
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p style="text-align: left;">Comprehensive<span class="decor"> Data Integration</span></p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <br>
-						<p style="text-align: left;">Transparent<span class="decor"> Surveying Practices </span></p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head3 for-mobile"> Existing Land Use Plan Analysis <span class="decoration">& Evalu</span>ation (ELU)</h4>
-				<img src="<?php base_url() ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/ELU-Ne.webp" class="contout">
-
-			</div>
-
-		</div>
-	</div>
-	<br>
-
-	<div class="container-3">
-		<div class="row">
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head4 for-mobile"> <span class="decoration"> Develop</span>ment Plan</h4>
-				<img src="<?php base_url() ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Development-Plan.webp" class="contout">
-
-			</div>
-			<div class="col-md-12 col-lg-6 col-xl-6">
-				<h4 class="survey-head4 for-desktop"> <span class="decoration"> Develop</span>ment Plan</h4>
-				<p class="survey-para">Our service specializes in the comprehensive preparation of development plans for towns and cities. We kickstart the process by conducting a thorough Existing Land Use (ELU) assessment, ensuring a solid foundation of accurate data. Building upon this, we meticulously craft development plans that encompass zoning regulations, infrastructure enhancement, and future land use proposals. Our commitment to detail and adherence to urban planning principles results in well-structured, sustainable, and forward-thinking development plans that cater to the evolving needs of your community.</p>
-
-				<h4 class="survey-head2">Client Projects</h4>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Tahalsari Nagar-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Talasari Nagar Panchayat</p>
+					<?php else : ?>
+						<div class="row">
+							<div class="col-md-12 col-lg-6 col-xl-6 order-lg-2 service-custom-position">
+								<h2 class="survey-head for-mobile">
+									<span class="decoration"><?php echo $item->title; ?></span>
+								</h2>
+								<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
+							</div>
+							<div class="col-md-12 col-lg-6 col-xl-6 service-custom-position">
+								<h4 class="survey-head for-desktop">
+									<span class="decoration"><?php echo $item->title; ?></span>
+								</h4>
+								<p class="survey-para"><?php echo $item->content; ?></p>
+								<h4 class="survey-head2 client-project">Client Projects</h4>
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12 col-lg-6 col-xl-6">
+											<div class="row">
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+													</div>
+												</div>
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-6">
+											<div class="row">
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+													</div>
+												</div>
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/KanKavli Logo-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Kankavli Nagar Panchayat</p>
-										</div>
+								<h4 class="Key">Key Features</h4>
+								<div class="row">
+									<div class="col-sm-6 col-md-6" style="display: flex;">
+										<i class="fa-solid fa-circle dot-1"></i> <br>
+										<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
+									</div>
+									<div class="col-sm-6 col-md-6" style="display: flex;">
+										<i class="fa-solid fa-circle dot-1"></i> <br>
+										<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-12 col-lg-6 col-xl-6">
-							<div class="row">
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Mangoan-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Mangaon Nagar Panchayat</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-6 mb-4">
-									<div class="project-logo text-center">
-										<div class="img-1">
-											<br>
-											<img src="<?php base_url() ?>assets/image/All-Logos-PNGs/Maharashtra Seal-01-01.png" class="proj-logo">
-											<br><br>
-											<p class="logo-dis">Khalapur Nagar Panchayat</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<h4 class="Key">Key Features</h4>
-				<div class="row">
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-						<i class="fa-solid fa-circle dot-1" style="color: #e19209;"></i> <Br>
-						<p> Empaneled by<span class="decor"> Maharashtra State Town Planning Department</span> </p>
-					</div>
-					<div class="col-sm-6 col-md-6" style="display: flex;">
-
-					</div>
+						</div>
+					<?php endif; ?>
 				</div>
-			</div>
-		</div>
+			<?php endforeach; ?>
+		<?php endif; ?>
 	</div>
 	<br>
 

@@ -30,53 +30,140 @@ $this->load->view('RMC_view/layout/header_view.php');
     </div>
 
     <div class="container-1">
-        <div class="row">
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <h4 class="for-mobile survey-head about_headings"> <span class="decoration"> Banking</span> & Financial Institutes </h4><br>
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Banking-copy.webp" class="contout tree">
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <div class="col6-custom">
-                    <h4 class="for-desktop survey-head about_headings"> <span class="decoration"> Banking</span> & Financial Institutes </h4><br>
-                    <p class="survey-para-se2" style="text-align: justify;">Banking and Finance are integral drivers of future growth and financial infrastructure development. We offer a range of services tailored to meet the unique needs of Banking and Financial Institutes, including pre and post valuation services for securing bank loans across various asset types. Our technical and financial assessments play a crucial role in making informed decisions and ensuring a sound return on investment. Moreover, our engineers provide project valuations to determine the value of both absolute assets and collateral securities, adding an extra layer of security and precision to financial transactions. We also offer re-evaluation services, which involve periodic progress reviews and asset monitoring, ensuring compliance, permissions, collateral checks, and balanced reporting. Partner with us to navigate the complex financial landscape with confidence and intelligence. </p>
-                </div>
-            </div>
+		<?php if (!empty($services)) : ?>
+			<?php foreach ($services as $item) : ?>
+				<div class="row">
+					<?php if ($item->id % 2 == 1) : ?>
+						<div class="col-md-12 col-lg-6 col-xl-6">
+							<h2 class="survey-head for-mobile">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h2>
+							<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
+						</div>
+						<div class="col-md-12 col-lg-6 col-xl-6">
+							<h4 class="survey-head for-desktop">
+								<span class="decoration"><?php echo $item->title; ?></span>
+							</h4>
+							<p class="survey-para"><?php echo $item->content; ?></p>
+							<!-- <h4 class="survey-head2 client-project">Client Projects</h4>
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-6">
+										<div class="row">
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+												</div>
+											</div>
+											<div class="col-6 mb-4">
+												<div class="project-logo text-center">
+													<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+													<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<!-- <h4 class="Key">Key Features</h4>
+							<div class="row">
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
+								</div>
+								<div class="col-sm-6 col-md-6" style="display: flex;">
+									<i class="fa-solid fa-circle dot-1"></i> <br>
+									<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
+								</div>
+							</div> -->
+						</div>
+					<?php else : ?>
+						<div class="row">
+							<div class="col-md-12 col-lg-6 col-xl-6 order-lg-2 service-custom-position">
+								<h2 class="survey-head for-mobile">
+									<span class="decoration"><?php echo $item->title; ?></span>
+								</h2>
+								<img src="<?php echo base_url('uploads/Main-img/' . $item->main_img); ?>" class="contout img-fluid">
+							</div>
+							<div class="col-md-12 col-lg-6 col-xl-6 service-custom-position">
+								<h4 class="survey-head for-desktop">
+									<span class="decoration"><?php echo $item->title; ?></span>
+								</h4>
+								<p class="survey-para"><?php echo $item->content; ?></p>
+								<!-- <h4 class="survey-head2 client-project">Client Projects</h4>
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12 col-lg-6 col-xl-6">
+											<div class="row">
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_1); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_1; ?></p>
+													</div>
+												</div>
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_2); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_2; ?></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-6 col-xl-6">
+											<div class="row">
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_3); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_3; ?></p>
+													</div>
+												</div>
+												<div class="col-6 mb-4">
+													<div class="project-logo text-center">
+														<img src="<?php echo base_url('uploads/Logo/' . $item->client_image_4); ?>" class="proj-logo img-fluid">
+														<p class="logo-dis text-center mb-0"><?php echo $item->client_des_4; ?></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> -->
+								<!-- <h4 class="Key">Key Features</h4>
+								<div class="row">
+									<div class="col-sm-6 col-md-6" style="display: flex;">
+										<i class="fa-solid fa-circle dot-1"></i> <br>
+										<p><span class="decor"><?php echo $item->key_feature_1; ?></span></p>
+									</div>
+									<div class="col-sm-6 col-md-6" style="display: flex;">
+										<i class="fa-solid fa-circle dot-1"></i> <br>
+										<p><span class="decor"><?php echo $item->key_feature_2; ?></span></p>
+									</div>
+								</div> -->
+							</div>
 
-        </div>
-    </div>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	</div>
 
-    <div class="container-2">
-        <div class="row reverse ">
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <div class="col6-custom">
-                    <h4 class="for-desktop survey-head about_headings"><span class="decoration">Individu</span>als</h4><br>
-                    <p class="survey-para-se2" style="text-align: justify;">Our experts provide comprehensive support for your personal wealth matters, including income tax planning, compliance assistance, advisory for legal matters and court cases, visa support, asset sale and purchase valuation, insurance valuations, project analysis, and education loan support. We also specialize in real estate valuation and consulting for secondary investments, including home and mortgage loans, and mesne profit matters. While these areas may not be our primary focus, we are here to guide you, allowing you to concentrate on your core strengths. Feel free to reach out to explore how we can assist you further.</p>
-                </div>
-            </div>
-
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <h4 class="for-mobile survey-head about_headings"><span class="decoration">Individu</span>als</h4>
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Individual-copy.webp" class="contout tree">
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container-3">
-        <div class="row">
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <h4 class="for-mobile survey-head about_headings"> <span class="decoration"> Corpor</span>ates </h4>
-                <img src="<?php base_url(); ?>/assets/new-img/All-Website-Images/Service-Page-images-for-both-side/Other-Images/Corporates-copy.webp" class="contout tree">
-            </div>
-            <div class="col-md-12 col-lg-6 col-xl-6">
-                <div class="col6-custom">
-                    <h4 class="for-desktop survey-head about_headings"> <span class="decoration"> Corpor</span>ates </h4><br>
-                    <p class="survey-para-se2" style="text-align: justify;">When you choose us as your corporate valuations partner, you can rest assured that you have selected a top-tier service provider in the field. We seamlessly align with your corporate vision, delivering precise values to help you achieve your business objectives. With extensive experience and a network of expert partners, our valuation team integrates smoothly into your corporate real estate plans. Our approach, marked by clarity, accountability, and efficiency, ensures robust support for your goals. Our core services encompass M&A Advisory, Bank Finance & Solvency Valuations, Insurance Valuations, Arbitrations & Litigations, Public Issue Support, Corporate Insolvency Advice, and Loan Against Property Valuations, all tailored to meet the diverse needs of our corporate clients.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 
 
