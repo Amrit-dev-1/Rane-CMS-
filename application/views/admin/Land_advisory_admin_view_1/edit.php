@@ -39,7 +39,7 @@
 				<!-- /.card-header -->
 				<!--<div class="card-body">-->
 				<!-- form start -->
-				<form id="demo-form2" action="<?php echo base_url(); ?>admin/Land_Advisory_Admin_1/edit" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
+				<!-- <form id="demo-form2" action="<?php echo base_url(); ?>admin/Land_Advisory_Admin_1/edit" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
 
 					<input type="hidden" id="id" required="required" class="form-control" name="id" value="<?php echo $service['id']; ?>">
 
@@ -75,7 +75,46 @@
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</div>
 
+				</form> -->
+
+				<form id="demo-form2" action="<?php echo base_url('admin/Land_Advisory_Admin_1/edit'); ?>" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
+
+					<input type="hidden" id="id" name="id" value="<?php echo $service['id']; ?>">
+
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="Key_points_icon">Key Points Icons</label>
+						<div class="col-md-6 col-sm-6">
+							<?php if (!empty($service['Key_points_icon'])) : ?>
+								<img src="<?php echo base_url('uploads/Land_advisory/' . $service['Key_points_icon']); ?>" alt="Main Image" width="100">
+								<br>
+							<?php endif; ?>
+							<input type="file" id="Key_points_icon" name="Key_points_icon" class="form-control">
+							<div class="error"><?php echo form_error('Key_points_icon'); ?></div>
+						</div>
+					</div>
+
+					<div class="item form-group">
+						<label class="col-form-label col-md-3 col-sm-3 label-align" for="Key_points_head">Key Points Head<span class="required">*</span></label>
+						<div class="col-md-6 col-sm-6 ">
+							<input type="text" id="Key_points_head" name="Key_points_head" class="form-control" value="<?php echo $service['Key_points_head']; ?>" required>
+							<div class="error"><?php echo form_error('Key_points_head'); ?></div>
+						</div>
+					</div>
+
+					<div class="item form-group">
+						<label for="content" class="col-form-label col-md-3 col-sm-3 label-align">Key Points Description</label>
+						<div class="col-md-6 col-sm-6 ">
+							<textarea class="form-control" name="Key_points_description"><?php echo $service['Key_points_description']; ?></textarea>
+							<div class="error"><?php echo form_error('Key_points_description'); ?></div>
+						</div>
+					</div>
+
+					<div class="item form-group">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+
 				</form>
+				<!--  -->
 
 				<!--</div>-->
 				<!-- /.row -->

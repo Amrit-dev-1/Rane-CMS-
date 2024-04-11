@@ -75,45 +75,46 @@ class Land_Advisory_Admin_1 extends CI_Controller
 
 
 
-
     public function edit($id = null)
     {
         if ($this->input->post()) {
             $id = $this->input->post('id');
-
+    
             $this->load->library('upload');
-
+    
             $config['upload_path'] = './uploads/Land_advisory/';
-            $config['allowed_types'] = 'jpg|jpeg|png|gif';
+            $config['allowed_types'] = '*';
             $config['max_size'] = 1024 * 10;
             $config['overwrite'] = true;
             $this->upload->initialize($config);
-
+    
             if (!empty($_FILES['Key_points_icon']['name']) && $this->upload->do_upload('Key_points_icon')) {
                 $main_img_data = $this->upload->data();
                 $data['Key_points_icon'] = $main_img_data['file_name'];
             } else {
+                
                 $this->session->set_flashdata('error', $this->upload->display_errors());
-                redirect('admin/Land_Advisory_Admin_1/edit/' . $id);
+                // redirect('admin/Land_Advisory_Admin_1/edit/' . $id);
             }
-
+    
             $data['Key_points_head'] = $this->input->post('Key_points_head');
             $data['Key_points_description'] = $this->input->post('Key_points_description');
-
+    
             $result = $this->Land_Advisory_model_1->edit($id, $data);
-
+    
             if ($result) {
                 $this->session->set_flashdata('success', 'Data updated successfully.');
             } else {
                 $this->session->set_flashdata('error', 'Error occurred while updating data.');
             }
-
+    
             redirect('admin/Land_Advisory_Admin_1/display_data');
         } else {
             $data['service'] = $this->Land_Advisory_model_1->get_service_by_id($id);
             $this->load->view('admin/Land_advisory_admin_view_1/edit.php', $data);
         }
     }
+    
 
 
 
