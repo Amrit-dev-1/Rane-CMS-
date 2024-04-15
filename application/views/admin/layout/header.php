@@ -40,13 +40,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <!-- Bootstrap 5 CSS -->
   <!-- <link href="assets/front/css/bootstrap.min.css" rel="stylesheet"> -->
 
-
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom CSS -->
-    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <!-- C:/xampp/htdocs/ranemanagementconsultant.com/assets/front/css/bootstrap.min.css -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/front/css/bootstrap.min.css">
+
+
+
 </head>
 
 

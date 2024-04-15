@@ -1,32 +1,30 @@
+<!-- top navigation -->
 
+<div class="top_nav">
 
-        <!-- top navigation -->
+  <div class="nav_menu">
 
-        <div class="top_nav">
+    <div class="nav toggle">
 
-          <div class="nav_menu">
+      <a id="menu_toggle"><i class="fa fa-bars"></i></a>
 
-              <div class="nav toggle">
+    </div>
 
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+    <nav class="nav navbar-nav">
 
-              </div>
+      <ul class=" navbar-right">
 
-              <nav class="nav navbar-nav">
+        <li class="nav-item dropdown open" style="padding-left: 15px;">
 
-              <ul class=" navbar-right">
+          <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
 
-                <li class="nav-item dropdown open" style="padding-left: 15px;">
+            <img src="<?php echo base_url(); ?>assets/admin/images/img.jpg" alt="">Admin
 
-                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+          </a>
 
-                    <img src="<?php echo base_url(); ?>assets/admin/images/img.jpg" alt="">Admin
+          <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
 
-                  </a>
-
-                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-
-                    <!-- <a class="dropdown-item"  href="javascript:;"> Profile</a>
+            <!-- <a class="dropdown-item"  href="javascript:;"> Profile</a>
 
                       <a class="dropdown-item"  href="javascript:;">
 
@@ -38,21 +36,21 @@
 
                     <a class="dropdown-item"  href="javascript:;">Help</a> -->
 
-                    <a class="dropdown-item"  href="<?php echo base_url() . 'admin/Login/logout_process'?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-
-                  </div>
-
-                </li>
-
-
-
-
-              </ul>
-
-            </nav>
+            <a class="dropdown-item" href="<?php echo base_url() . 'admin/Login/logout_process' ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
 
           </div>
 
-        </div>
+        </li>
 
-        <!-- /top navigation -->
+
+
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</div>
+
+<!-- /top navigation -->
