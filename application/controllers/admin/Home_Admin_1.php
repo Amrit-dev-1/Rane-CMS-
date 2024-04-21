@@ -221,15 +221,15 @@ class Home_Admin_1 extends CI_Controller
                 $fieldName = 'Survey_desc_' . $i;
                 $survey_desc[$fieldName] = $this->input->post($fieldName);
             }
-    
+
             // Merge all uploaded data
             $update_data = array_merge($uploaded_images, $uploaded_mobile_images, $uploaded_survey_images, $survey_desc);
-    
 
-            
-                    // echo "<pre>";
-                    // print_r($update_data);
-                    // exit;
+
+
+            // echo "<pre>";
+            // print_r($update_data);
+            // exit;
 
             // Update the banner data
             if (!empty($update_data)) {
@@ -239,10 +239,10 @@ class Home_Admin_1 extends CI_Controller
                     $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
                 }
             }
-    
-            // redirect('admin/Home_Admin_1/display_data');
+
+            redirect('admin/Home_Admin_1/display_data');
         }
-    
+
         $this->load->view('admin/Home_admin_view_1/edit.php', $data);
     }
 

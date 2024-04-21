@@ -55866,3 +55866,10 @@ a.text-muted:hover {
     width: 35%;
     margin: 20px 0;
 }
+
+
+
+.banner-image {
+    height: 150px !important; 
+    object-fit: cover !important;
+}

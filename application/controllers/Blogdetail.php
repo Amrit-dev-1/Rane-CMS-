@@ -11,7 +11,10 @@ class Blogdetail extends CI_Controller {
 
         $data['blog_item'] = $this->Blog_1_model->get_blog_item($id);
 
-        $this->load->view('RMC_view/blogdetail.php', $data);
+        // Fetch suggested blog items
+        $data['suggested_blogs'] = $this->Blog_1_model->get_suggested_blogs($id);
+
+        $this->load->view('RMC_view/blogdetail', $data);
     }
 }
 ?>

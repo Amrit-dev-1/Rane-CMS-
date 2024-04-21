@@ -173,111 +173,45 @@ $this->load->view('RMC_view/layout/header_view.php');
 
         </div>
 
-        <?php if(isset($blog_item)): ?>
-
-
-        <div class="blog-main-container">
-            <div class="row">
-                <div class="col-lg-8 col-md-6 col-sm-12">
-                    <div class="blog-detail-1">
-                        <h1 class="blog-title"><?php echo $blog_item->Blog_title; ?></h1>
-                        <img class="d-block w-100" src="<?php echo base_url('uploads/blog_images/' . $blog_item->Blog_Img); ?>" alt="First slide">
-                        <!--<h3>Land provides basic necessities like food</h3>-->
-                      
-
-                        <p><?php echo $blog_item->Blog_detail_content; ?></p>
-
-                    </div>
-
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="blog-detail">
-                        <h2><u>Popular Post</u></h2>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Agricultural-Land.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                            <a href="<?php base_url() ?>Blogdetail">   <p>Agricultural land, encompassing various forms of cultivation. </p></a> 
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Development-of-Land.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                            <a href="<?php base_url() ?>Development"><p>Development of land involves various operations aimed at changing </p></a>
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Investigation-of-Title.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                              <a href="<?php base_url()  ?>Investigation">  <p>Title signifies ownership rights to property; investigation ensures legality through a thorough search </p></a>
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Blog.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                            <a href="<?php base_url()  ?>Land">    <p>providing essential necessities like food, clothing, and shelter.</p></a>
-                            </div>
-                        </div>
-
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Record.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                            <a href="<?php base_url()  ?>Land_record">   <p>Accurate and up-to-date land records play a crucial role not only in policy </p></a>
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Land-Reveune-Blog.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                              <a href="<?php base_url()?>Land_Reveune">  <p>The roots of Land Administration trace back to ancient times </p> </a>
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Blog-Images-Work/NON-AGRICULTURAL-LAND-New.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                              <a href="<?php base_url() ?>Non_Agricultural_Land">  <p>Non-agricultural land refers to land that undergoes development activities making it unsuitable for cultivation
-
-                                </p></a>
-                            </div>
-                        </div>
-
-                        <div class="row suggested-blogs">
-                            <div class="col-4">
-                                <img class="d-block w-100 suggested-blogs-img" src="<?php base_url() ?>assets/new-img/All-Website-Images/Blog-Images-Work/Right-over-land.webp" alt="First slide">
-                            </div>
-                            <div class="col-8">
-                              <a href="<?= base_url() ?>Right_over_land"> <p>Land rights, a critical aspect of property ownership, undergo various changes and are subject to legal restrictions </p></a> 
-                            </div>
-                        </div>
-                    </div>
-
-
+        <?php if (isset($blog_item)) : ?>
+    <div class="blog-main-container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <!-- Main blog content -->
+                <div class="blog-detail-1">
+                    <h1 class="blog-title"><?php echo $blog_item->Blog_title; ?></h1>
+                    <img class="d-block w-100" src="<?php echo base_url('uploads/blog_images/' . $blog_item->Blog_Img); ?>" alt="Blog Image">
+                    <p><?php echo $blog_item->Blog_detail_content; ?></p>
                 </div>
             </div>
-
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <!-- Suggested blogs -->
+                <div class="blog-detail">
+                    <h2><u>Popular Post</u></h2>
+                    <?php if (!empty($suggested_blogs)) : ?>
+                        <?php foreach ($suggested_blogs as $suggested_blog) : ?>
+                            <div class="row suggested-blogs">
+                                <div class="col-4">
+                                    <img class="d-block w-100 suggested-blogs-img" src="<?php echo base_url('uploads/blog_images/' . $suggested_blog->Blog_Img); ?>" alt="Suggested Blog Image">
+                                </div>
+                                <div class="col-8">
+                                    <a href="<?php echo base_url('Blogdetail?id=' . $suggested_blog->id); ?>">
+                                        <p><?php echo $suggested_blog->Blog_title; ?></p>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <p>No suggested blogs found.</p>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
+    </div>
+<?php endif; ?>
 
 
-        <?php endif; ?>
+
     </section>
     <!-- carousel end -->
 

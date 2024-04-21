@@ -17,7 +17,11 @@ class Blog_1_model extends CI_Model
         return $query->row(); 
     }
 
-
+    public function get_suggested_blogs($current_id)
+    {
+        $this->db->where('id !=', $current_id);
+        return $this->db->get('blog_1')->result();
+    }
 
     public function add($data)
     {
