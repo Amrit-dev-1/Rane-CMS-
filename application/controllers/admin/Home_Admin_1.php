@@ -21,7 +21,7 @@ class Home_Admin_1 extends CI_Controller
     public function display_data()
     {
         $data['Banner'] = $this->Home_model_1->getHomepageData();
-
+        // echo ' <pre>';
         // var_dump($data['Banner']);
 
         $this->load->view('admin/Home_admin_view_1/view.php', $data);
@@ -218,28 +218,20 @@ class Home_Admin_1 extends CI_Controller
             // }
 
             for ($i = 1; $i <= 5; $i++) {
-                $fieldName = 'survey_desc_' . $i;
+                $fieldName = 'Survey_desc_' . $i;
                 $survey_desc[$fieldName] = $this->input->post($fieldName);
             }
-            
-
-
-
-            $update_data = [];
-
+    
+            // Merge all uploaded data
             $update_data = array_merge($uploaded_images, $uploaded_mobile_images, $uploaded_survey_images, $survey_desc);
+    
 
-            foreach ($uploaded_images as $fieldName => $image) {
-                if (!empty($image)) {
-                    $update_data[$fieldName] = $image;
-                }
-            }
+            
+                    // echo "<pre>";
+                    // print_r($update_data);
+                    // exit;
 
-            echo "<pre>";
-            print_r($update_data);
-            // exit;
-
-
+            // Update the banner data
             if (!empty($update_data)) {
                 if ($this->Home_model_1->updateBanner($id, $update_data)) {
                     $this->session->set_flashdata('success', 'Banner data updated successfully.');
@@ -247,10 +239,10 @@ class Home_Admin_1 extends CI_Controller
                     $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
                 }
             }
-
-            redirect('admin/Home_Admin_1/display_data');
+    
+            // redirect('admin/Home_Admin_1/display_data');
         }
-
+    
         $this->load->view('admin/Home_admin_view_1/edit.php', $data);
     }
 

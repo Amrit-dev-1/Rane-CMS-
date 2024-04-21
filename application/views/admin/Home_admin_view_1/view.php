@@ -109,8 +109,8 @@
 
                             <?php for ($i = 1; $i <= 5; $i++) : ?>
                               <td>
-                                <?php $survey_desc = 'Survey_desc_' . $i; ?>
-                                <?php echo $banner_item[$survey_desc] ?? ''; ?>
+                                <?php $Survey_desc_ = 'Survey_desc_' . $i; ?>
+                                <?php echo $banner_item[$Survey_desc_] ?? ''; ?>
                               </td>
                             <?php endfor; ?>
 
