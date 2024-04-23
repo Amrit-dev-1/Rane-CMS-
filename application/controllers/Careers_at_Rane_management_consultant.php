@@ -11,7 +11,10 @@ class Careers_at_Rane_management_consultant extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('RMC_view/careers_view.php');
+
+        $this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
+        $this->load->view('RMC_view/careers_view.php',$data);
     }
  
         function send() {

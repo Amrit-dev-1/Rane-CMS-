@@ -6,17 +6,15 @@ class Header extends CI_Controller
     public function index()
     {
         $this->load->model('Navigation_model');
-        
-        // Fetch data from model
-
 
 		$data['Banner'] = $this->Navigation_model->getHomepageData();
-   
-	
+
+        // echo "<pre>";
+        // print_r($data);
+        // exit;
 
 
-        $this->load->view('admin/Contactus_admin_view/view.php', $data);
+        $this->load->view('RMC_view/layout/header_view', $data);
 
-        // $this->load->view('RMC_view/layout/header_view.php', $data);
     }
 }

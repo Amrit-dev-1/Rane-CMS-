@@ -21,7 +21,7 @@ class Our_client_model extends CI_Model
     public function getHomepageData($id = null)
     {
         if ($id !== null) {
-            $this->db->where('ID', $id);
+            $this->db->where('id', $id);
         }
 
         $query = $this->db->get('our_client');

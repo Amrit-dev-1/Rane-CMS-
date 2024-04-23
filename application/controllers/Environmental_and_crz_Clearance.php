@@ -13,6 +13,8 @@ class Environmental_and_crz_Clearance extends CI_Controller {
 	{
 
 		$this->load->model('Service_7_model');
+		$this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
 
 		$data['services'] = $this->Service_7_model->get_all_data();
 

@@ -13,6 +13,8 @@ class Building_plan_approval extends CI_Controller {
 	{
 
 		$this->load->model('Service_8_model');
+		$this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
 
 		$data['services'] = $this->Service_8_model->get_all_data();
 

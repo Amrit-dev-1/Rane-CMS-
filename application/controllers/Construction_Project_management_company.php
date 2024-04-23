@@ -8,6 +8,8 @@ class Construction_Project_management_company extends CI_Controller {
 	{
 
 		$this->load->model('Service_6_model');
+		$this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
 
 		$data['services'] = $this->Service_6_model->get_all_data();
 

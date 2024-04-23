@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/admin_style.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 
@@ -32,13 +32,13 @@
                 <a href="#">Forget Password</a>
             </div>
             <button type="submit">Log in</button>
-            
+            <br>
 
             <?php if ($this->session->flashdata('success')) : ?>
-                <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
+                <div class="bg-white alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
             <?php endif; ?>
             <?php if ($this->session->flashdata('error')) : ?>
-                <div class="alert alert-danger"><?php echo $this->session->flashdata('error'); ?></div>
+                <div class="bg-white alert alert-danger"><?php echo $this->session->flashdata('error'); ?></div>
             <?php endif; ?>
         </form>
 

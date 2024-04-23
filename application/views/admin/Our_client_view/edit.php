@@ -20,26 +20,35 @@
 		<div class="container-fluid">
 			<div class="card card-default">
 				<div class="card-body">
-					<?php if (isset($Banner)) : ?>
+					<?php if (!empty($Banner)) : ?>
 						<div class="container">
 							<div class="row">
-								<div class="col-md-6 offset-md-3">
+								<div class="col-md-12 ">
 									<h2>Edit Banner</h2>
 									<form action="<?php echo base_url('admin/Our_client_Admin/edit/' . $id); ?>" method="post" enctype="multipart/form-data">
 										<input type="hidden" name="id" value="<?php echo $id; ?>">
 
+										<?php $banner_data = $Banner[0]; ?>
 
-
-										<?php for ($i = 1; $i <= 8; $i++) : ?>
-											<div class="form-group">
-												<label for="our_client_<?php echo $i; ?>">Our Client Icon <?php echo $i; ?></label>
-												<input type="file" class="form-control-file" id="our_client_<?php echo $i; ?>" name="our_client_<?php echo $i; ?>">
-												<?php if (isset($Banner['our_client_' . $i])) : ?>
-													<img src="<?php echo base_url($Banner['our_client_' . $i]); ?>" class="img-fluid admin-img" alt="survey Banner <?php echo $i; ?>">
-												<?php endif; ?>
-											</div>
-										<?php endfor; ?>
-
+										<div class="row">
+											<?php for ($i = 1; $i <= 8; $i++) : ?>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="our_client_<?php echo $i; ?>">Our Client Icon <?php echo $i; ?></label>
+														<input type="file" class="form-control-file" id="our_client_<?php echo $i; ?>" name="our_client_<?php echo $i; ?>">
+														<?php if (!empty($banner_data['our_client_' . $i])) : ?>
+															<img src="<?php echo base_url($banner_data['our_client_' . $i]); ?>" class="img-fluid admin-img" alt="Our Client Icon <?php echo $i; ?>">
+														<?php else : ?>
+															<p>No image found for this client.</p>
+														<?php endif; ?>
+													</div>
+												</div>
+												<?php if ($i % 4 == 0) : ?>
+										</div>
+										<div class="row">
+										<?php endif; ?>
+									<?php endfor; ?>
+										</div>
 
 
 										<button type="submit" class="btn btn-primary">Submit</button>
@@ -50,6 +59,9 @@
 					<?php else : ?>
 						<p>Banner data not found.</p>
 					<?php endif; ?>
+
+
+
 				</div>
 			</div>
 		</div>

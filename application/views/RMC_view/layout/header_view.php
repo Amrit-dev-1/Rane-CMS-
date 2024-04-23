@@ -64,10 +64,20 @@
 
     <nav class="navbar navbar-expand-lg navbar-light" id="" style="background-color: white;">
 
-        <div class="home">
+        <!-- <div class="home">
             <a href="<?php base_url(); ?>RANE_con">
                 <img src="<?php base_url(); ?>assets/image/Rane-Logo-WebsiteTopHead-01.png" class="logo">
             </a>
+        </div> -->
+
+        <div class="home">
+
+            <?php if (!empty($Head)) : ?>
+                <?php foreach ($Head as $banner_item) : ?>
+                    <a href="<?php echo base_url('RANE_con'); ?>">
+                        <img src="<?php echo base_url($banner_item['rane_icon']); ?>" class="logo" alt="Logo">
+                    </a>
+               
         </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,18 +105,18 @@
                                 <div class="row justify-content-center my-4 gap-1">
                                     <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 mobile-view-menu for-mega-menu">
                                         <div class="list-group list-group-flush">
-                                            <h6><span class="colour-2" href="#">Service</span></h6>
+                                            <h6><span class="colour-2" href="#"><?php echo $banner_item['menu_service_title']; ?></span></h6>
 
                                             <div class="para0">
 
-                                                <p class="service-para">Our certified surveyors and experienced team deliver precise surveying services using cutting-edge technology for various projects, including land surveys and mapping, meeting diverse requirements.</p>
+                                                <p class="service-para"><?php echo $banner_item['menu_service_desc']; ?></p>
 
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-4 mb-3 mb-lg-0 for-mega-menu">
                                         <div class="list-group list-group-flush">
-                                            <h3 class="colour"><span class="decoration">Expe</span>rtise</h3>
+                                            <h3 class="colour"><span class="decoration"><?php echo $banner_item['Experties']; ?></span></h3>
 
                                             <div class="link">
                                                 <ul class="dot">
@@ -125,7 +135,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-4 mb-3 mb-md-0 for-mega-menu">
-                                        <h3 class="colour"><span class="decoration">Capa</span>bilities</h3>
+                                        <h3 class="colour"><span class="decoration"><?php echo $banner_item['Capabilities']; ?></span></h3>
 
                                         <div class="link">
                                             <ul class="dot">
@@ -181,7 +191,12 @@
                         </div>
                     </div>
 
-
+                    <?php endforeach; ?>
+            <?php else : ?>
+                <tr>
+                    <td colspan="20">No data found.</td>
+                </tr>
+            <?php endif; ?>
                 </li>
 
                 <li class="nav-item">

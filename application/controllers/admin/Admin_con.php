@@ -70,11 +70,11 @@ class Admin_con extends CI_Controller
 
     public function edit($id = null)
     {
-        $this->load->model('Admin_model');
-
+        $this->load->model('Admin_login_model');
+        
         // Load the banner data for the specified ID
-        $data['Banner'] = $this->Admin_model->getBannerById($id);
-
+        $data['Banner'] = $this->Admin_login_model->getBannerById($id);
+    
         // If form is submitted
         if ($this->input->post()) {
             // Get form data
@@ -82,7 +82,7 @@ class Admin_con extends CI_Controller
             $user_id = $this->input->post('user_id');
             $Email_id = $this->input->post('Email_id');
             $password = $this->input->post('password');
-
+    
             // Prepare data for update
             $update_data = array(
                 'admin_id' => $admin_id,
@@ -90,28 +90,21 @@ class Admin_con extends CI_Controller
                 'Email_id' => $Email_id,
                 'password' => $password
             );
-
-
-      
-
-            if ($this->Admin_model->updateBanner($id, $update_data)) {
+    
+            // Check if $id is set and update the banner data
+            if ($id !== null && $this->Admin_login_model->updateBanner($id, $update_data)) {
                 $this->session->set_flashdata('success', 'Banner data updated successfully.');
-
-                echo "<pre>";
-                print_r($update_data);
-                // exit;
+                // Redirect back to the display_data method
+                redirect('admin/Admin_con/display_data');
             } else {
                 $this->session->set_flashdata('error', 'Error occurred while updating banner data.');
             }
-
-
-            // Redirect back to the display_data method
-            redirect('admin/Admin_con/display_data');
         }
-
+    
         // Load the edit view with the banner data
         $this->load->view('admin/Adminpanel_login_view/edit.php', $data);
     }
+    
 
 
 

@@ -8,6 +8,9 @@ class Contact_us extends CI_Controller
         $this->load->model('Contact_us_model_1');
         $this->load->model('Contact_us_model_2');
 
+        $this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
+
         $data['services_1'] = $this->Contact_us_model_1->get_all_data();
         $data['services_2'] = $this->Contact_us_model_2->get_all_data();
 

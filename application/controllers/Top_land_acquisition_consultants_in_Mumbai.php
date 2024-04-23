@@ -10,6 +10,8 @@ class Top_land_acquisition_consultants_in_Mumbai extends CI_Controller {
 
 	
 	public function index(){
+		$this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
 
 		$data['services'] = $this->Service_2_model->get_all_data(); 
 

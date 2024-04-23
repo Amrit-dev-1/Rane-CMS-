@@ -9,6 +9,8 @@ class Top_land_survey extends CI_Controller {
     }
 
     public function index() {
+        $this->load->model('Navigation_model');
+        $data['Head'] = $this->Navigation_model->getHomepageData();
         $data['services'] = $this->Service_1_model->get_all_data(); 
         $this->load->view('RMC_view/Service1_view', $data); 
     }

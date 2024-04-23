@@ -22,5 +22,39 @@ class Admin_login_model extends CI_Model
             return false; // Return false if credentials are incorrect
         }
     }
+
+    // Retrieve banner data by ID
+    public function getBannerById($id)
+    {
+        $query = $this->db->get_where('admin', array('id' => $id));
+        return $query->row_array();
+    }
+
+    // Update banner data
+    public function updateBanner($id, $update_data)
+    {
+        // Check if $id is not null or empty
+        if ($id !== null && !empty($id)) {
+            // Update the banner data
+            $this->db->where('id', $id);
+            $success = $this->db->update('admin', $update_data);
+    
+            // Check if the update operation was successful
+            if ($success) {
+                return true; // Return true if update was successful
+            } else {
+                // Log the database error
+                $error = $this->db->error();
+                log_message('error', 'Database Error: ' . $error['message']);
+    
+                return false; // Return false if update failed
+            }
+        } else {
+            return false; // Return false if $id is null or empty
+        }
+    }
+    
+    
+    
 }
 ?>
