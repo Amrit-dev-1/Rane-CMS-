@@ -7,7 +7,7 @@
      <!-- Brand Logo -->
      <a href="https://ranemanagementconsultant.com/" target="blank" class="brand-link" style="background-color: #FFF;height: 55px;">
 
-         <img src="<?php echo base_url(); ?>assets/image/Rane-Logo-WebsiteTopHead-01.png" alt="My Wedding Palette" class="brand-image elevation-3" style="opacity: .9;margin-left: 0;margin-right: 0;">
+         <img src="<?php echo base_url(); ?>assets/new-img/Rane-Logo-WebsiteTopHead-01.png" alt="My Wedding Palette" class="brand-image elevation-3" style="opacity: .9;margin-left: 0;margin-right: 0;">
 
      </a>
 
@@ -17,7 +17,7 @@
          <a href="<?php echo base_url() ?>admin/index">
              <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                  <div class="image">
-                     <img src="<?php echo base_url(); ?>assets/image/Website Small Logo-01.png" class="img-circle elevation-2" alt="User Image">
+                     <img src="<?php echo base_url(); ?>assets/new-img/Website Small Logo-01.png" class="img-circle elevation-2" alt="User Image">
                  </div>
                  <div class="info">
                      <a style="pointer-events: none;" href="<?php base_url() ?>admin/index" class="d-block"><span style="font-weight: 700;">Admin</span></a>

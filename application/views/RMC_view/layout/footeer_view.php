@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mb-md-0">
                     <a href="<?php base_url(); ?>RANE_con">
-                        <img src="<?php base_url(); ?>assets/image/Rane-Logo-WebsiteTopHead-01.png" class="foot-logo" alt="Company Logo">
+                        <img src="<?php base_url(); ?>assets/new-img/Rane-Logo-WebsiteTopHead-01.png" class="foot-logo" alt="Company Logo">
                     </a>
                     <p class="footer-description">
                         The Most Reliable & Experienced Constructors For Your Next Project

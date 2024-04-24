@@ -26,7 +26,7 @@
 					<?php if (isset($Banner)) : ?>
 						<div class="container">
 							<div class="row">
-								<div class="col-md-6 ">
+								<div class="col-md-12 ">
 									<h2>Edit Banner</h2>
 
 									<form id="demo-form2" action="<?php echo base_url('admin/Home_Admin_1/edit/' . $id); ?>" method="post" enctype="multipart/form-data" class="custom-form">
