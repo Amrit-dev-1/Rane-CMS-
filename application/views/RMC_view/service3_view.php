@@ -2,16 +2,16 @@
 $this->load->view('RMC_view/layout/header_view.php');
 ?>
 
-<head>
+<?php foreach ($seo as $meta) : ?>
+    <?php if ($meta->id == 3) : ?>
+        <title><?php echo $meta->meta_title; ?></title>
+        <meta name="description" content="<?php echo $meta->meta_description; ?>">
+        <?php echo $meta->meta_description; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
-	<title>
-		Your Trusted Partner for Land Record Verification and Modification
-	</title>
-	<link rel="stylesheet" href="<?php base_url(); ?>assets/css/external.css">
-	<meta name="description" content="Land Record Verification & Modification services. Village Map. Our team meticulously verifies land records, confirming ownership details & identifying encumbrances. ">
-
-
-</head>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/external.css">
+	
 
 
 

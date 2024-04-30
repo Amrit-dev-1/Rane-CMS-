@@ -2,17 +2,16 @@
 $this->load->view('RMC_view/layout/header_view.php');
 ?>
 
+<?php foreach ($seo as $meta) : ?>
+	<?php if ($meta->id == 5) : ?>
+		<title><?php echo $meta->meta_title; ?></title>
+		<meta name="description" content="<?php echo $meta->meta_description; ?>">
+		<?php echo $meta->meta_description; ?>
+	<?php endif; ?>
+<?php endforeach; ?>
 
+<link rel="stylesheet" href="<?php base_url() ?>assets/css/external.css">
 
-<head>
-	<title>
-		Geospatial & Customized mapping solution, Municipal GIS, QGIS
-
-	</title>
-	<link rel="stylesheet" href="<?php base_url() ?>assets/css/external.css">
-	<meta name="description" content="Geospatial & IT Solutions is one-stop destination for comprehensive services in the fields of geographic information systems & information technology ">
-
-</head>
 
 <body>
 	<div class="banner-service-9 ">

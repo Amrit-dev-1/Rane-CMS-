@@ -2,14 +2,17 @@
 $this->load->view('RMC_view/layout/header_view.php');
 ?>
 
-<head>
-	<title>
-		City Survey | Existing Land Use Plan Analysis & Evaluation (ELU)
-	</title>
-	<link rel="stylesheet" href="<?php base_url() ?>assets/css/external.css">
-	<meta name="description" content="Rane Management Key Features - Transparent Surveying Practices, Empaneled by Maharashtra State Town Planning Department, Vast Revenue Document Mastery">
+<?php foreach ($seo as $meta) : ?>
+	<?php if ($meta->id == 4) : ?>
+		<title><?php echo $meta->meta_title; ?></title>
+		<meta name="description" content="<?php echo $meta->meta_description; ?>">
+		<?php echo $meta->meta_description; ?>
+	<?php endif; ?>
+<?php endforeach; ?>
 
-</head>
+
+<link rel="stylesheet" href="<?php base_url() ?>assets/css/external.css">
+
 
 
 

@@ -3,13 +3,15 @@ $this->load->view('RMC_view/layout/header_view.php');
 ?>
 <link rel="stylesheet" href="assets/css/external.css">
 
-<head>
-	<title>
-		Environmental Clearance, CRZ Clearance from Government Authorities
-	</title>
-	<meta name="description" content="Forest Clearance, Forest Diversion, Environment clearance, wildlife clearance, CRZ clearance, height clearance, Airport Authority of India   ">
+<?php foreach ($seo as $meta) : ?>
+    <?php if ($meta->id == 7) : ?>
+        <title><?php echo $meta->meta_title; ?></title>
+        <meta name="description" content="<?php echo $meta->meta_description; ?>">
+        <?php echo $meta->meta_description; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
-</head>
+
 
 <body>
 	<div class="banner-service-6">

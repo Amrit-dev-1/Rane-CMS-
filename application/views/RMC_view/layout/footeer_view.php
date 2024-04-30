@@ -1,33 +1,20 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.x.x/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.x.x/css/all.min.css">
 
+<div class="floating-icon" id="floatingIcon">
+    <a href="<?php echo base_url() ?>RANE_con" class="icon-item">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="mailto:ranemanagementconsultant@gmail.com" class="icon-item">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="tel:9820536562" class="icon-item">
+        <i class="fas fa-phone"></i>
+    </a>
 
+</div>
 
-
-</head>
-
-<!-- <div id="advertisement-card" class="advertisement-card">
-    <button class="close-btn" onclick="closeAdvertisement()">x</button>
-
-    <div class="row">
-        <div class="col-md-6">
-            <img src="<?php base_url() ?>assets/new-img/All-Website-Images/popup-img/villa-house.webp" alt="pop-img" class="pop-up-img">
-        </div>
-        <div class="col-md-6 text-center ">
-            <div class="content">
-                <h2>Do you want to list your Property with us ?</h2>
-        
-                <div class="pop-up-btns">
-                    <a class="pop-up-btn" style="width: 50%;" href="<?php base_url() ?>Property_lisiting_con"> List </a>
-                    <a class="pop-up-btn" onclick="closeAdvertisement()">Close</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 <div class="modal fade" id="comingSoonModal" tabindex="-1" role="dialog" aria-labelledby="comingSoonModalLabel" aria-hidden="true">

@@ -1,16 +1,16 @@
 <?php
 $this->load->view('RMC_view/layout/header_view.php');
 ?>
-
-<head>
+<?php foreach ($seo as $meta) : ?>
 	<title>
-		Top Land Surveyor in Mumbai, Navi Mumbai, Maharashtra
-		<link rel="stylesheet" href="<?php base_url() ?>assets/css/external.css">
+		<?php echo $meta->meta_title; ?>
 	</title>
-	<meta name="description" content="Land survey, Revenue Survey, GPS, GIS, Drone Survey, SRA Plot survey, Licensed Surveyor, location survey, Demarcation of plot, earthwork calculation ">
-	<link rel="stylesheet" href="<?php base_url(); ?>assets/css/external.css">
+	<meta name="description" content="<?php echo $meta->meta_description; ?> ">
 
-</head>
+<?php endforeach; ?>
+
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/external.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/external.css">
 
 
 
@@ -189,6 +189,7 @@ $this->load->view('RMC_view/other_service_view.php');
 		<button class="btns active-collaborate" data-toggle="modal" data-target="#myModal">Collaborate With Us <i class="fas fa-arrow-circle-right"></i></button>
 	</div>
 </div>
+
 
 
 <!-- JavaScript -->

@@ -3,13 +3,15 @@ $this->load->view('RMC_view/layout/header_view.php');
 ?>
 <link rel="stylesheet" href="assets/css/external.css">
 
-<head>
-	<title>
-	Building Plan Approval that Strictly Adhere to Guidelines as per RERA 
-	</title>
-<meta name="description" content="Building Plan Approval that adhere to guidelines as per RERA rules Building Plan Approval, NOCs, Design, Estimation and costing, Interior Design, BIM">
+<?php foreach ($seo as $meta) : ?>
+    <?php if ($meta->id == 8) : ?>
+        <title><?php echo $meta->meta_title; ?></title>
+        <meta name="description" content="<?php echo $meta->meta_description; ?>">
+        <?php echo $meta->meta_description; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
-</head>
+
 
 <body>
 	<div class="banner-service-7">

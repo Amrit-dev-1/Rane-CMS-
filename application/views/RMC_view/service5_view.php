@@ -3,10 +3,14 @@ $this->load->view('RMC_view/layout/header_view.php');
 ?>
 <link rel="stylesheet" href="assets/css/external.css">
 
-<title>
-	Construction Project Management Company | Infrastructure Planning
-</title>
-<meta name="description" content="Project Planning & Management for Road Network, Rail Network, Water Supply,  Sewage, Storm Water, Skywalks, Bridges, DPR, Transport consulting, etc.">
+<?php foreach ($seo as $meta) : ?>
+    <?php if ($meta->id == 6) : ?>
+        <title><?php echo $meta->meta_title; ?></title>
+        <meta name="description" content="<?php echo $meta->meta_description; ?>">
+        <?php echo $meta->meta_description; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
+
 
 
 <body>

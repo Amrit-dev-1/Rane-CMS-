@@ -3,13 +3,13 @@ $this->load->view('RMC_view/layout/header_view.php');
 ?>
 <link rel="stylesheet" href="assets/css/external.css">
 
-<head>
-    <title>
-        Land & Building Valuation | Precise Property Valuations Experts
-    </title>
-    <meta name="description" content="We cater to individual needs such as property wills, and family disputes. We excel in real estate valuation and consulting for secondary investments.  ">
-
-</head>
+<?php foreach ($seo as $meta) : ?>
+    <?php if ($meta->id == 9) : ?>
+        <title><?php echo $meta->meta_title; ?></title>
+        <meta name="description" content="<?php echo $meta->meta_description; ?>">
+        <?php echo $meta->meta_description; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
 
 <body>
