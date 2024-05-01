@@ -60,4 +60,12 @@ class Admin_model extends CI_Model
         }
         return $result;
     }
+
+
+    public function getAllAdminData()
+    {
+        return $this->db->get('admin')->result_array();
+    }
+    
+
 }

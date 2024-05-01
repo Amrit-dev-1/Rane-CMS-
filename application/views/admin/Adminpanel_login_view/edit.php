@@ -40,38 +40,39 @@
 				<!--<div class="card-body">-->
 				<!-- form start -->
 
-				<form action="<?php echo base_url(); ?>admin/Admin_con/edit" method="POST" enctype="multipart/form-data">
-					<?php if (!empty($Banner)) : ?>
-						<input type="hidden" id="id" required="required" class="form-control" name="id" value="<?php echo $Banner['id']; ?>">
+
+				<?php if (!empty($Banner)) : ?>
+					<form id="editBannerForm" action="<?php echo base_url(); ?>admin/Admin_con/edit" method="POST" enctype="multipart/form-data" class="form-horizontal form-label-left">
+						<input type="hidden" name="id" value="<?php echo $Banner['id']; ?>">
 
 						<div class="item form-group">
-							<label class="col-form-label col-md-3 col-sm-3 label-align" for="admin_id">Admin id<span class="required">*</span></label>
-							<div class="col-md-6 col-sm-6 ">
-								<input type="text" id="admin_id" required="required" class="form-control" name="admin_id" value="<?php echo $Banner['admin_id']; ?>">
+							<label class="col-form-label col-md-3 col-sm-3 label-align" for="admin_id">Admin ID <span class="required">*</span></label>
+							<div class="col-md-6 col-sm-6">
+								<input type="text" id="admin_id" name="admin_id" class="form-control" required value="<?php echo $Banner['admin_id']; ?>">
 								<div class="error"><?php echo form_error('admin_id'); ?></div>
 							</div>
 						</div>
 
 						<div class="item form-group">
-							<label class="col-form-label col-md-3 col-sm-3 label-align" for="user_id">User id<span class="required">*</span></label>
-							<div class="col-md-6 col-sm-6 ">
-								<input type="text" id="user_id" required="required" class="form-control" name="user_id" value="<?php echo $Banner['user_id']; ?>">
+							<label class="col-form-label col-md-3 col-sm-3 label-align" for="user_id">User ID <span class="required">*</span></label>
+							<div class="col-md-6 col-sm-6">
+								<input type="text" id="user_id" name="user_id" class="form-control" required value="<?php echo $Banner['user_id']; ?>">
 								<div class="error"><?php echo form_error('user_id'); ?></div>
 							</div>
 						</div>
 
 						<div class="item form-group">
-							<label class="col-form-label col-md-3 col-sm-3 label-align" for="Email_id">Email id<span class="required">*</span></label>
-							<div class="col-md-6 col-sm-6 ">
-								<input type="text" id="Email_id" required="required" class="form-control" name="Email_id" value="<?php echo $Banner['Email_id']; ?>">
+							<label class="col-form-label col-md-3 col-sm-3 label-align" for="Email_id">Email ID <span class="required">*</span></label>
+							<div class="col-md-6 col-sm-6">
+								<input type="text" id="Email_id" name="Email_id" class="form-control" required value="<?php echo $Banner['Email_id']; ?>">
 								<div class="error"><?php echo form_error('Email_id'); ?></div>
 							</div>
 						</div>
 
 						<div class="item form-group">
-							<label class="col-form-label col-md-3 col-sm-3 label-align" for="password"> Password <span class="required">*</span></label>
-							<div class="col-md-6 col-sm-6 ">
-								<input type="text" id="password" required="required" class="form-control" name="password" value="<?php echo $Banner['password']; ?>">
+							<label class="col-form-label col-md-3 col-sm-3 label-align" for="password">Password <span class="required">*</span></label>
+							<div class="col-md-6 col-sm-6">
+								<input type="text" id="password" name="password" class="form-control" required value="<?php echo $Banner['password']; ?>">
 								<div class="error"><?php echo form_error('password'); ?></div>
 							</div>
 						</div>
@@ -81,10 +82,10 @@
 								<button type="submit" class="btn btn-success">Update</button>
 							</div>
 						</div>
-					<?php else : ?>
-						<p>Error: Banner data not found or empty.</p>
-					<?php endif; ?>
-				</form>
+					</form>
+
+				<?php endif; ?>
+
 
 
 				<!--</div>-->
