@@ -1,0 +1,148 @@
+* {
+	font-family: Montserrat;
+}
+.prop-head {
+	    font-size: 20px;
+    color: #2b3f49;
+    text-align: left;
+}
+.prop-text {
+	font-size: 700;
+}
+h1 {
+	color: #2b3f49;
+	font-size: 17px;
+	margin: 0px 3px 0px 49px;
+}
+.prop-img {
+	padding: 30px;
+	width: 59%;
+}
+.prop-card {
+	position: absolute;
+	left: 10%;
+}
+.prop-card {
+	height: 361px;
+	width: 407px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	margin: 27px 3px 3px 51%;
+	text-align: center;
+	padding: 34px;
+	background-color: rgb(252, 252, 253);
+border-radius: 10px;
+}
+.card-decor {
+	border-bottom: 1px solid black;
+	padding: 20px;
+	text-align: center;
+	color: #1d1d1d;
+	font-weight: 700;
+
+	font-size: 30px;
+}
+.card-data1 {
+	text-align: left;
+	color: #243d71;
+	font-size: 22px;
+	font-weight: 700;
+}
+.card-data2 {
+	text-align: left;
+}
+.prop-name {
+	line-height: normal;
+}
+.col {
+	display: flex;
+}
+.icon {
+	font-size: 22px;
+}
+.prop-btn {
+	margin: 0 0 0 -56%;
+	border: none;
+	padding: 10px;
+	text-align: center;
+	color: white;
+	background-color: #243d71;
+	width: 42%;
+	border-radius: 6px;
+}
+.prop-btn:hover {
+	background-color: white;
+	color: #243d71;
+	transition: 0.3s ease-in-out;
+	border: 1px solid #243d71;
+}
+.prop-card-2 {
+	margin: -26% -69px 0 55%;
+    width: 490px;
+    padding: 20px;
+    height: 300px;
+}
+.npc{
+    margin: 4px 0 0 3%;
+}
+h2 {
+	font-weight: 700;
+	color: #243d71;
+}
+.h1-edit {
+	font-weight: 700;
+	margin-left: 0%;
+	font-size: 15px;
+	color: black;
+}
+.cards-btn {
+	border: 0.5px solid black;
+	background-color: #e9e9e9;
+	padding: 10px;
+	width: 35%;
+	border-radius: 6px;
+	color: #243d71;
+}
+.prop-card-2-btn {
+	display: flexbox;
+}
+.iframe-container {
+	text-align: center;
+}
+
+.iframe-container iframe {
+	display: inline-block;
+}
+.card {
+	width: 46%;
+	border-radius: 3px;
+	padding: 10px;
+	border: none;
+}
+.re-direct{
+ position: relative;
+    left: 47%;
+    top: -64%;
+}
+.container-end {
+	display: flex;
+	padding: 0 0 0 6%;
+}
+.card-image {
+	height: 300px;
+}
+.font1 {
+	font-size: 14px;
+	margin-left: 10px;
+}
+.btns {
+	width: 130px;
+	border: 1.5px solid black;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 6px 0px 0px 9px;
+}
+.heading-properties {
+        margin: 23px 0 0 0px;
+    display: flex;
+    justify-content: center;
+}

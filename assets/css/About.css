@@ -1,0 +1,102 @@
+.ourvision-img {
+       height: auto;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.our-story{
+    padding:20px;
+}
+
+.our-story .our_vision {
+    text-align: justify;
+    height: 300px;
+    overflow-y: hidden;
+    padding: 10px 40px;
+}
+
+.our-story p {
+    text-align: left;
+    height: 300px;
+    /*overflow-y: scroll;*/
+    padding: 0 10px;
+}
+
+.Our-Mission-img {
+    width: 100%;
+}
+
+.item {
+    align-items: center;
+    background-color: #f6f6f6;
+    color: black;
+    padding: 15px 30px 15px 54px;
+    height: 248px;
+    justify-content: center;
+    border-radius: 0 75px 0 75px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.text-center-abt {
+    text-align: center;
+    color: #273d71;
+}
+
+.con-1 {
+    padding: 10px;
+}
+.abt-ban{
+    color: white;
+}
+
+.banner-container{
+    text-align: center;
+    background-color: #273d71;
+    height: 40vh;
+    width: 50%;
+    padding: 65px 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.enquire-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #fff;
+    color: #243d71;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.enquire-btn:hover {
+    background: #243d71;
+    color: #fff;
+    border: 1px solid white;
+}
+.about_headings {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 40px;
+    color: #273d71;
+    font-weight: 700;
+    font-family: Arial, sans-serif !important;
+}
+.banner-back-about {
+    background-color: #243D71;
+    width: 347px;
+    padding: 18px;
+    color: white;
+    opacity: 0.8;
+    margin: 9% 0px 0px 5%;
+}
+.our-story-2{
+    padding: 0 20px;
+}
+.headings-our-client {
+    padding-top: 33px;
+    text-align:center;
+    color:#273D71;
+    font-size:48px;
+}

@@ -1,0 +1,27 @@
+.client{
+    margin: auto;
+    /* display: flex; */
+    justify-content: center;
+    margin: 0 110px 0 64px;
+    display: grid;
+}
+
+.custom {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 22.666667%;
+    max-width: 50.666667%;
+}
+
+.client-logo img {
+   width: 50%;
+    height: auto;
+}
+
+.client-logo{
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+.client-logo:hover{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}

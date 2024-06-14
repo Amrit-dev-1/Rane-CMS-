@@ -1,0 +1,188 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* Adjust the height of the banner */
+  background-image: url('assets/image/Careers/architecture-concept-with-building-plan/architecture-concept-with-building-plan@2x.png');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  /* Align text to the left within the banner */
+  padding: 20px;
+  /* Add padding for text */
+  box-sizing: border-box;
+  /* Include padding in width/height calculation */
+}
+
+.banner h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  margin-left: 13%;
+  margin-top: 10%;
+}
+
+.banner_btn {
+  color: white;
+  background-color: #243D71;
+  padding: 14px;
+  left: 50px;
+  top: -20px;
+  position: relative;
+}
+
+.banner_btn:hover {
+  color: bisque;
+}
+
+h4 {
+  font-family: Montserrat;
+  color: #243D71;
+  font-size: 41px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+
+}
+
+.centered-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /* Align text/content inside the container */
+  border: 0px solid #ccc;
+  /* Optional: Border for visualization */
+  padding: 20px;
+  /* Optional: Padding for content */
+}
+
+.form {
+  margin-left: -150px;
+}
+
+.input {
+  width: 40%
+}
+
+
+
+.container-form {
+  width: 50%;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  margin: auto;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"] {
+  width: calc(104% - 22px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+textarea:hover {
+  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+  transition: 0.3s ease-in-out;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #243D71;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  /* margin-left: 9%; */
+  width: 83%;
+}
+
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #243D71;
+  border: 1px solid #243D71;
+  transition: 0.3s ease-in-out;
+
+}
+
+input:hover {
+  box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+  transition: 0.3s ease-in-out;
+}
+
+.banner-2-text {
+  color: #243D71;
+  font-size: 46px;
+  font-weight: 700;
+  margin-top: 10%;
+      text-align: center;
+}
+
+.banner-2-para {
+        text-align: center;
+    color: #243D71;
+    margin: 60px 100px;
+
+}
+
+.banner-3-head {
+  color: #243D71;
+  font-size: 46px;
+  font-weight: 700;
+  margin-top: 5%;
+  margin-left: 45%;
+  line-height: normal;
+}
+
+.banner-3-text {
+  color: #7B7B7B;
+  margin: 2px 0 0 45%;
+  font-size: 26px;
+
+}
+
+.banner-3-btn {
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  background-color: #243D71;
+  color: white;
+ text-align: center;
+    margin: 27px auto !important;
+    display: block !important;
+
+}
+
+
+ .car-submit {
+    margin:0 auto;
+    display: block;
+      
+  }
